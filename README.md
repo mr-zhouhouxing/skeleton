@@ -1,4 +1,4 @@
-<h1 style="text-align: center">Pandora-商城API</h1>
+<h1 style="text-align: center">Pandora-潘多拉魔盒</h1>
 
 #### 项目简介
 Pandora：
