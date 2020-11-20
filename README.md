@@ -3,15 +3,22 @@
 #### 项目简介
 Pandora：
     基于当前流行技术组合的前后端分离商城系统
-    SpringBoot2+MybatisPlus+SpringSecurity+jwt+redis+Vue的前后端分离的商城系统， 
-    包含商城、拼团、砍价、商户管理、 秒杀、优惠券、积分、会员、充值、多门店等功能；
+    SpringBoot2 + MybatisPlus + SpringSecurity + JWT + Redis + ElasticSearch + RabbitMQ + Vue的前后端分离的商城系统; 
+    包含：商城、商品搜索、客服系统、订单服务、物流服务、用户足迹、用户收藏、店铺关注、购物车、优惠卷抵扣、积分兑换、多店铺等功能；
+
+#### 体验地址(暂未开放)
+|     |   演示地址  |    https://doc.pandla.io  |
+|---  |--- | --- |
+
 
 ### 1.0 版本功能预告：
-    1、商品列表、商品收藏、商城客服
-    2、购物车、结算功能
-    3、用户收货地址
-    4、用户下单、商品售后
-    5、我的浏览足迹
+    1、商城首页：轮播图广告、商品热卖榜、每日上新榜、商品推荐榜；
+    2、商品服务：商品搜索、商品分类、商品添加、商品浏览记录、商品评价、商品属性；
+    3、用户服务：用户收货地址、用户浏览记录、用户商品收藏、用户优惠卷、用户购物车；
+    4、订单服务：创建订单、订单物流查询、订单支付、订单延时取消；
+    5、客服系统：智能客服、人工客服、自助查询；
+    6、店铺入驻：店铺审核、开通店铺、店铺推荐；
+    7、优惠卷中心、积分商城等功能；
 
 #### 项目源码
 |     |  API系统源码 |   前端源码  |
@@ -23,20 +30,22 @@ Pandora：
 * 一：商品模块：商品添加、规格设置，商品上下架等
 * 二：订单模块：下单、购物车、支付，发货、收货、评价、退款等
 * 三：营销模块：积分、优惠券、分销、砍价、拼团、秒杀、多门店等
-* 四：微信模块：自定义菜单、自动回复、微信授权、图文管理、模板消息推送
-* 五：配置模块：各种配置
+* 四：微信模块：自定义菜单、自动回复、微信授权、图文管理、模板消息推送(待开放)
+* 五：配置模块：系统配置、第三方密钥对配置、权限配置等
 * 六：用户模块：登陆、注册、会员卡、充值等
 * 七：其他等
 
 #### 项目结构
 项目采用分模块开发方式
-- pandora-common    公共模块
-- pandora-admin     后台模块
-- pandora-logging   日志模块
-- pandora-tools     第三方工具模块
-- pandora-generator 代码生成模块
-- pandora-shop      商城模块
-- pandora-mproot    mybatisPlus
+- pandora-admin         - **后台模块**
+- pandora-biz           - **第三方组件**
+- pandora-common        - **公共模块**
+- pandora-generate      - **代码生成模块**
+- pandora-job           - **定时任务**
+- pandora-logging       - **日志模块**
+- pandora-mbp           - **mybatisPlus**
+- pandora-push          - **通用推送模块**
+- pandora-shop          - **商城模块**
 
 
 ## 技术选型
@@ -46,17 +55,16 @@ Pandora：
     * 1.3 SpringSecurity
     * 1.5 Druid
     * 1.6 Slf4j
-    * 1.7 Fastjson
+    * 1.7 FastJson
     * 1.8 JWT
     * 1.9 Redis
     * 1.10 Quartz
     * 1.11 Mysql
-    * 1.12 swagger
-    * 1.13 WxJava
+    * 1.12 Swagger-BootStrap
     * 1.14 Lombok
     * 1.15 Hutool
     * 1.16 Mapstruct
-	* 1.17 Redisson
+	* 1.17 Jedis
 	* 1.18 RabbitMQ
         
 * 前端使用技术
