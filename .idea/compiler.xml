@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="pandora-admin" />
+        <module name="pandora-biz-rabbit" />
         <module name="pandora-common" />
         <module name="pandora-generate" />
         <module name="pandora-job" />
@@ -25,6 +26,7 @@
       <module name="mall-common" options="-parameters" />
       <module name="pandora-admin" options="-parameters" />
       <module name="pandora-biz" options="-parameters" />
+      <module name="pandora-biz-rabbit" options="-parameters" />
       <module name="pandora-common" options="-parameters" />
       <module name="pandora-generate" options="-parameters" />
       <module name="pandora-job" options="-parameters" />

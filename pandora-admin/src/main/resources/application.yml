@@ -1,0 +1,15 @@
+server:
+  port: 6483
+  tomcat:
+    max-threads: 2000
+    min-spare-threads: 30
+    uri-encoding: UTF-8
+
+spring:
+  profiles:
+    active: dev
+  application:
+    name: pandora-mall
+  banner:
+    location: config/banner.txt
+

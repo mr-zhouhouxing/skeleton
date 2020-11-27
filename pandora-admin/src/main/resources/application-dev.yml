@@ -1,0 +1,20 @@
+spring:
+  rabbitmq:
+    port: 5672
+    host: localhost
+    username: guest
+    password: guest
+    virtual-host: test
+#    listener:
+#      simple:
+#        # 当前监听容器数
+#        concurrency: 10
+#        # 最大监听容器数
+#        max-concurrency: 20
+#        prefetch: 5
+#        # 采用手动应答
+#        acknowledge-mode: manual
+#    # 支持发布确认
+#    publisher-confirms: true
+#    # 支持发布返回
+#    publisher-returns: true

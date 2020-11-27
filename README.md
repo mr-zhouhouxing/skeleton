@@ -1,9 +1,9 @@
 <h1 style="text-align: center">Pandora-潘多拉魔盒</h1>
 
 #### 项目简介
-    s基于当前流行技术组合的前后端分离商城系统
-    SpringBoot2 + MybatisPlus + SpringSecurity + JWT + Redis + ElasticSearch + RabbitMQ + Vue的前后端分离的商城系统; 
-    包含：商城、商品搜索、客服系统、订单服务、物流服务、用户足迹、用户收藏、店铺关注、购物车、优惠卷抵扣、积分兑换、多店铺等功能；
+   基于当前流行技术组合的前后端分离商城系统
+   SpringBoot2 + MybatisPlus + SpringSecurity + JWT + Redis + ElasticSearch + RabbitMQ + Vue的前后端分离的商城系统; 
+   包含：商城、商品搜索、客服系统、订单服务、物流服务、用户足迹、用户收藏、店铺关注、购物车、优惠卷抵扣、积分兑换、多店铺等功能；
 
 #### 体验地址(暂未开放)
 |     |   演示地址  |    https://doc.pandla.io  |
