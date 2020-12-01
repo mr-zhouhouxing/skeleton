@@ -17,11 +17,11 @@
     5、客服系统：智能客服、人工客服、自助查询；
     6、店铺入驻：店铺审核、开通店铺、店铺推荐；
     7、优惠卷中心、积分商城等功能；
-
-#### 项目源码
-|     |  API系统源码 |   前端源码  |
-|---  |--- | --- |
-|   码云  |  https://gitee.com/zhouhouxing/pandora-mall  | https://gitee.com/zhouhouxing/pandora-web |
+### 项目源码
+|  |  GiTee | GitHub | 
+|---  |--- | --- | 
+| 后端源码 | https://gitee.com/zhouhouxing/pandora-mall| https://github.com/zhouhouxing/pandora-mall|
+| 前端源码 | https://gitee.com/zhouhouxing/pandora-web | https://github.com/zhouhouxing/pandora-web |
 
 
 ## 商城功能
