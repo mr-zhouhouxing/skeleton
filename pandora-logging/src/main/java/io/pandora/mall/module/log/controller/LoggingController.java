@@ -1,7 +1,7 @@
-package io.pandora.mall.log.controller;
+package io.pandora.mall.module.log.controller;
 
-import io.pandora.mall.log.service.LoggingService;
-import io.pandora.mall.log.service.dto.LogQueryCriteria;
+import io.pandora.mall.module.log.service.dto.LogQueryCriteria;
+import io.pandora.mall.module.log.service.LoggingService;
 import io.swagger.annotations.Api;
 import org.springframework.data.domain.Pageable;
 import io.swagger.annotations.ApiOperation;
@@ -28,7 +28,7 @@ public class LoggingController {
 
     @GetMapping
     @ApiOperation("日志查询")
-    @PreAuthorize("@el.check('admin','log:list')")
+    @PreAuthorize("@el.check('admin','modelue:list')")
     public ResponseEntity<Object> getLogs(LogQueryCriteria criteria, Pageable pageable){
         criteria.setLogType("INFO");
         criteria.setType(0);

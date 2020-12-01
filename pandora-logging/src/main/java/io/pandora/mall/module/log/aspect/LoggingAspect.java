@@ -1,10 +1,10 @@
-package io.pandora.mall.log.aspect;
+package io.pandora.mall.module.log.aspect;
 
 import io.pandora.mall.domian.system.Log;
-import io.pandora.mall.log.service.LoggingService;
-import io.pandora.mall.util.spring.SecurityUtils;
+import io.pandora.mall.module.log.service.LoggingService;
 import io.pandora.mall.util.StringUtils;
 import io.pandora.mall.util.ThrowableUtils;
+import io.pandora.mall.util.spring.SecurityUtils;
 import io.pandora.mall.util.spring.SpringContextHolder;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
@@ -35,7 +35,7 @@ public class LoggingAspect {
         this.loggingService = loggingService;
     }
 
-    @Pointcut("@annotation(io.pandora.mall.log.annotation.SysLog)")
+    @Pointcut("@annotation(io.pandora.mall.module.log.annotation.SysLog)")
     public void logPointcut() { }
 
     /**
@@ -78,11 +78,10 @@ public class LoggingAspect {
         Log log = new Log("ERROR",System.currentTimeMillis() - currentTime.get());
         currentTime.remove();
         log.setExceptionDetail(ThrowableUtils.getStackTrace(e).getBytes());
-        HttpServletRequest request = SpringContextHolder.getHttpServletRequest();
 
-        loggingService.saveLogging(getUsername(),
-                StringUtils.getIp(SpringContextHolder.getHttpServletRequest()),
-                (ProceedingJoinPoint)joinPoint, log,getUid());
+        String ip = StringUtils.getIp(SpringContextHolder.getHttpServletRequest());
+        // 存储异常信息
+        loggingService.saveLogging(getUsername(), ip, (ProceedingJoinPoint)joinPoint, log,getUid());
     }
 
     /**

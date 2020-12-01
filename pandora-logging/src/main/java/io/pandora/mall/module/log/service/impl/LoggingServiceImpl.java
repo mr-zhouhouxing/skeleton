@@ -1,11 +1,11 @@
-package io.pandora.mall.log.service.impl;
+package io.pandora.mall.module.log.service.impl;
 
 import cn.hutool.json.JSONObject;
 import io.pandora.mall.base.BaseServiceImpl;
 import io.pandora.mall.domian.system.Log;
-import io.pandora.mall.log.annotation.SysLog;
-import io.pandora.mall.log.service.LoggingService;
-import io.pandora.mall.log.service.dto.LogQueryCriteria;
+import io.pandora.mall.module.log.annotation.SysLog;
+import io.pandora.mall.module.log.service.LoggingService;
+import io.pandora.mall.module.log.service.dto.LogQueryCriteria;
 import io.pandora.mall.mapper.system.LoggingMapper;
 import io.pandora.mall.util.StringUtils;
 import org.aspectj.lang.ProceedingJoinPoint;

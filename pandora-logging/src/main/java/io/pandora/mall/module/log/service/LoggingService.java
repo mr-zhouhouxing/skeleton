@@ -1,8 +1,8 @@
-package io.pandora.mall.log.service;
+package io.pandora.mall.module.log.service;
 
 import io.pandora.mall.base.BaseService;
 import io.pandora.mall.domian.system.Log;
-import io.pandora.mall.log.service.dto.LogQueryCriteria;
+import io.pandora.mall.module.log.service.dto.LogQueryCriteria;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.springframework.data.domain.Pageable;
 import org.springframework.scheduling.annotation.Async;
