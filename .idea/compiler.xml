@@ -13,7 +13,7 @@
         <module name="pandora-generate" />
         <module name="pandora-job" />
         <module name="pandora-logging" />
-        <module name="pandora-mbp" />
+        <module name="pandora-persistence" />
         <module name="pandora-push" />
         <module name="pandora-shop" />
       </profile>
@@ -32,7 +32,7 @@
       <module name="pandora-generate" options="-parameters" />
       <module name="pandora-job" options="-parameters" />
       <module name="pandora-logging" options="-parameters" />
-      <module name="pandora-mbp" options="-parameters" />
+      <module name="pandora-persistence" options="-parameters" />
       <module name="pandora-push" options="-parameters" />
       <module name="pandora-shop" options="-parameters" />
     </option>

@@ -10,7 +10,7 @@
         <version>1.0</version>
     </parent>
 
-    <artifactId>pandora-mbp</artifactId>
+    <artifactId>pandora-persistence</artifactId>
     <packaging>jar</packaging>
 
     <properties>

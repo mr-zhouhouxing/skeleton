@@ -23,7 +23,7 @@
         <module>pandora-generate</module>
         <module>pandora-shop</module>
         <module>pandora-job</module>
-        <module>pandora-mbp</module>
+        <module>pandora-persistence</module>
         <module>pandora-push</module>
     </modules>
 
@@ -41,6 +41,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
+        <jjwt.version>0.7.0</jjwt.version>
         <druid.version>1.1.9</druid.version>
         <hutool.version>5.2.5</hutool.version>
         <userAgent.version>1.20</userAgent.version>
@@ -110,6 +111,13 @@
             <artifactId>swagger-bootstrap-ui</artifactId>
             <version>${bootstrap.version}</version>
         </dependency>
+        <!--  jwt start -->
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt</artifactId>
+            <version>${jjwt.version}</version>
+        </dependency>
+        <!--  jwt end -->
     </dependencies>
 
 </project>
