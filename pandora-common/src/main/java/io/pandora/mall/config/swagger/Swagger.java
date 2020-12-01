@@ -1,7 +1,6 @@
 package io.pandora.mall.config.swagger;
 
 import io.swagger.annotations.ApiOperation;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import springfox.documentation.builders.ApiInfoBuilder;
@@ -20,8 +19,11 @@ import java.util.List;
 @EnableSwagger2
 public class Swagger {
 
-    @Autowired
-    private SwaggerProperties swaggerProperties;
+    private final SwaggerProperties swaggerProperties;
+
+    public Swagger(SwaggerProperties swaggerProperties) {
+        this.swaggerProperties = swaggerProperties;
+    }
 
     @Bean
     public Docket createManageApi() {
@@ -32,7 +34,7 @@ public class Swagger {
                 //加了ApiOperation注解的类，才生成接口文档
                 .apis(RequestHandlerSelectors.withMethodAnnotation(ApiOperation.class))
                 //包下的类，才生成接口文档
-                .apis(RequestHandlerSelectors.basePackage("io.pandora.mall.manage.modules"))
+                .apis(RequestHandlerSelectors.basePackage("io.pandora.mall.module"))
                 .paths(PathSelectors.any())
                 .build()
                 .securitySchemes(manage_security());
