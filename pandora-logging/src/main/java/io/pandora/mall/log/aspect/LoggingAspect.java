@@ -2,7 +2,7 @@ package io.pandora.mall.log.aspect;
 
 import io.pandora.mall.domian.system.Log;
 import io.pandora.mall.log.service.LoggingService;
-import io.pandora.mall.util.SecurityUtils;
+import io.pandora.mall.util.spring.SecurityUtils;
 import io.pandora.mall.util.StringUtils;
 import io.pandora.mall.util.ThrowableUtils;
 import io.pandora.mall.util.spring.SpringContextHolder;

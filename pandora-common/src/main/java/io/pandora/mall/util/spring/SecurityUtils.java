@@ -1,4 +1,4 @@
-package io.pandora.mall.util;
+package io.pandora.mall.util.spring;
 
 import cn.hutool.json.JSONObject;
 import io.pandora.mall.exception.BadRequestException;

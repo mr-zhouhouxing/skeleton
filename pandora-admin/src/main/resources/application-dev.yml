@@ -1,20 +1,52 @@
 spring:
+  # RabbitMQ
   rabbitmq:
     port: 5672
-    host: localhost
+    host: 127.0.0.1
     username: guest
     password: guest
     virtual-host: test
-#    listener:
-#      simple:
-#        # 当前监听容器数
-#        concurrency: 10
-#        # 最大监听容器数
-#        max-concurrency: 20
-#        prefetch: 5
-#        # 采用手动应答
-#        acknowledge-mode: manual
-#    # 支持发布确认
-#    publisher-confirms: true
-#    # 支持发布返回
-#    publisher-returns: true
+  # 数据源
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/pandora_mall?serverTimezone=CTT&useSSL=false&useUnicode=true&characterEncoding=utf8
+    # 推荐utf8mb4编码以便支持表情字符，sys_log记录系统数据变动需要支持utf8mb4
+    connectionInitSqls: SET NAMES utf8mb4;
+    username: root
+    password: 123456
+    initialSize: 1
+    minIdle: 3
+    maxActive: 20
+    # 配置获取连接等待超时的时间
+    maxWait: 60000
+    # 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒
+    timeBetweenEvictionRunsMillis: 60000
+    # 配置一个连接在池中最小生存的时间，单位是毫秒
+    minEvictableIdleTimeMillis: 30000
+    validationQuery: select 'x'
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    # 打开PSCache，并且指定每个连接上PSCache的大小
+    poolPreparedStatements: true
+    maxPoolPreparedStatementPerConnectionSize: 20
+    # 配置监控统计拦截的filters，去掉后监控界面sql无法统计，'wall'用于防火墙
+    filters: stat,wall,slf4j
+    # 通过connectProperties属性来打开mergeSql功能；慢SQL记录
+    connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+    # 合并多个DruidDataSource的监控数据
+    #useGlobalDataSourceStat: true
+
+# Redis
+redis:
+  host: 127.0.0.1
+  port: 6379
+  password:
+  timeout: 30000
+  database: 0
+  maxActive: 200
+  maxWait: 10000
+  maxIdle: 50
+  minIdle: 10
+

@@ -1,5 +1,5 @@
 server:
-  port: 6483
+  port: 9009
   tomcat:
     max-threads: 2000
     min-spare-threads: 30
@@ -12,4 +12,28 @@ spring:
     name: pandora-mall
   banner:
     location: config/banner.txt
+
+mybatis-plus:
+  mapper-locations: classpath:/mapper/**/*Mapper.xml
+  typeAliasesPackage: io.pandora.mall.**.domian
+  global-config:
+    banner: false
+  configuration:
+    map-underscore-to-camel-case: true
+
+logging:
+  path: logs/
+  file: pandora.log
+  config: classpath:config/logback-spring.xml
+
+task:
+  pool:
+    # 核心线程池大小
+    core-pool-size: 10
+    # 最大线程数
+    max-pool-size: 30
+    # 活跃时间
+    keep-alive-seconds: 60
+    # 队列容量
+    queue-capacity: 50
 

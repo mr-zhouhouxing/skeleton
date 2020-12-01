@@ -1,6 +1,6 @@
 package io.pandora.mall.config;
 
-import io.pandora.mall.util.SecurityUtils;
+import io.pandora.mall.util.spring.SecurityUtils;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.stereotype.Service;
 

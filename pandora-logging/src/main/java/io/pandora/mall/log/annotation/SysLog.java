@@ -8,7 +8,7 @@ import java.lang.annotation.Target;
 /**
  * 系统日志注解
  *
- * @author Created by mr_zhou on 2020/11/30
+ * @author Created by mr_zhou on 2020/1/30
  */
 @Target(ElementType.METHOD)
 @Retention(RetentionPolicy.RUNTIME)

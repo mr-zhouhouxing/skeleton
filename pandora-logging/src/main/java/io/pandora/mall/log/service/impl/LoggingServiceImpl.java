@@ -5,27 +5,40 @@ import io.pandora.mall.base.BaseServiceImpl;
 import io.pandora.mall.domian.system.Log;
 import io.pandora.mall.log.annotation.SysLog;
 import io.pandora.mall.log.service.LoggingService;
+import io.pandora.mall.log.service.dto.LogQueryCriteria;
 import io.pandora.mall.mapper.system.LoggingMapper;
 import io.pandora.mall.util.StringUtils;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.reflect.MethodSignature;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.lang.reflect.Method;
+import java.util.List;
 
 /**
  * @author Created by mr_zhou on 2020/11/30
  */
 @Service
 @Transactional(propagation = Propagation.SUPPORTS, readOnly = true, rollbackFor = Exception.class)
-public class LoggingServiceImpl extends BaseServiceImpl implements LoggingService {
+public class LoggingServiceImpl extends BaseServiceImpl<LoggingMapper,Log> implements LoggingService {
 
     private final LoggingMapper loggingMapper;
 
     public LoggingServiceImpl(LoggingMapper loggingMapper) {
         this.loggingMapper = loggingMapper;
+    }
+
+    @Override
+    public List<Log> queryAll(LogQueryCriteria criteria) {
+        return null;
+    }
+
+    @Override
+    public Object queryAll(LogQueryCriteria criteria, Pageable pageable) {
+        return null;
     }
 
     @Override
