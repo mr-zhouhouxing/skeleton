@@ -2,7 +2,7 @@ spring:
   # RabbitMQ
   rabbitmq:
     port: 5672
-    host: 127.0.0.1
+    host: 47.242.89.109
     username: guest
     password: guest
     virtual-host: test

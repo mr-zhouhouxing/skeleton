@@ -1,6 +1,5 @@
 package io.pandora.mall.config;
 
-
 import com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor;
 import com.baomidou.mybatisplus.extension.plugins.pagination.optimize.JsqlParserCountOptimize;
 import org.mybatis.spring.annotation.MapperScan;
@@ -14,7 +13,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
  */
 @Configuration
 @EnableTransactionManagement
-@MapperScan(basePackages = {"io.pandora.mall.mapper.**"})
+@MapperScan(basePackages = {"io.pandora.mall.**.mapper"})
 public class MybatisPlusConfig {
 
     /**

@@ -23,7 +23,7 @@ mybatis-plus:
 
 logging:
   path: logs/
-  file: pandora.log
+  file: pandora.modelue
   config: classpath:config/logback-spring.xml
 
 task:
@@ -36,4 +36,19 @@ task:
     keep-alive-seconds: 60
     # 队列容量
     queue-capacity: 50
+
+#忽略token验证的接口
+ignore:
+  urls:
+  - /api/**
+  - /pay/**
+  - /csrf
+  - /v2/api-docs
+  - /swagger-resources/**
+  - /webjars/**
+  - /robots.txt
+  - /druid/**
+  - /v1/user/login
+  authenticates:
+  - /manage/**
 
