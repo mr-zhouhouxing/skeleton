@@ -40,41 +40,35 @@
 * 五：粉丝关注：关注好友、取消关注、好友备注、邀请用户
 * 六：系统通知：系统公告、举报提醒、点赞提醒、私信提醒、评论回复提醒
 
-#### 项目结构
+## 项目结构
 项目采用分模块开发方式
-- pandora-admin         - **后台模块**
-- pandora-biz           - **第三方组件**
-- pandora-common        - **公共模块**
-- pandora-generate      - **代码生成模块**
-- pandora-job           - **定时任务**
-- pandora-logging       - **日志模块**
-- pandora-mbp           - **mybatisPlus**
-- pandora-push          - **通用推送模块**
-- pandora-shop          - **商城模块**
-
+- **后台服务模块**    - pandora-admin         
+- **公共组件模块**    - pandora-biz          
+- **公共代码模块**    - pandora-common        
+- **代码生成模块**    - pandora-generate    
+- **定时任务模块**    - pandora-job           
+- **日志收集模块**    - pandora-logging       
+- **数据访问模块**    - pandora-persistence   
+- **通用推送模块**    - pandora-push          
+- **商城服务模块**    - pandora-shop          
 
 ## 技术选型
-* 1 后端使用技术
-    * 1.1 SpringBoot2
-    * 1.2 mybatis、MyBatis-Plus
-    * 1.3 SpringSecurity
-    * 1.5 Druid
-    * 1.6 Slf4j
-    * 1.7 FastJson
-    * 1.8 JWT
-    * 1.9 Redis
-    * 1.10 Quartz
-    * 1.11 Mysql
-    * 1.12 Swagger-BootStrap
-    * 1.14 Lombok
-    * 1.15 Hutool
-    * 1.16 Mapstruct
-	* 1.17 Jedis
-	* 1.18 RabbitMQ
+#### 后端使用技术
+* 1.0 - SpringBoot + MyBatisPlus
+* 1.1 - SpringSecurity + JWT
+* 1.2 - Lombok + MapStruct 
+* 1.3 - HuTool + FastJson 
+* 1.4 - Mysql + Druid 
+* 1.5 - Redis + Jedis 
+* 1.6 - ElasticSearch
+* 1.7 - Slf4j + Aop 
+* 1.8 - RabbitMQ 
+* 1.9 - Quartz 
         
-* 前端使用技术
-    * 2.1 Vue 全家桶
-    * 2.2 Element
-    * 2.3 mpvue
-    * 2.3 uniapp
+        
+#### 前端使用技术
+* 2.1 - Vue 全家桶
+* 2.2 - Element
+* 2.3 - mpvue
+* 2.3 - uniapp
 
