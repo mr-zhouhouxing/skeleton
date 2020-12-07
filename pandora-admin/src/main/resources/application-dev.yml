@@ -40,9 +40,9 @@ spring:
 
 # Redis
 redis:
-  host: 127.0.0.1
-  port: 6379
-  password:
+  host: 47.244.27.153
+  port: 6389
+  password: pandla@912
   timeout: 30000
   database: 0
   maxActive: 200

@@ -1,6 +1,7 @@
-package io.pandora.mall.module.security;
+package io.pandora.mall.filter;
 
 
+import io.pandora.mall.module.security.MyUserDetailsService;
 import io.pandora.mall.module.security.utils.JwtUtil;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,12 +1,16 @@
 package io.pandora.mall.module.security;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import io.pandora.mall.constant.Constant;
 import io.pandora.mall.enume.CodeEnum;
+import io.pandora.mall.exception.CustomException;
 import io.pandora.mall.mapper.system.UserMapper;
+import io.pandora.mall.module.security.utils.JwtUtil;
 import io.pandora.mall.pojo.dto.admin.LoginDto;
 import io.pandora.mall.pojo.vo.system.UserInfo;
+import io.pandora.mall.redis.util.RedisUtils;
 import io.pandora.mall.response.ResponseBean;
-import io.pandora.mall.module.security.utils.JwtUtil;
+import io.pandora.mall.util.StringUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationServiceException;
@@ -39,6 +43,8 @@ public class MyLoginFiler extends AbstractAuthenticationProcessingFilter {
     @Autowired
     private UserMapper userMapper;
     @Autowired
+    private RedisUtils redisUtils;
+    @Autowired
     private ObjectMapper objectMapper;
 
     private String usernameParameter = "username";
@@ -59,6 +65,14 @@ public class MyLoginFiler extends AbstractAuthenticationProcessingFilter {
 
             String username = dto.getAccount();
             String password = dto.getPassword();
+
+            // 校验验证码
+            String result = redisUtils.get(username).toString();
+            if (StringUtils.isBlank(result) || !result.equalsIgnoreCase(Constant.OK)){
+                throw new CustomException("验证码已过期或验证码错误请重新输入");
+            }
+            // 成功则清除
+            redisUtils.del(username);
 
             UsernamePasswordAuthenticationToken authRequest = new UsernamePasswordAuthenticationToken(username, password);
 

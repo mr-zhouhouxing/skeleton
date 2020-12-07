@@ -7,10 +7,18 @@ import eu.bitwalker.useragentutils.Browser;
 import eu.bitwalker.useragentutils.UserAgent;
 
 import javax.servlet.http.HttpServletRequest;
+import java.io.UnsupportedEncodingException;
+import java.lang.annotation.Annotation;
+import java.lang.reflect.Method;
 import java.net.InetAddress;
+import java.net.URLDecoder;
 import java.net.UnknownHostException;
 import java.util.Calendar;
+import java.util.Collection;
 import java.util.Date;
+import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * 字符串工具类, 继承org.apache.commons.lang3.StringUtils类
@@ -35,12 +43,8 @@ public class StringUtils extends org.apache.commons.lang3.StringUtils {
      * toUnderScoreCase("helloWorld") = "hello_world"
      */
     public static String toCamelCase(String s) {
-        if (s == null) {
-            return null;
-        }
-
+        if (s == null) return null;
         s = s.toLowerCase();
-
         StringBuilder sb = new StringBuilder(s.length());
         boolean upperCase = false;
         for (int i = 0; i < s.length(); i++) {
@@ -187,5 +191,208 @@ public class StringUtils extends org.apache.commons.lang3.StringUtils {
             w = 0;
         }
         return weekDays[w];
+    }
+
+    /**
+     * 获取方法中指定注解的value值返回
+     * @param method 方法名
+     * @param validationParamValue 注解的类名
+     * @return
+     */
+    public static String getMethodAnnotationOne(Method method, String validationParamValue) {
+        String retParam =null;
+        Annotation[][] parameterAnnotations = method.getParameterAnnotations();
+        for (int i = 0; i < parameterAnnotations.length; i++) {
+            for (int j = 0; j < parameterAnnotations[i].length; j++) {
+                String str = parameterAnnotations[i][j].toString();
+                if(str.indexOf(validationParamValue) >0){
+                    retParam = str.substring(str.indexOf("=")+1,str.indexOf(")"));
+                }
+            }
+        }
+        return retParam;
+    }
+
+    public static boolean isValidURLAddress(String url) {
+        String pattern = "([h]|[H])([t]|[T])([t]|[T])([p]|[P])([s]|[S]){0,1}://([^:/]+)(:([0-9]+))?(/\\S*)*";
+        return url.matches(pattern);
+    }
+    /**
+     * 将utf-8编码的汉字转为中文
+     * @author zhaoqiang
+     * @param str
+     * @return
+     */
+    public static String utf8Decoding(String str){
+        String result = str;
+        try
+        {
+            result = URLDecoder.decode(str, "UTF-8");
+        }
+        catch (UnsupportedEncodingException e)
+        {
+            e.printStackTrace();
+        }
+        return result;
+    }
+
+    public static boolean checkEmail(String email) {
+        if (StringUtils.isEmpty(email)) {
+            return false;
+        }
+        boolean flag = false;
+        try {
+            String check = "^([a-z0-9A-Z]+[-|_|\\.]?)+[a-z0-9A-Z]@([a-z0-9A-Z]+(-[a-z0-9A-Z]+)?\\.)+[a-zA-Z]{2,}$";
+            Pattern regex = Pattern.compile(check);
+            Matcher matcher = regex.matcher(email);
+            flag = matcher.matches();
+        } catch (Exception e) {
+            flag = false;
+        }
+        return flag;
+    }
+    /**
+     * 验证手机号码，11位数字，1开通，第二位数必须是3456789这些数字之一 *
+     * @param mobileNumber
+     * @return
+     */
+    public static boolean checkMobileNumber(String mobileNumber) {
+        boolean flag = false;
+        try {
+            // Pattern regex = Pattern.compile("^(((13[0-9])|(15([0-3]|[5-9]))|(18[0,5-9]))\\d{8})|(0\\d{2}-\\d{8})|(0\\d{3}-\\d{7})$");
+            Pattern regex = Pattern.compile("^1[345789]\\d{9}$");
+            Matcher matcher = regex.matcher(mobileNumber);
+            flag = matcher.matches();
+        } catch (Exception e) {
+            e.printStackTrace();
+            flag = false;
+        }
+        return flag;
+    }
+
+    public static boolean isEmpty(Object aObj) {
+        if (aObj instanceof String) {
+            return isEmpty((String) aObj);
+        } else if (aObj instanceof Long) {
+            return isEmpty((Long) aObj);
+        } else if (aObj instanceof java.util.Date) {
+            return isEmpty((java.util.Date) aObj);
+        } else if (aObj instanceof Collection) {
+            return isEmpty((Collection) aObj);
+        } else if (aObj instanceof Map) {
+            return isEmpty((Map) aObj);
+        } else if (aObj != null && aObj.getClass().isArray()) {
+            return isEmptyArray(aObj);
+        } else {
+            return isNull(aObj);
+        }
+    }
+
+    private static boolean isEmptyArray(Object array) {
+        int length = 0;
+        if (array instanceof int[]) {
+            length = ((int[]) array).length;
+        } else if (array instanceof byte[]) {
+            length = ((byte[]) array).length;
+        } else if (array instanceof short[]) {
+            length = ((short[]) array).length;
+        } else if (array instanceof char[]) {
+            length = ((char[]) array).length;
+        } else if (array instanceof float[]) {
+            length = ((float[]) array).length;
+        } else if (array instanceof double[]) {
+            length = ((double[]) array).length;
+        } else if (array instanceof long[]) {
+            length = ((long[]) array).length;
+        } else if (array instanceof boolean[]) {
+            length = ((boolean[]) array).length;
+        } else {
+            length = ((Object[]) array).length;
+        }
+        if (length == 0) {
+            return true;
+        }
+        return false;
+    }
+
+
+    public static boolean isEmpty(java.util.Date aDate) {
+        if (aDate == null) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public static boolean isEmpty(Long aLong) {
+        if (aLong == null) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+
+    public static boolean isEmpty(Map m) {
+        if (m == null || m.size() == 0) {
+            return true;
+        }
+        return false;
+    }
+
+    public static boolean isEmpty(Collection c) {
+        if (c == null || c.size() == 0) {
+            return true;
+        }
+        return false;
+    }
+
+    public static boolean isEmpty(String aStr) {
+        if (aStr == null || aStr.trim().isEmpty()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+
+
+    public static String trim(String aStr) {
+        if (aStr == null) {
+            return "";
+        } else {
+            return aStr.trim();
+        }
+    }
+
+    public static boolean isNull(Object oStr) {
+        if (oStr == null) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+
+    public static boolean equals(String str1, String str2) {
+        return str1 != null ? str1.equals(str2) : str2 == null;
+    }
+
+    public static boolean equals(Long L1, Long L2) {
+        return L1 != null ? L1.equals(L2) : L2 == null;
+    }
+
+    public static boolean equals(Object obj1, Object obj2) {
+        boolean result;
+        if (obj1 != null) {
+            result = obj1.equals(obj2);
+        } else {
+            result = (obj2 == null);
+        }
+        return result;
+    }
+
+    public static boolean equalsIgnoreCase(String str1, String str2) {
+        return str1 != null ? str1.equalsIgnoreCase(str2) : str2 == null;
     }
 }

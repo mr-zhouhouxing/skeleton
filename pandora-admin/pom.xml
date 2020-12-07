@@ -34,6 +34,13 @@
             <artifactId>pandora-logging</artifactId>
             <version>1.0</version>
         </dependency>
+
+        <!--图片验证-->
+        <dependency>
+            <groupId>com.github.whvcse</groupId>
+            <artifactId>easy-captcha</artifactId>
+            <version>${easyCaptcha.version}</version>
+        </dependency>
     </dependencies>
 
 </project>

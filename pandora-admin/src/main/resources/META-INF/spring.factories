@@ -1,0 +1,2 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+    io.pandora.mall.dozer.config.DozerMapperConfig
