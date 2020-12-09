@@ -1,4 +1,4 @@
-package io.pandora.mall.enume;
+package io.pandora.mall.annotation;
 
 import java.lang.annotation.*;
 
