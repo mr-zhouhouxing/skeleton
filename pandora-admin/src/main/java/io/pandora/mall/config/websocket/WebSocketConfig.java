@@ -1,4 +1,4 @@
-package io.pandora.mall.config;
+package io.pandora.mall.config.websocket;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

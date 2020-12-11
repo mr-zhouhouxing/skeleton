@@ -1,7 +1,7 @@
 package io.pandora.mall.aspect;
 
 import com.alibaba.fastjson.JSONObject;
-import io.pandora.mall.enume.ValidationParam;
+import io.pandora.mall.annotation.ValidationParam;
 import io.pandora.mall.exception.ParamJsonException;
 import io.pandora.mall.util.StringUtils;
 import org.aspectj.lang.ProceedingJoinPoint;
