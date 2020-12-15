@@ -1,4 +1,4 @@
-package io.pandora.mall.module.admin.service;
+package io.pandora.mall.manage.admin.service;
 
 import io.pandora.mall.base.BaseService;
 import io.pandora.mall.domian.system.User;

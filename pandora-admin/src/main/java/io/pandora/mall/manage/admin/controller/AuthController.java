@@ -1,10 +1,10 @@
-package io.pandora.mall.module.security;
+package io.pandora.mall.manage.admin.controller;
 
 import com.wf.captcha.ArithmeticCaptcha;
 import io.pandora.mall.annotation.AnonymousAccess;
 import io.pandora.mall.constant.Constant;
 import io.pandora.mall.exception.CustomException;
-import io.pandora.mall.module.log.annotation.SysLog;
+import io.pandora.mall.manage.log.annotation.SysLog;
 import io.pandora.mall.pojo.dto.admin.LoginDto;
 import io.pandora.mall.redis.util.RedisUtils;
 import io.pandora.mall.response.ResponseBean;

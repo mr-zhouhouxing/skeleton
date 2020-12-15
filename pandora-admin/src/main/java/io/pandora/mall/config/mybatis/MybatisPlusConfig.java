@@ -9,11 +9,10 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 /**
  * MybatisPlus配置
- *
  */
 @Configuration
 @EnableTransactionManagement
-@MapperScan(basePackages = {"io.pandora.mall.**.mapper"})
+@MapperScan(basePackages = {"io.pandora.mall.mapper.**"})
 public class MybatisPlusConfig {
 
     /**

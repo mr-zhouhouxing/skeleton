@@ -18,6 +18,10 @@ mybatis-plus:
   typeAliasesPackage: io.pandora.mall.**.domian
   global-config:
     banner: false
+    db-config:
+      id-type: auto
+      logic-delete-value: 1
+      logic-not-delete-value: 0
   configuration:
     map-underscore-to-camel-case: true
 

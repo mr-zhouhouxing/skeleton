@@ -14,6 +14,7 @@
     <packaging>jar</packaging>
 
     <dependencies>
+        <!-- 系统模块 -->
         <dependency>
             <groupId>io.pandora.mall</groupId>
             <artifactId>pandora-biz-rabbit</artifactId>
@@ -34,7 +35,11 @@
             <artifactId>pandora-logging</artifactId>
             <version>1.0</version>
         </dependency>
-
+        <dependency>
+            <groupId>io.pandora.mall</groupId>
+            <artifactId>pandora-security</artifactId>
+            <version>1.0</version>
+        </dependency>
         <!--图片验证-->
         <dependency>
             <groupId>com.github.whvcse</groupId>
