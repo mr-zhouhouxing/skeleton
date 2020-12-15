@@ -1,7 +1,7 @@
-package io.pandora.mall.module.log.aspect;
+package io.pandora.mall.manage.log.aspect;
 
 import io.pandora.mall.domian.system.Log;
-import io.pandora.mall.module.log.service.LoggingService;
+import io.pandora.mall.manage.log.service.LoggingService;
 import io.pandora.mall.util.StringUtils;
 import io.pandora.mall.util.ThrowableUtils;
 import io.pandora.mall.util.spring.SecurityUtils;
@@ -35,7 +35,7 @@ public class LoggingAspect {
         this.loggingService = loggingService;
     }
 
-    @Pointcut("@annotation(io.pandora.mall.module.log.annotation.SysLog)")
+    @Pointcut("@annotation(io.pandora.mall.manage.log.annotation.SysLog)")
     public void logPointcut() { }
 
     /**
@@ -103,20 +103,14 @@ public class LoggingAspect {
         logger.info(sb.toString());
     }
 
-    public String getUsername() {
-        try {
-            return SecurityUtils.getUsername();
-        }catch (Exception e){
-            return "";
-        }
+    private String getUsername() {
+        try { return SecurityUtils.getUsername();
+        }catch (Exception e){ return ""; }
     }
 
-    public Long getUid(){
-        try {
-            return SecurityUtils.getUserId();
-        }catch (Exception e){
-            return 0L;
-        }
+    private Long getUid(){
+        try { return SecurityUtils.getUserId();
+        }catch (Exception e){ return 0L; }
     }
 
 }

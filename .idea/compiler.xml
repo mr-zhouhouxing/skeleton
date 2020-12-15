@@ -15,6 +15,7 @@
         <module name="pandora-logging" />
         <module name="pandora-persistence" />
         <module name="pandora-push" />
+        <module name="pandora-security" />
         <module name="pandora-shop" />
       </profile>
     </annotationProcessing>
@@ -34,6 +35,7 @@
       <module name="pandora-logging" options="-parameters" />
       <module name="pandora-persistence" options="-parameters" />
       <module name="pandora-push" options="-parameters" />
+      <module name="pandora-security" options="-parameters" />
       <module name="pandora-shop" options="-parameters" />
     </option>
   </component>

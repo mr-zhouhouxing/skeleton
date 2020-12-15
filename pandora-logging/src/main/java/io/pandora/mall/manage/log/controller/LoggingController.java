@@ -1,7 +1,7 @@
-package io.pandora.mall.module.log.controller;
+package io.pandora.mall.manage.log.controller;
 
-import io.pandora.mall.module.log.service.dto.LogQueryCriteria;
-import io.pandora.mall.module.log.service.LoggingService;
+import io.pandora.mall.manage.log.service.dto.LogQueryCriteria;
+import io.pandora.mall.manage.log.service.LoggingService;
 import io.swagger.annotations.Api;
 import org.springframework.data.domain.Pageable;
 import io.swagger.annotations.ApiOperation;
@@ -34,10 +34,6 @@ public class LoggingController {
         criteria.setType(0);
         return new ResponseEntity<>(loggingService.queryAll(criteria,pageable), HttpStatus.OK);
     }
-
-
-
-
 
 }
 

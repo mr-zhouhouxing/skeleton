@@ -28,13 +28,13 @@ public class Swagger {
     @Bean
     public Docket createManageApi() {
         return new Docket(DocumentationType.SWAGGER_2)
-                .groupName("商城后台管理-API")
+                .groupName("后台管理-API")
                 .apiInfo(apiInfo())
                 .select()
                 //加了ApiOperation注解的类，才生成接口文档
                 .apis(RequestHandlerSelectors.withMethodAnnotation(ApiOperation.class))
                 //包下的类，才生成接口文档
-                .apis(RequestHandlerSelectors.basePackage("io.pandora.mall.module"))
+                .apis(RequestHandlerSelectors.basePackage("io.pandora.mall.manage"))
                 .paths(PathSelectors.any())
                 .build()
                 .securitySchemes(manage_security());
@@ -43,7 +43,7 @@ public class Swagger {
     @Bean
     public Docket createRestApi() {
         return new Docket(DocumentationType.SWAGGER_2)
-                .groupName("APP商城-API")
+                .groupName("REST服务-API")
                 .apiInfo(apiInfo())
                 .select()
                 //加了ApiOperation注解的类，才生成接口文档

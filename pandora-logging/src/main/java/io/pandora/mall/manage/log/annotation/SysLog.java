@@ -1,4 +1,4 @@
-package io.pandora.mall.module.log.annotation;
+package io.pandora.mall.manage.log.annotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

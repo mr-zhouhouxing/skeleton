@@ -6,8 +6,8 @@ import com.baomidou.mybatisplus.core.metadata.OrderItem;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.github.pagehelper.PageHelper;
-import io.pandora.mall.pojo.web.OrderQueryParam;
-import io.pandora.mall.pojo.web.QueryParam;
+import io.pandora.mall.pojo.common.OrderQueryParam;
+import io.pandora.mall.pojo.common.QueryParam;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Pageable;
@@ -20,7 +20,7 @@ import java.util.List;
  */
 public abstract class BaseServiceImpl<M extends BaseMapper<T>, T> extends ServiceImpl<M,T> implements BaseService<T> {
 
-    private Logger LOGGER = LoggerFactory.getLogger(this.getClass());
+    protected Logger LOGGER = LoggerFactory.getLogger(this.getClass());
 
     protected Page setPageParam(QueryParam queryParam) {
         return setPageParam(queryParam,null);

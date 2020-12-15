@@ -1,4 +1,4 @@
-package io.pandora.mall.pojo.web;
+package io.pandora.mall.pojo.common;
 
 import com.alibaba.fastjson.annotation.JSONField;
 import com.baomidou.mybatisplus.core.metadata.IPage;
@@ -50,9 +50,6 @@ public class PagingVo<T> implements Serializable {
 
     @Override
     public String toString() {
-        return "PagingVo{" +
-                "total=" + total +
-                ", records=" + records +
-                '}';
+        return "PagingVo{ total=" + total + ", records=" + records + "}";
     }
 }

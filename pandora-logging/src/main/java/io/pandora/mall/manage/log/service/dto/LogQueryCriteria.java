@@ -1,4 +1,4 @@
-package io.pandora.mall.module.log.service.dto;
+package io.pandora.mall.manage.log.service.dto;
 
 import io.pandora.mall.annotation.Query;
 import lombok.Data;

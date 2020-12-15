@@ -11,6 +11,7 @@
     <file url="file://$PROJECT_DIR$/pandora-logging" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/pandora-persistence" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/pandora-push" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pandora-security" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/pandora-shop" charset="UTF-8" />
   </component>
 </project>

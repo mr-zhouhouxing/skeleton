@@ -4,7 +4,6 @@ import com.baomidou.mybatisplus.annotation.FieldFill;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
-import com.baomidou.mybatisplus.extension.activerecord.Model;
 import io.pandora.mall.base.BaseDo;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -15,7 +14,7 @@ import java.sql.Timestamp;
  * @author Created by mr_zhou on 2020/11/30
  */
 @Data
-@TableName("sys_log")
+@TableName("system_log")
 @NoArgsConstructor
 public class Log extends BaseDo{
     @TableId

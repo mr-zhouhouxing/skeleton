@@ -1,4 +1,4 @@
-package io.pandora.mall.pojo.web;
+package io.pandora.mall.pojo.common;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;

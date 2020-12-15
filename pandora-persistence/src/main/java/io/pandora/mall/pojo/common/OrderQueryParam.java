@@ -1,4 +1,4 @@
-package io.pandora.mall.pojo.web;
+package io.pandora.mall.pojo.common;
 
 import cn.hutool.core.collection.CollectionUtil;
 import com.baomidou.mybatisplus.core.metadata.OrderItem;
