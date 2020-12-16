@@ -8,13 +8,15 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="pandora-admin" />
-        <module name="pandora-biz-rabbit" />
         <module name="pandora-common" />
         <module name="pandora-generate" />
         <module name="pandora-job" />
         <module name="pandora-logging" />
+        <module name="pandora-pay" />
         <module name="pandora-persistence" />
         <module name="pandora-push" />
+        <module name="pandora-rabbitmq" />
+        <module name="pandora-search" />
         <module name="pandora-security" />
         <module name="pandora-shop" />
       </profile>
@@ -27,16 +29,18 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="mall-common" options="-parameters" />
       <module name="pandora-admin" options="-parameters" />
-      <module name="pandora-biz" options="-parameters" />
-      <module name="pandora-biz-rabbit" options="-parameters" />
       <module name="pandora-common" options="-parameters" />
       <module name="pandora-generate" options="-parameters" />
       <module name="pandora-job" options="-parameters" />
       <module name="pandora-logging" options="-parameters" />
+      <module name="pandora-pay" options="-parameters" />
       <module name="pandora-persistence" options="-parameters" />
       <module name="pandora-push" options="-parameters" />
+      <module name="pandora-rabbitmq" options="-parameters" />
+      <module name="pandora-search" options="-parameters" />
       <module name="pandora-security" options="-parameters" />
       <module name="pandora-shop" options="-parameters" />
+      <module name="pandora-tools" options="-parameters" />
     </option>
   </component>
 </project>

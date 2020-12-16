@@ -17,7 +17,7 @@
         <!-- 系统模块 -->
         <dependency>
             <groupId>io.pandora.mall</groupId>
-            <artifactId>pandora-biz-rabbit</artifactId>
+            <artifactId>pandora-rabbitmq</artifactId>
             <version>1.0</version>
         </dependency>
         <dependency>

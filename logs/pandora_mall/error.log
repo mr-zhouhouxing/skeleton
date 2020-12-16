@@ -36,3 +36,4 @@ Action:
 
 Consider defining a bean of type 'io.pandora.mall.mapper.system.UserMapper' in your configuration.
 
+2020-12-16 23:16:01,216 [main] ERROR [com.baomidou.mybatisplus.core.MybatisConfiguration] MybatisConfiguration.java:85 - mapper[io.pandora.mall.mapper.system.UserMapper.findUserByAccount] is ignored, because it exists, maybe from xml file

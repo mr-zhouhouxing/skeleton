@@ -3,8 +3,6 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/pandora-admin" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/pandora-biz" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/pandora-biz/pandora-biz-rabbit" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/pandora-common" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/pandora-generate" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/pandora-job" charset="UTF-8" />
@@ -13,5 +11,9 @@
     <file url="file://$PROJECT_DIR$/pandora-push" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/pandora-security" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/pandora-shop" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pandora-tools" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pandora-tools/pandora-pay" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pandora-tools/pandora-rabbitmq" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pandora-tools/pandora-search" charset="UTF-8" />
   </component>
 </project>
