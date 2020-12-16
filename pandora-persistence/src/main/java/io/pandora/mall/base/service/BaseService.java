@@ -1,4 +1,4 @@
-package io.pandora.mall.base;
+package io.pandora.mall.base.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 

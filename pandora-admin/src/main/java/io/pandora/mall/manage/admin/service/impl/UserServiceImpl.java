@@ -1,6 +1,6 @@
 package io.pandora.mall.manage.admin.service.impl;
 
-import io.pandora.mall.base.BaseServiceImpl;
+import io.pandora.mall.base.service.impl.BaseServiceImpl;
 import io.pandora.mall.domian.system.User;
 import io.pandora.mall.mapper.system.UserMapper;
 import io.pandora.mall.manage.admin.service.UserService;

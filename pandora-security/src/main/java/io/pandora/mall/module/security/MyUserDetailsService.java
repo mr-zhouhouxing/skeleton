@@ -38,7 +38,7 @@ public class MyUserDetailsService implements UserDetailsService {
             throw new UsernameNotFoundException("账号:" + account +"不存在");
         }else {
             if (user.getEnable() == PERMISSION_SIZE){
-                throw new BadRequestException("该账号已被禁用请联系管理员");
+                throw new UsernameNotFoundException("该账号已被禁用请联系管理员");
             }
             String permission = queryUserPermission(user.getId());
             return new MyUserDetails(user.getId(),user.getAccount(),user.getPassword(), AuthorityUtils.commaSeparatedStringToAuthorityList(permission));
@@ -71,13 +71,14 @@ public class MyUserDetailsService implements UserDetailsService {
     }
 
     private static BCryptPasswordEncoder bCryptPasswordEncoder = new BCryptPasswordEncoder();
+
     public static String encodePassword(String password){
         return bCryptPasswordEncoder.encode(password);
     }
 
-    public static void main(String[] args) {
-        String password = "123456";
-        String pwd = encodePassword(password);
-        System.out.println(pwd);
-    }
+//    public static void main(String[] args) {
+//        String password = "123456";
+//        String pwd = encodePassword(password);
+//        System.out.println(pwd);
+//    }
 }

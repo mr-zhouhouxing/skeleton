@@ -1,10 +1,11 @@
-package io.pandora.mall.module.security;
+package io.pandora.mall.module.security.filter;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.pandora.mall.constant.Constant;
 import io.pandora.mall.enume.CodeEnum;
 import io.pandora.mall.exception.CustomException;
 import io.pandora.mall.mapper.system.UserMapper;
+import io.pandora.mall.module.security.MyUserDetails;
 import io.pandora.mall.module.security.utils.JwtUtil;
 import io.pandora.mall.pojo.dto.admin.LoginDto;
 import io.pandora.mall.pojo.vo.system.UserInfo;

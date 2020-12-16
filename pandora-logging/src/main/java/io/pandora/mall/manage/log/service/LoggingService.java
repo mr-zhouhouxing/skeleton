@@ -1,6 +1,6 @@
 package io.pandora.mall.manage.log.service;
 
-import io.pandora.mall.base.BaseService;
+import io.pandora.mall.base.service.BaseService;
 import io.pandora.mall.domian.system.Log;
 import io.pandora.mall.manage.log.service.dto.LogQueryCriteria;
 import org.aspectj.lang.ProceedingJoinPoint;

@@ -1,7 +1,7 @@
 package io.pandora.mall.manage.log.service.impl;
 
 import cn.hutool.json.JSONObject;
-import io.pandora.mall.base.BaseServiceImpl;
+import io.pandora.mall.base.service.impl.BaseServiceImpl;
 import io.pandora.mall.domian.system.Log;
 import io.pandora.mall.manage.log.annotation.SysLog;
 import io.pandora.mall.manage.log.service.LoggingService;

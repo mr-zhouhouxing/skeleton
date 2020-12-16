@@ -4,7 +4,7 @@ package io.pandora.mall.exception;
  * @author zhouhouxing
  * @version 1.0
  * @Description token异常
- * @date 2019/7/3
+ * @date 2019/5/3
  */
 public class TokenException extends RuntimeException {
 

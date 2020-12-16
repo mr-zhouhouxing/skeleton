@@ -2,7 +2,6 @@ package io.pandora.mall.domian.system;
 
 import com.baomidou.mybatisplus.annotation.FieldFill;
 import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import io.pandora.mall.base.BaseDo;
 import lombok.Data;
@@ -17,7 +16,6 @@ import java.sql.Timestamp;
 @TableName("system_log")
 @NoArgsConstructor
 public class Log extends BaseDo{
-    @TableId
     private Long id;
 
     /** 操作用户 */

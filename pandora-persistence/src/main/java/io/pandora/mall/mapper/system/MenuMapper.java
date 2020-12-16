@@ -8,14 +8,6 @@ import org.apache.ibatis.annotations.Select;
 import java.util.List;
 
 public interface MenuMapper extends BaseDao<Menu> {
-
-    /**
-     * 添加 菜单
-     * @param record
-     * @return
-     */
-    int insertSelective(Menu record);
-
     /**
      * 根据 父ID查询菜单
      * @param pid

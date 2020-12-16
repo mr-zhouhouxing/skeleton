@@ -1,14 +1,15 @@
 package io.pandora.mall.module.security.service;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import io.pandora.mall.base.BaseServiceImpl;
+import io.pandora.mall.base.service.impl.BaseServiceImpl;
 import io.pandora.mall.constant.Constant;
 import io.pandora.mall.domian.system.Token;
 import io.pandora.mall.exception.TokenException;
-import io.pandora.mall.mapper.system.TokenDao;
+import io.pandora.mall.mapper.system.TokenMapper;
 import io.pandora.mall.util.DateUtils;
 import io.pandora.mall.util.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
@@ -19,17 +20,20 @@ import java.util.UUID;
  * @author Created by John on 2020/10/16
  */
 @Service
-public class ITokenServiceImpl extends BaseServiceImpl<TokenDao, Token> implements ITokenService {
+public class ITokenServiceImpl extends BaseServiceImpl<TokenMapper, Token> implements ITokenService {
+
+    @Value("${jwt.secret}")
+    private String secretStr;
 
     @Autowired
-    private TokenDao tokenDao;
+    private TokenMapper tokenMapper;
 
     @Override
     public Token findByToken(String tokenStr) {
         if (StringUtils.isEmpty(tokenStr)) {
             return null;
         }
-        List<Token> list = tokenDao.selectList(new QueryWrapper<Token>().eq("token",tokenStr));
+        List<Token> list = tokenMapper.selectList(new QueryWrapper<Token>().eq("token",tokenStr));
         if (list == null || list.isEmpty()) {
             return null;
         }
@@ -38,7 +42,7 @@ public class ITokenServiceImpl extends BaseServiceImpl<TokenDao, Token> implemen
 
     @Override
     public Token findByToken(Long userId) {
-        List<Token> list = tokenDao.selectList(new QueryWrapper<Token>().eq("user_id",userId));
+        List<Token> list = tokenMapper.selectList(new QueryWrapper<Token>().eq("user_id",userId));
         if (list == null || list.isEmpty()) {
             return null;
         }
@@ -61,7 +65,7 @@ public class ITokenServiceImpl extends BaseServiceImpl<TokenDao, Token> implemen
     public void insert(Token token) throws TokenException {
         try {
             token.setCreateTime(new Date());
-            tokenDao.insert(token);
+            tokenMapper.insert(token);
         }catch (Exception e){
             LOGGER.error("【Token】-> 保存Token异常:{}",e);
             throw new TokenException("保存Token异常");
@@ -77,9 +81,8 @@ public class ITokenServiceImpl extends BaseServiceImpl<TokenDao, Token> implemen
     @Override
     public String createToken(Long id,String secret) throws TokenException {
         // 判空
-        if (StringUtils.isEmpty(id) && StringUtils.isEmpty(secret)){
-            throw new TokenException("ID and Secret cannot be empty");
-        }
+        if (StringUtils.isEmpty(id)) throw new TokenException("ID cannot be empty");
+        if (StringUtils.isEmpty(secret)) secret = secretStr;
         // 查询 appId 及 secret 是否正确
 
         // 生成token
@@ -102,7 +105,7 @@ public class ITokenServiceImpl extends BaseServiceImpl<TokenDao, Token> implemen
     @Override
     public void update(Token token) throws TokenException {
         try {
-            tokenDao.updateById(token);
+            tokenMapper.updateById(token);
         }catch (Exception e){
             LOGGER.error("【Token】-> 更新Token异常:{}",e);
             throw new TokenException("更新Token异常");

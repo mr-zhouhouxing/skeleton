@@ -5,7 +5,7 @@ import org.springframework.http.HttpStatus;
 import static org.springframework.http.HttpStatus.BAD_REQUEST;
 
 /**
- * 自定义异常
+ * 自定义参数异常
  *
  * @author Created by mr_zhou on 2020/11/30
  */

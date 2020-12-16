@@ -1,4 +1,4 @@
-package io.pandora.mall.base;
+package io.pandora.mall.base.service.impl;
 
 import cn.hutool.core.collection.CollectionUtil;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
@@ -6,12 +6,12 @@ import com.baomidou.mybatisplus.core.metadata.OrderItem;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.github.pagehelper.PageHelper;
+import io.pandora.mall.base.service.BaseService;
 import io.pandora.mall.pojo.common.OrderQueryParam;
 import io.pandora.mall.pojo.common.QueryParam;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Pageable;
-
 import java.util.Arrays;
 import java.util.List;
 

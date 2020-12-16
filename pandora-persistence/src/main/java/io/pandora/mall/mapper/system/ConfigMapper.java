@@ -1,12 +1,13 @@
 package io.pandora.mall.mapper.system;
 
+import io.pandora.mall.base.BaseDao;
 import io.pandora.mall.domian.system.Config;
 import io.pandora.mall.domian.system.ConfigExample;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
-public interface ConfigMapper {
+public interface ConfigMapper extends BaseDao<Config> {
 
     int countByExample(ConfigExample example);
 

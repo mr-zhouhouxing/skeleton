@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="io.pandora.mall.mapper.system.ConfigMapper" >
+
+  <resultMap id="BaseResultMap" type="io.pandora.mall.domian.system.Config" >
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="key" property="key" jdbcType="VARCHAR" />
+    <result column="seq" property="seq" jdbcType="INTEGER" />
+    <result column="type" property="type" jdbcType="CHAR" />
+    <result column="isRequ" property="isrequ" jdbcType="CHAR" />
+    <result column="defaultVal" property="defaultval" jdbcType="VARCHAR" />
+  </resultMap>
+
+  <resultMap id="ResultMapWithBLOBs" type="io.pandora.mall.domian.system.Config" extends="BaseResultMap" >
+    <result column="value" property="value" jdbcType="LONGVARCHAR" />
+  </resultMap>
+
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+
+  <sql id="Base_Column_List" >
+    id, name, `key`, seq, type, isRequ, defaultVal,`value`
+  </sql>
+
+  <sql id="Blob_Column_List" >
+    value
+  </sql>
+
+  <select id="selectByExampleWithBLOBs" resultMap="ResultMapWithBLOBs" parameterType="io.pandora.mall.domian.system.Config" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from sys_config
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="io.pandora.mall.domian.system.Config" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from sys_config
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+
+  <select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from sys_config
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from sys_config
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+
+  <delete id="deleteByExample" parameterType="io.pandora.mall.domian.system.Config" >
+    delete from sys_config
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+
+  <insert id="insert" parameterType="io.pandora.mall.domian.system.Config" >
+    <selectKey resultType="java.lang.Long" keyProperty="id" order="AFTER" >
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into sys_config (name, key, seq, 
+      type, isRequ, defaultVal, 
+      value)
+    values (#{name,jdbcType=VARCHAR}, #{key,jdbcType=VARCHAR}, #{seq,jdbcType=INTEGER}, 
+      #{type,jdbcType=CHAR}, #{isrequ,jdbcType=CHAR}, #{defaultval,jdbcType=VARCHAR}, 
+      #{value,jdbcType=LONGVARCHAR})
+  </insert>
+
+  <insert id="insertSelective" parameterType="io.pandora.mall.domian.system.Config" >
+    <selectKey resultType="java.lang.Long" keyProperty="id" order="AFTER" >
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into sys_config
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="name != null" >
+        name,
+      </if>
+      <if test="key != null" >
+        key,
+      </if>
+      <if test="seq != null" >
+        seq,
+      </if>
+      <if test="type != null" >
+        type,
+      </if>
+      <if test="isrequ != null" >
+        isRequ,
+      </if>
+      <if test="defaultval != null" >
+        defaultVal,
+      </if>
+      <if test="value != null" >
+        value,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="name != null" >
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="key != null" >
+        #{key,jdbcType=VARCHAR},
+      </if>
+      <if test="seq != null" >
+        #{seq,jdbcType=INTEGER},
+      </if>
+      <if test="type != null" >
+        #{type,jdbcType=CHAR},
+      </if>
+      <if test="isrequ != null" >
+        #{isrequ,jdbcType=CHAR},
+      </if>
+      <if test="defaultval != null" >
+        #{defaultval,jdbcType=VARCHAR},
+      </if>
+      <if test="value != null" >
+        #{value,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="io.pandora.mall.domian.system.Config" resultType="java.lang.Integer" >
+    select count(*) from sys_config
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update sys_config
+    <set >
+      <if test="record.id != null" >
+        id = #{record.id,jdbcType=BIGINT},
+      </if>
+      <if test="record.name != null" >
+        name = #{record.name,jdbcType=VARCHAR},
+      </if>
+      <if test="record.key != null" >
+        `key` = #{record.key,jdbcType=VARCHAR},
+      </if>
+      <if test="record.seq != null" >
+        seq = #{record.seq,jdbcType=INTEGER},
+      </if>
+      <if test="record.type != null" >
+        type = #{record.type,jdbcType=CHAR},
+      </if>
+      <if test="record.isrequ != null" >
+        isRequ = #{record.isrequ,jdbcType=CHAR},
+      </if>
+      <if test="record.defaultval != null" >
+        defaultVal = #{record.defaultval,jdbcType=VARCHAR},
+      </if>
+      <if test="record.value != null" >
+        value = #{record.value,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExampleWithBLOBs" parameterType="map" >
+    update sys_config
+    set id = #{record.id,jdbcType=BIGINT},
+      name = #{record.name,jdbcType=VARCHAR},
+      key = #{record.key,jdbcType=VARCHAR},
+      seq = #{record.seq,jdbcType=INTEGER},
+      type = #{record.type,jdbcType=CHAR},
+      isRequ = #{record.isrequ,jdbcType=CHAR},
+      defaultVal = #{record.defaultval,jdbcType=VARCHAR},
+      value = #{record.value,jdbcType=LONGVARCHAR}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update sys_config
+    set id = #{record.id,jdbcType=BIGINT},
+      name = #{record.name,jdbcType=VARCHAR},
+      key = #{record.key,jdbcType=VARCHAR},
+      seq = #{record.seq,jdbcType=INTEGER},
+      type = #{record.type,jdbcType=CHAR},
+      isRequ = #{record.isrequ,jdbcType=CHAR},
+      defaultVal = #{record.defaultval,jdbcType=VARCHAR}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="io.pandora.mall.domian.system.Config" >
+    update sys_config
+    <set >
+      <if test="name != null" >
+        name = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="key != null" >
+        key = #{key,jdbcType=VARCHAR},
+      </if>
+      <if test="seq != null" >
+        seq = #{seq,jdbcType=INTEGER},
+      </if>
+      <if test="type != null" >
+        type = #{type,jdbcType=CHAR},
+      </if>
+      <if test="isrequ != null" >
+        isRequ = #{isrequ,jdbcType=CHAR},
+      </if>
+      <if test="defaultval != null" >
+        defaultVal = #{defaultval,jdbcType=VARCHAR},
+      </if>
+      <if test="value != null" >
+        value = #{value,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="io.pandora.mall.domian.system.Config" >
+    update sys_config
+    set name = #{name,jdbcType=VARCHAR},
+      key = #{key,jdbcType=VARCHAR},
+      seq = #{seq,jdbcType=INTEGER},
+      type = #{type,jdbcType=CHAR},
+      isRequ = #{isrequ,jdbcType=CHAR},
+      defaultVal = #{defaultval,jdbcType=VARCHAR},
+      value = #{value,jdbcType=LONGVARCHAR}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="io.pandora.mall.domian.system.Config" >
+    update sys_config
+    set name = #{name,jdbcType=VARCHAR},
+      key = #{key,jdbcType=VARCHAR},
+      seq = #{seq,jdbcType=INTEGER},
+      type = #{type,jdbcType=CHAR},
+      isRequ = #{isrequ,jdbcType=CHAR},
+      defaultVal = #{defaultval,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>

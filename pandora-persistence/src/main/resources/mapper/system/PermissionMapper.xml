@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="io.pandora.mall.mapper.system.PermissionMapper" >
+
+  <resultMap id="BaseResultMap" type="io.pandora.mall.domian.system.Permission" >
+    <result column="id" property="id" jdbcType="INTEGER" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="code" property="code" jdbcType="VARCHAR" />
+    <result column="status" property="status" jdbcType="BIT" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+  </resultMap>
+
+  <select id="findPermissionByUserId" resultType="map">
+    SELECT
+      `code`
+    FROM
+      mall_sys_permission
+    WHERE
+      id IN (
+        SELECT
+          permission_id
+        FROM
+          mall_sys_role_permission
+        WHERE
+          role_id = (SELECT role_id FROM mall_sys_user_role WHERE user_id = #{userId})
+      )
+  </select>
+
+</mapper>

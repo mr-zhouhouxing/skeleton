@@ -1,4 +1,4 @@
-package io.pandora.mall.config.security;
+package io.pandora.mall.module.security.config;
 
 import lombok.Data;
 import lombok.ToString;

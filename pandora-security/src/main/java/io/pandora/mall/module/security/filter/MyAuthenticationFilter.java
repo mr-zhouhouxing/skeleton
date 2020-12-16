@@ -1,4 +1,4 @@
-package io.pandora.mall.filter;
+package io.pandora.mall.module.security.filter;
 
 
 import io.pandora.mall.module.security.MyUserDetailsService;

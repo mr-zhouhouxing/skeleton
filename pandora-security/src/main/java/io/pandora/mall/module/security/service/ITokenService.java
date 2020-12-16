@@ -1,6 +1,6 @@
 package io.pandora.mall.module.security.service;
 
-import io.pandora.mall.base.BaseService;
+import io.pandora.mall.base.service.BaseService;
 import io.pandora.mall.domian.system.Token;
 import io.pandora.mall.exception.TokenException;
 

@@ -1,6 +1,6 @@
 package io.pandora.mall.manage.admin.service;
 
-import io.pandora.mall.base.BaseService;
+import io.pandora.mall.base.service.BaseService;
 import io.pandora.mall.domian.system.Role;
 
 /**

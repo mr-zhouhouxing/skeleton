@@ -1,5 +1,6 @@
 package io.pandora.mall.pojo.vo.system;
 
+import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
@@ -9,7 +10,9 @@ import java.io.Serializable;
  * @author Created by John on 2020/9/11
  */
 @Data
+@ApiModel("用户详情")
 public class UserInfo implements Serializable {
+
     @ApiModelProperty(name = "id",value = "用户ID")
     private Integer id;
 
@@ -42,4 +45,7 @@ public class UserInfo implements Serializable {
 
     @ApiModelProperty(name = "roleId",value = "角色ID")
     private Integer roleId;
+
+    @ApiModelProperty("0.可用,1.禁用")
+    private int enable;
 }
