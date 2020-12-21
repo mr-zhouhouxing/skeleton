@@ -49,10 +49,11 @@
 ## 项目结构
 项目采用分模块开发方式
 - **后台服务模块**    - pandora-admin         
-- **公共组件模块**    - pandora-biz          
+- **公共组件模块**    - pandora-tools          
 - **公共代码模块**    - pandora-common        
 - **代码生成模块**    - pandora-generate    
-- **定时任务模块**    - pandora-job           
+- **定时任务模块**    - pandora-job        
+- **系统安全模块**    - pandora-security   
 - **日志收集模块**    - pandora-logging       
 - **数据访问模块**    - pandora-persistence   
 - **通用推送模块**    - pandora-push          
