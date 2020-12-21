@@ -9,7 +9,7 @@ import org.springframework.boot.autoconfigure.web.ServerProperties;
 import org.springframework.context.annotation.PropertySource;
 
 /**
- * @author Created by mr_zhou on 2020/11/26
+ * @author Created by mr_zhou on 2020/5/26
  */
 @SpringBootApplication
 @PropertySource(value = "config/config.properties",encoding = "UTF-8")
@@ -26,6 +26,6 @@ public class PandoraApplication {
         ServerProperties serverProperties = SpringContextHolder
                 .getApplicationContext()
                 .getBean(ServerProperties.class);
-        LOGGER.info("=============> run at http://localhost:{}/doc.html  <=============", serverProperties.getPort());
+        LOGGER.info("run at http://127.0.0.1:{}/doc.html", serverProperties.getPort());
     }
 }
