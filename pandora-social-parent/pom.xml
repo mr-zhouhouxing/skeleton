@@ -10,7 +10,12 @@
         <version>1.0</version>
     </parent>
 
-    <artifactId>pandora-shop</artifactId>
-    <packaging>jar</packaging>
+    <artifactId>pandora-social-parent</artifactId>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>pandora-social-rest</module>
+        <module>pandora-social-service</module>
+    </modules>
 
 </project>

@@ -28,7 +28,7 @@ public class TokenApi {
 
     @SysLog("获取Token")
     @PostMapping("/getToken")
-    @ApiOperation(value = "获取Token",notes = "根据用户ID/应用Id + 密钥获取Token")
+    @ApiOperation(value = "获取Token",notes = "根据用户ID/APP_ID + 密钥获取Token")
     public ResponseBean getToken(@RequestBody TokenDto dto) throws TokenException {
         String token = tokenService.createToken(dto.getId(),dto.getSecret());
         TokenVo vo = new TokenVo();
@@ -40,7 +40,7 @@ public class TokenApi {
 
     @SysLog("刷新Token")
     @GetMapping("/refreshToken")
-    @ApiOperation(value = "刷新Token",notes = "根据用户ID/APPID + 密钥获取Token")
+    @ApiOperation(value = "刷新Token",notes = "根据用户ID/APP_ID + 密钥获取Token")
     @ApiImplicitParam(name = "accessToken",value = "Token",dataType = "String",required = true,paramType = "query")
     public ResponseBean refreshToken(String accessToken) throws TokenException {
         tokenService.refreshToken(accessToken);
