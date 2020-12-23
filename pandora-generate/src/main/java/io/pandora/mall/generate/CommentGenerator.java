@@ -13,6 +13,8 @@ import java.util.Properties;
 
 /**
  * 自定义注释生成器
+ * 该生成器会生成 Get/Set 方法,实现序列化
+ * @see com.baomidou.mybatisplus.annotation.TableName 会自动加上MybatisPlus表名注解以便支持CRUD操作
  *
  * @author Created by macro update by Mr_zhou by 2020-12-13
  */
@@ -44,11 +46,10 @@ public class CommentGenerator extends DefaultCommentGenerator {
 
         //根据参数和备注信息判断是否添加备注信息
         if(addRemarkComments && StringUtility.stringHasValue(remarks)){
-            if(remarks.contains("\"")){
-                remarks = remarks.replace("\"","'");
-            }
+            if(remarks.contains("\"")) remarks = remarks.replace("\"","'");
+
             //给model的字段添加swagger注解
-            field.addJavaDocLine("@ApiModelProperty(value = \""+remarks+"\")");
+            field.addJavaDocLine("@ApiModelProperty(value = \""+ remarks +"\")");
         }
     }
 
@@ -59,8 +60,8 @@ public class CommentGenerator extends DefaultCommentGenerator {
         field.addJavaDocLine("/**");
         //获取数据库字段的备注信息
         String[] remarkLines = remarks.split(System.getProperty("line.separator"));
-        for(String remarkLine:remarkLines){
-            field.addJavaDocLine(" * "+remarkLine);
+        for(String remarkLine : remarkLines){
+            field.addJavaDocLine(" * "+ remarkLine);
         }
         addJavadocTag(field, false);
         field.addJavaDocLine(" */");

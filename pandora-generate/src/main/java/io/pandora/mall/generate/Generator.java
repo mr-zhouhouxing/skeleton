@@ -10,12 +10,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 代码生成器
+ * 代码生成器 启动器
+ *
+ * @author Created by macro update by Mr_zhou by 2020-12-13
  */
 public class Generator {
 
     /**
-     * 启动器
      * @param args
      * @throws Exception
      */
@@ -37,9 +38,7 @@ public class Generator {
         //执行生成代码
         myBatisGenerator.generate(null);
         //输出警告信息
-        for (String warning : warnings) {
-            System.out.println(warning);
-        }
+        for (String warning : warnings) System.out.println(warning);
     }
 
 }
