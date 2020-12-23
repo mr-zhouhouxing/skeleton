@@ -13,7 +13,8 @@ import java.util.Properties;
 
 /**
  * 自定义注释生成器
- * @author Mr_zhou update by 2020-12-13
+ *
+ * @author Created by macro update by Mr_zhou by 2020-12-13
  */
 public class CommentGenerator extends DefaultCommentGenerator {
 

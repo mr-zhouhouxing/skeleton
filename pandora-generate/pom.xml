@@ -13,4 +13,11 @@
     <artifactId>pandora-generate</artifactId>
     <packaging>jar</packaging>
 
+    <dependencies>
+        <dependency>
+            <groupId>io.pandora.mall</groupId>
+            <artifactId>pandora-persistence</artifactId>
+            <version>1.0</version>
+        </dependency>
+    </dependencies>
 </project>
