@@ -3,7 +3,6 @@ package io.pandora.mall.domian.system;
 import com.baomidou.mybatisplus.annotation.TableName;
 import io.pandora.mall.base.BaseDo;
 import lombok.Data;
-
 import java.util.Date;
 
 /**

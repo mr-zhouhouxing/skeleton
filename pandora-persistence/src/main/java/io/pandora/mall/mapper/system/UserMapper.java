@@ -3,7 +3,6 @@ package io.pandora.mall.mapper.system;
 import io.pandora.mall.base.BaseDao;
 import io.pandora.mall.domian.system.User;
 import io.pandora.mall.pojo.vo.system.UserInfo;
-import org.apache.ibatis.annotations.Select;
 
 import java.util.List;
 
@@ -12,7 +11,11 @@ import java.util.List;
  */
 public interface UserMapper extends BaseDao<User> {
 
-    @Select("SELECT * FROM mall_sys_user WHERE account = #{account}")
+    /**
+     * 根据账号 查找
+     * @param account
+     * @return
+     */
     User findUserByAccount(String account);
 
     /**

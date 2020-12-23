@@ -1,4 +1,4 @@
-package io.pandora.mall.annotation;
+package io.pandora.mall.support;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

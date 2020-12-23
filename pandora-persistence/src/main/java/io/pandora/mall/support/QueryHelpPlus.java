@@ -1,9 +1,8 @@
-package io.pandora.mall.util;
+package io.pandora.mall.support;
 
 import cn.hutool.core.collection.CollUtil;
 import cn.hutool.core.util.ObjectUtil;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import io.pandora.mall.annotation.Query;
 import lombok.extern.slf4j.Slf4j;
 import java.lang.reflect.Field;
 import java.text.SimpleDateFormat;
