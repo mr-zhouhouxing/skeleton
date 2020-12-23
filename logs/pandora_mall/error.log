@@ -101,3 +101,4 @@ java.lang.NullPointerException: null
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:745)
 2020-12-18 18:20:44,719 [main] ERROR [com.baomidou.mybatisplus.core.MybatisConfiguration] MybatisConfiguration.java:85 - mapper[io.pandora.mall.mapper.system.UserMapper.findUserByAccount] is ignored, because it exists, maybe from xml file
+2020-12-23 16:07:14,939 [main] ERROR [com.baomidou.mybatisplus.core.MybatisConfiguration] MybatisConfiguration.java:85 - mapper[io.pandora.mall.mapper.system.UserMapper.findUserByAccount] is ignored, because it exists, maybe from xml file

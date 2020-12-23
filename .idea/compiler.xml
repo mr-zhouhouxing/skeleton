@@ -2,7 +2,6 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
-      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
@@ -22,12 +21,24 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="mall-common" target="1.8" />
+      <module name="pandora-admin" target="1.8" />
+      <module name="pandora-common" target="1.8" />
+      <module name="pandora-generate" target="1.8" />
+      <module name="pandora-job" target="1.8" />
+      <module name="pandora-logging" target="1.8" />
+      <module name="pandora-mall" target="1.8" />
+      <module name="pandora-pay" target="1.8" />
+      <module name="pandora-persistence" target="1.8" />
+      <module name="pandora-push" target="1.8" />
+      <module name="pandora-rabbitmq" target="1.8" />
+      <module name="pandora-search" target="1.8" />
+      <module name="pandora-security" target="1.8" />
+      <module name="pandora-shop" target="1.8" />
+      <module name="pandora-tools" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="mall-common" options="-parameters" />
       <module name="pandora-admin" options="-parameters" />
       <module name="pandora-common" options="-parameters" />
       <module name="pandora-generate" options="-parameters" />
@@ -40,7 +51,6 @@
       <module name="pandora-search" options="-parameters" />
       <module name="pandora-security" options="-parameters" />
       <module name="pandora-shop" options="-parameters" />
-      <module name="pandora-tools" options="-parameters" />
     </option>
   </component>
 </project>

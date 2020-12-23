@@ -24,7 +24,7 @@ public interface IRabbitMqExchange {
     default String type(){return ExchangeType.TOPIC;}
 
     /**
-     * whether data persistence
+     * whether data support
      */
     default boolean durable(){return true;}
 

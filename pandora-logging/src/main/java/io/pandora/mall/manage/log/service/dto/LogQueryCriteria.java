@@ -1,6 +1,6 @@
 package io.pandora.mall.manage.log.service.dto;
 
-import io.pandora.mall.annotation.Query;
+import io.pandora.mall.support.Query;
 import lombok.Data;
 
 import java.sql.Timestamp;

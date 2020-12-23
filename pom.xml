@@ -19,13 +19,13 @@
         <module>pandora-common</module>
         <module>pandora-admin</module>
         <module>pandora-logging</module>
-        <module>pandora-generate</module>
         <module>pandora-shop</module>
         <module>pandora-job</module>
         <module>pandora-persistence</module>
         <module>pandora-push</module>
         <module>pandora-security</module>
         <module>pandora-tools</module>
+        <module>pandora-generate</module>
     </modules>
 
     <name>pandora-mall</name>

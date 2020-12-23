@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/pandora-admin/pandora-admin.iml" filepath="$PROJECT_DIR$/pandora-admin/pandora-admin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pandora-common/pandora-common.iml" filepath="$PROJECT_DIR$/pandora-common/pandora-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pandora-generate/pandora-generate.iml" filepath="$PROJECT_DIR$/pandora-generate/pandora-generate.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pandora-job/pandora-job.iml" filepath="$PROJECT_DIR$/pandora-job/pandora-job.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pandora-logging/pandora-logging.iml" filepath="$PROJECT_DIR$/pandora-logging/pandora-logging.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pandora-mall.iml" filepath="$PROJECT_DIR$/pandora-mall.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pandora-tools/pandora-pay/pandora-pay.iml" filepath="$PROJECT_DIR$/pandora-tools/pandora-pay/pandora-pay.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pandora-persistence/pandora-persistence.iml" filepath="$PROJECT_DIR$/pandora-persistence/pandora-persistence.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pandora-push/pandora-push.iml" filepath="$PROJECT_DIR$/pandora-push/pandora-push.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pandora-tools/pandora-rabbitmq/pandora-rabbitmq.iml" filepath="$PROJECT_DIR$/pandora-tools/pandora-rabbitmq/pandora-rabbitmq.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pandora-tools/pandora-search/pandora-search.iml" filepath="$PROJECT_DIR$/pandora-tools/pandora-search/pandora-search.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pandora-security/pandora-security.iml" filepath="$PROJECT_DIR$/pandora-security/pandora-security.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pandora-shop/pandora-shop.iml" filepath="$PROJECT_DIR$/pandora-shop/pandora-shop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pandora-tools/pandora-tools.iml" filepath="$PROJECT_DIR$/pandora-tools/pandora-tools.iml" />
+    </modules>
+  </component>
+</project>
