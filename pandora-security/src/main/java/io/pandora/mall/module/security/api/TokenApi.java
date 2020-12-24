@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.*;
  * @author Created by mr_zhou on 2020/12/15
  */
 @RestController
-@RequestMapping("/${api}/token")
+@RequestMapping("/token")
 @Api(tags = {"系统服务:Token服务"})
 public class TokenApi {
 

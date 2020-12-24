@@ -35,6 +35,16 @@
             <artifactId>pandora-security</artifactId>
             <version>1.0</version>
         </dependency>
+        <dependency>
+            <groupId>io.pandora.mall</groupId>
+            <artifactId>pandora-social-rest</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>io.pandora.mall</groupId>
+            <artifactId>pandora-shop-rest</artifactId>
+            <version>1.0</version>
+        </dependency>
       <!--  <dependency>
             <groupId>io.pandora.mall</groupId>
             <artifactId>pandora-rabbitmq</artifactId>

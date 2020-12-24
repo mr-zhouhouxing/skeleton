@@ -7,10 +7,9 @@ import lombok.Data;
 import java.io.Serializable;
 
 /**
- * <p>
- *     ResponseBean 统一响应对象
- * </p>
- * @author John by date 2019 5
+ * ResponseBean 统一响应对象
+ *
+ * @author Mr_zhou by date 2019/5
  */
 @Data
 @ApiModel(value = "通用PI接口返回", description = "Common Api Response")

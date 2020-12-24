@@ -17,6 +17,7 @@
       <module fileurl="file://$PROJECT_DIR$/pandora-shop-parent/pandora-shop-parent.iml" filepath="$PROJECT_DIR$/pandora-shop-parent/pandora-shop-parent.iml" />
       <module fileurl="file://$PROJECT_DIR$/pandora-shop-parent/pandora-shop-rest/pandora-shop-rest.iml" filepath="$PROJECT_DIR$/pandora-shop-parent/pandora-shop-rest/pandora-shop-rest.iml" />
       <module fileurl="file://$PROJECT_DIR$/pandora-shop-parent/pandora-shop-service/pandora-shop-service.iml" filepath="$PROJECT_DIR$/pandora-shop-parent/pandora-shop-service/pandora-shop-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pandora-tools/pandora-sms/pandora-sms.iml" filepath="$PROJECT_DIR$/pandora-tools/pandora-sms/pandora-sms.iml" />
       <module fileurl="file://$PROJECT_DIR$/pandora-social-parent/pandora-social-parent.iml" filepath="$PROJECT_DIR$/pandora-social-parent/pandora-social-parent.iml" />
       <module fileurl="file://$PROJECT_DIR$/pandora-social-parent/pandora-social-rest/pandora-social-rest.iml" filepath="$PROJECT_DIR$/pandora-social-parent/pandora-social-rest/pandora-social-rest.iml" />
       <module fileurl="file://$PROJECT_DIR$/pandora-social-parent/pandora-social-service/pandora-social-service.iml" filepath="$PROJECT_DIR$/pandora-social-parent/pandora-social-service/pandora-social-service.iml" />

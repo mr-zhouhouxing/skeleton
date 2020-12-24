@@ -19,6 +19,7 @@
         <module name="pandora-security" />
         <module name="pandora-shop-rest" />
         <module name="pandora-shop-service" />
+        <module name="pandora-sms" />
         <module name="pandora-social-rest" />
         <module name="pandora-social-service" />
       </profile>
@@ -39,9 +40,10 @@
       <module name="pandora-shop-parent" target="1.8" />
       <module name="pandora-shop-rest" target="1.8" />
       <module name="pandora-shop-service" target="1.8" />
+      <module name="pandora-sms" target="1.8" />
       <module name="pandora-social-parent" target="1.8" />
-      <module name="pandora-social-rest" target="1.5" />
-      <module name="pandora-social-service" target="1.5" />
+      <module name="pandora-social-rest" target="1.8" />
+      <module name="pandora-social-service" target="1.8" />
       <module name="pandora-tools" target="1.8" />
     </bytecodeTargetLevel>
   </component>
@@ -61,6 +63,7 @@
       <module name="pandora-shop-parent" options="-parameters" />
       <module name="pandora-shop-rest" options="-parameters" />
       <module name="pandora-shop-service" options="-parameters" />
+      <module name="pandora-sms" options="-parameters" />
       <module name="pandora-social-parent" options="-parameters" />
       <module name="pandora-social-rest" options="-parameters" />
       <module name="pandora-social-service" options="-parameters" />

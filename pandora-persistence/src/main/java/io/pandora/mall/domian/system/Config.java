@@ -3,7 +3,7 @@ package io.pandora.mall.domian.system;
 import com.baomidou.mybatisplus.annotation.TableName;
 import io.pandora.mall.base.BaseDo;
 
-@TableName("sys_config")
+@TableName("system_config")
 public class Config extends BaseDo {
     private Long id;
     /**
@@ -12,8 +12,7 @@ public class Config extends BaseDo {
     private String name;
 
     /**
-     * 配置项key
-            查询时根据key获取值
+     * 配置项KEY 查询时根据key获取值
      */
     private String key;
 
@@ -23,7 +22,7 @@ public class Config extends BaseDo {
     private Integer seq;
 
     /**
-     * 文本框类型  (0: 代表普通文本框（input），1代表：多行的文本(textarea)，2代表： 富文本(Editor),3代表：图片（Image）)
+     * 文本框类型- 0: 代表普通文本框，1代表：多行的文本，2代表： 富文本,3代表：图片
      */
     private String type;
 

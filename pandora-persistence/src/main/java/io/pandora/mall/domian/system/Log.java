@@ -16,6 +16,7 @@ import java.sql.Timestamp;
 @TableName("system_log")
 @NoArgsConstructor
 public class Log extends BaseDo{
+
     private Long id;
 
     /** 操作用户 */

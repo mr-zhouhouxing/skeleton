@@ -20,5 +20,6 @@
     <file url="file://$PROJECT_DIR$/pandora-tools/pandora-pay" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/pandora-tools/pandora-rabbitmq" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/pandora-tools/pandora-search" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pandora-tools/pandora-sms" charset="UTF-8" />
   </component>
 </project>
