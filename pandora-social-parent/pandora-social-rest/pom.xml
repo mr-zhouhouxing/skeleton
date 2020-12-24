@@ -5,12 +5,20 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <artifactId>pandora-social</artifactId>
+        <artifactId>pandora-social-parent</artifactId>
         <groupId>io.pandora.mall</groupId>
         <version>1.0</version>
     </parent>
 
     <artifactId>pandora-social-rest</artifactId>
     <packaging>jar</packaging>
+
+    <dependencies>
+        <dependency>
+            <groupId>io.pandora.mall</groupId>
+            <artifactId>pandora-social-service</artifactId>
+            <version>1.0</version>
+        </dependency>
+    </dependencies>
 
 </project>

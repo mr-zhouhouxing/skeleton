@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <artifactId>pandora-social</artifactId>
+        <artifactId>pandora-social-parent</artifactId>
         <groupId>io.pandora.mall</groupId>
         <version>1.0</version>
     </parent>
@@ -14,6 +14,7 @@
     <packaging>jar</packaging>
 
     <dependencies>
+        <!-- 系统模块 -->
         <dependency>
             <groupId>io.pandora.mall</groupId>
             <artifactId>pandora-common</artifactId>
@@ -22,6 +23,16 @@
         <dependency>
             <groupId>io.pandora.mall</groupId>
             <artifactId>pandora-persistence</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>io.pandora.mall</groupId>
+            <artifactId>pandora-logging</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>io.pandora.mall</groupId>
+            <artifactId>pandora-security</artifactId>
             <version>1.0</version>
         </dependency>
     </dependencies>
