@@ -17,6 +17,7 @@
         <module>pandora-rabbitmq</module>
         <module>pandora-pay</module>
         <module>pandora-search</module>
+        <module>pandora-sms</module>
     </modules>
 
 </project>
