@@ -1,7 +1,7 @@
 package io.pandora.mall.module.social.support;
 
 import io.pandora.mall.domian.social.SocialUser;
-import io.pandora.mall.module.social.processor.SocialUserLoginProcessor;
+import io.pandora.mall.module.social.processor.user.SocialUserLoginProcessor;
 
 import javax.servlet.http.HttpServletRequest;
 

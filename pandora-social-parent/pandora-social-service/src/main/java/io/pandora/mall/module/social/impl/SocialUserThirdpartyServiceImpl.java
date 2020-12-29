@@ -5,7 +5,7 @@ import io.pandora.mall.domian.social.SocialUser;
 import io.pandora.mall.domian.social.SocialUserThirdparty;
 import io.pandora.mall.mapper.social.SocialUserThirdpartyMapper;
 import io.pandora.mall.module.social.SocialUserThirdpartyService;
-import io.pandora.mall.module.social.processor.ThirdPartyUser;
+import io.pandora.mall.module.social.processor.user.ThirdPartyUser;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 

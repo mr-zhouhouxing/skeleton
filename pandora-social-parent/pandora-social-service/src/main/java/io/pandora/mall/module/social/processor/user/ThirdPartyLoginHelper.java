@@ -1,9 +1,10 @@
-package io.pandora.mall.module.social.processor;
+package io.pandora.mall.module.social.processor.user;
 
 import cn.hutool.http.HttpUtil;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import io.pandora.mall.config.ResourcesConfig;
+import io.pandora.mall.module.social.enume.SocialUserLoginType;
 import io.pandora.mall.util.HttpUtils;
 import org.apache.commons.httpclient.NameValuePair;
 import org.apache.commons.lang3.StringUtils;
@@ -234,7 +235,7 @@ public final class ThirdPartyLoginHelper {
     public static String getRedirectUrl(String host , Integer type) {
         String url = "";
         url = ResourcesConfig.THIRDPARTY.getString("authorizeURL_" + type);
-        if ("wx".equals(type)) {
+        if (SocialUserLoginType.WeCHAT_TO_LOGIN.getType() == type ) {
             url = url + "?appid=" + ResourcesConfig.THIRDPARTY.getString("app_id_" + type) + "&redirect_uri=http://" + host
                     + ResourcesConfig.THIRDPARTY.getString("redirect_url_" + type) + "&response_type=code&scope="
                     + ResourcesConfig.THIRDPARTY.getString("scope_" + type) + "&state=fhmj";

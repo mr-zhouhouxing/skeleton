@@ -1,7 +1,7 @@
 package io.pandora.mall.module.social.support.strategy;
 
 import io.pandora.mall.domian.social.SocialUser;
-import io.pandora.mall.module.social.processor.SocialUserLoginProcessor;
+import io.pandora.mall.module.social.processor.user.SocialUserLoginProcessor;
 import io.pandora.mall.module.social.support.UserLoginStrategy;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;

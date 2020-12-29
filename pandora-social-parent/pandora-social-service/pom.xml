@@ -35,5 +35,15 @@
             <artifactId>pandora-security</artifactId>
             <version>1.0</version>
         </dependency>
+        <dependency>
+            <groupId>io.pandora.mall</groupId>
+            <artifactId>pandora-sms</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>io.pandora.mall</groupId>
+            <artifactId>pandora-email</artifactId>
+            <version>1.0</version>
+        </dependency>
     </dependencies>
 </project>

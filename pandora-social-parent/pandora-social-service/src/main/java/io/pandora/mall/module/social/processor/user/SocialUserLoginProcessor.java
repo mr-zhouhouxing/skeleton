@@ -1,4 +1,4 @@
-package io.pandora.mall.module.social.processor;
+package io.pandora.mall.module.social.processor.user;
 
 import lombok.Builder;
 import lombok.Data;

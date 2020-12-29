@@ -1,4 +1,4 @@
-package io.pandora.mall.module.social.processor;
+package io.pandora.mall.module.social.processor.user;
 
 import lombok.*;
 
@@ -12,9 +12,9 @@ import java.io.Serializable;
  */
 @Data
 @Builder
+@ToString
 @NoArgsConstructor
 @AllArgsConstructor
-@ToString
 public class ThirdPartyUser implements Serializable {
 	// 用户
 	private String account;

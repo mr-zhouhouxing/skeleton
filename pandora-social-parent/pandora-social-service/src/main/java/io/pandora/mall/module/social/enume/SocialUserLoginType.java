@@ -27,27 +27,14 @@ public enum SocialUserLoginType {
         return PASSWORD_TO_LOGIN.bean;
     }
 
-    public int getType() {
-        return type;
-    }
-
-    public void setType(int type) {
-        this.type = type;
-    }
+    public int getType() { return type; }
 
     public String getBean() {
         return bean;
-    }
-
-    public void setBean(String bean) {
-        this.bean = bean;
     }
 
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
 }
