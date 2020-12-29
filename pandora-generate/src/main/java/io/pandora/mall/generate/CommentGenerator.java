@@ -22,8 +22,8 @@ public class CommentGenerator extends DefaultCommentGenerator {
 
     private boolean addRemarkComments = true;
 
-    private static final String EXAMPLE_SUFFIX="Example";
     private static final String MAPPER_SUFFIX="Mapper";
+    private static final String EXAMPLE_SUFFIX="Example";
     // @TableName 注解所在包
     private static final String TABLE_NAME="com.baomidou.mybatisplus.annotation.TableName";
     private static final String API_MODEL_PROPERTY_FULL_CLASS_NAME="io.swagger.annotations.ApiModelProperty";

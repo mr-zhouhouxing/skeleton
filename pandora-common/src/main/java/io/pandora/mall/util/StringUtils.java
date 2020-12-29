@@ -13,10 +13,7 @@ import java.lang.reflect.Method;
 import java.net.InetAddress;
 import java.net.URLDecoder;
 import java.net.UnknownHostException;
-import java.util.Calendar;
-import java.util.Collection;
-import java.util.Date;
-import java.util.Map;
+import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -71,9 +68,8 @@ public class StringUtils extends org.apache.commons.lang3.StringUtils {
      * toUnderScoreCase("helloWorld") = "hello_world"
      */
     public static String toCapitalizeCamelCase(String s) {
-        if (s == null) {
-            return null;
-        }
+        if (s == null) return null;
+
         s = toCamelCase(s);
         return s.substring(0, 1).toUpperCase() + s.substring(1);
     }
@@ -86,9 +82,7 @@ public class StringUtils extends org.apache.commons.lang3.StringUtils {
      * toUnderScoreCase("helloWorld") = "hello_world"
      */
     static String toUnderScoreCase(String s) {
-        if (s == null) {
-            return null;
-        }
+        if (s == null) return null;
 
         StringBuilder sb = new StringBuilder();
         boolean upperCase = false;
@@ -169,7 +163,8 @@ public class StringUtils extends org.apache.commons.lang3.StringUtils {
     public static String getCityInfo(String ip) {
         String api = String.format(IP_URL,ip);
         JSONObject object = JSONUtil.parseObj(HttpUtil.get(api));
-        return object.get("addr", String.class);
+        String[] replace = object.get("addr", String.class).split(" ");
+        return Optional.ofNullable(replace[0]).orElse(object.get("addr", String.class));
     }
 
     public static String getBrowser(HttpServletRequest request){

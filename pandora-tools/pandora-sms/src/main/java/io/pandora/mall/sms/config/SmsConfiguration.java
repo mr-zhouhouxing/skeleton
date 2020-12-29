@@ -1,7 +1,6 @@
 package io.pandora.mall.sms.config;
 
-import io.pandora.mall.sms.service.AliyunServiceImpl;
-import io.pandora.mall.sms.service.AliyunSmsService;
+import io.pandora.mall.sms.util.SmsSendUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
@@ -16,13 +15,15 @@ import org.springframework.context.annotation.Configuration;
 @EnableCaching
 @Configuration
 public class SmsConfiguration {
+
     @Bean
     @ConditionalOnProperty(prefix = "sms.aliyun", name = "accessKeyIdSelect")
-    @ConditionalOnMissingBean(AliyunSmsService.class)
-    public AliyunServiceImpl aliyunSmsServer(SmsProperties properties) {
+    @ConditionalOnMissingBean(SmsSendUtils.class)
+    public SmsSendUtils smsServer(SmsProperties properties) {
         if (log.isDebugEnabled()) {
             log.info("启用阿里云短信服务...");
         }
-        return new AliyunServiceImpl(properties);
+        return new SmsSendUtils(properties);
     }
+
 }

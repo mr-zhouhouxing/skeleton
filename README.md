@@ -57,7 +57,8 @@
 - **日志收集模块**    - pandora-logging       
 - **数据访问模块**    - pandora-persistence   
 - **通用推送模块**    - pandora-push          
-- **商城服务模块**    - pandora-shop          
+- **商城服务模块**    - pandora-shop-parent          
+- **社交服务模块**    - pandora-social-parent          
 
 ## 技术选型
 #### 后端使用技术
@@ -68,7 +69,7 @@
 * 1.4 - Mysql + Druid 
 * 1.5 - Redis + Jedis 
 * 1.6 - ElasticSearch
-* 1.7 - Slf4j + Aop 
+* 1.7 - Slf4j + AOP 
 * 1.8 - RabbitMQ 
 * 1.9 - Quartz 
         

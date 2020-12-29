@@ -13,8 +13,8 @@ import org.springframework.stereotype.Component;
 @PropertySource("classpath:config/config.properties")
 @ConfigurationProperties(prefix = "sms.aliyun")
 public class SmsProperties {
-    private String product;
     private String domain;
+    private String product;
     private String accessKeyId;
     private String accessKeyIdSelect;
 }

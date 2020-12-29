@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="pandora-admin" />
         <module name="pandora-common" />
+        <module name="pandora-email" />
         <module name="pandora-generate" />
         <module name="pandora-job" />
         <module name="pandora-logging" />
@@ -27,6 +28,7 @@
     <bytecodeTargetLevel>
       <module name="pandora-admin" target="1.8" />
       <module name="pandora-common" target="1.8" />
+      <module name="pandora-email" target="1.8" />
       <module name="pandora-generate" target="1.8" />
       <module name="pandora-job" target="1.8" />
       <module name="pandora-logging" target="1.8" />
@@ -51,6 +53,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="pandora-admin" options="-parameters" />
       <module name="pandora-common" options="-parameters" />
+      <module name="pandora-email" options="-parameters" />
       <module name="pandora-generate" options="-parameters" />
       <module name="pandora-job" options="-parameters" />
       <module name="pandora-logging" options="-parameters" />

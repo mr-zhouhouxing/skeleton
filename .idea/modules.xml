@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/pandora-admin/pandora-admin.iml" filepath="$PROJECT_DIR$/pandora-admin/pandora-admin.iml" />
       <module fileurl="file://$PROJECT_DIR$/pandora-common/pandora-common.iml" filepath="$PROJECT_DIR$/pandora-common/pandora-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pandora-tools/pandora-email/pandora-email.iml" filepath="$PROJECT_DIR$/pandora-tools/pandora-email/pandora-email.iml" />
       <module fileurl="file://$PROJECT_DIR$/pandora-generate/pandora-generate.iml" filepath="$PROJECT_DIR$/pandora-generate/pandora-generate.iml" />
       <module fileurl="file://$PROJECT_DIR$/pandora-job/pandora-job.iml" filepath="$PROJECT_DIR$/pandora-job/pandora-job.iml" />
       <module fileurl="file://$PROJECT_DIR$/pandora-logging/pandora-logging.iml" filepath="$PROJECT_DIR$/pandora-logging/pandora-logging.iml" />

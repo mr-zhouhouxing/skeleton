@@ -10,7 +10,7 @@
         <version>1.0</version>
     </parent>
 
-    <artifactId>pandora-sms</artifactId>
+    <artifactId>pandora-email</artifactId>
     <packaging>jar</packaging>
 
     <dependencies>
@@ -24,28 +24,22 @@
             <artifactId>pandora-persistence</artifactId>
             <version>1.0</version>
         </dependency>
-        <dependency>
-            <groupId>io.pandora.mall</groupId>
-            <artifactId>pandora-rabbitmq</artifactId>
-            <version>1.0</version>
-        </dependency>
-        <dependency>
-            <groupId>io.pandora.mall</groupId>
-            <artifactId>pandora-email</artifactId>
-            <version>1.0</version>
-        </dependency>
 
-        <!-- AliYun-短信-sdk bgin -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-email</artifactId>
+            <version>${email.version}</version>
+        </dependency>
+        <!-- 阿里云邮件发送 -->
         <dependency>
             <groupId>com.aliyun</groupId>
             <artifactId>aliyun-java-sdk-core</artifactId>
-            <version>${aliyun.sms.version}</version>
+            <version>${aliyun.email.core}</version>
         </dependency>
         <dependency>
             <groupId>com.aliyun</groupId>
-            <artifactId>aliyun-java-sdk-dysmsapi</artifactId>
-            <version>${aliyun.dysmsapi.version}</version>
+            <artifactId>aliyun-java-sdk-dm</artifactId>
+            <version>${aliyun.email.version}</version>
         </dependency>
     </dependencies>
-
 </project>

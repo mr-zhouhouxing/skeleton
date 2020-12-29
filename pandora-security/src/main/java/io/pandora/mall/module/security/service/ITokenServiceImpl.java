@@ -6,6 +6,7 @@ import io.pandora.mall.constant.Constant;
 import io.pandora.mall.domian.system.Token;
 import io.pandora.mall.exception.TokenException;
 import io.pandora.mall.mapper.system.TokenMapper;
+import io.pandora.mall.pojo.vo.system.TokenVo;
 import io.pandora.mall.util.DateUtils;
 import io.pandora.mall.util.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -101,6 +102,15 @@ public class ITokenServiceImpl extends BaseServiceImpl<TokenMapper, Token> imple
         this.insert(bean);
         return token;
     }
+
+    @Override
+    public TokenVo createToken(Long id) {
+        String token = this.createToken(id, secretStr);
+        Date now = new Date();
+        Date expireTime = new Date(now.getTime() + Constant.ACCESS_TOKEN_EXPIRE_TIME);
+        return TokenVo.builder().accessToken(token).expire(expireTime.getTime()).build();
+    }
+
 
     @Override
     public void update(Token token) throws TokenException {
