@@ -3,7 +3,7 @@ package io.pandora.mall.domian.system;
 import com.baomidou.mybatisplus.annotation.TableName;
 import io.pandora.mall.base.BaseDo;
 
-@TableName("system_config")
+@TableName("sys_config")
 public class Config extends BaseDo {
     private Long id;
     /**

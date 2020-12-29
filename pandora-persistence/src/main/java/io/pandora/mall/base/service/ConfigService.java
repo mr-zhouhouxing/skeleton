@@ -11,6 +11,8 @@ public interface ConfigService extends BaseService<Config> {
 
     String getValueByKey(String key);
 
+    String getValueByKey(String key,String defaultValue);
+
     Integer getValue2Int(String key, Integer defaultValue);
 
     Long getValue2Long(String key, Long defaultValue);

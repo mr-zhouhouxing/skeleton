@@ -36,6 +36,11 @@ public class ConfigServiceImpl extends BaseServiceImpl<ConfigMapper, Config> imp
     }
 
     @Override
+    public String getValueByKey(String key, String defaultValue) {
+        return Optional.ofNullable(getValueByKey(key)).orElse(defaultValue);
+    }
+
+    @Override
     public Integer getValue2Int(String key, Integer defaultValue) {
         return Optional.ofNullable(getValueByKey(key)).map(Integer::valueOf).orElse(defaultValue);
     }
