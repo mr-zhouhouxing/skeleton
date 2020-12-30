@@ -2,7 +2,7 @@ package io.pandora.mall.redis.util;
 
 import io.pandora.mall.constant.Constant;
 import io.pandora.mall.exception.CustomException;
-import io.pandora.mall.util.SerializableUtils;
+import io.pandora.mall.util.http.SerializableUtils;
 import io.pandora.mall.util.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

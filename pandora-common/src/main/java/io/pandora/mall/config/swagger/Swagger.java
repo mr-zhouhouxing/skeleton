@@ -28,7 +28,7 @@ public class Swagger {
     @Bean
     public Docket createManageApi() {
         return new Docket(DocumentationType.SWAGGER_2)
-                .groupName("后台管理-API")
+                .groupName("后台管理 - API")
                 .apiInfo(apiInfo())
                 .select()
                 //加了ApiOperation注解的类，才生成接口文档
@@ -43,7 +43,7 @@ public class Swagger {
     @Bean
     public Docket createRestApi() {
         return new Docket(DocumentationType.SWAGGER_2)
-                .groupName("REST服务-API")
+                .groupName("REST服务 - API")
                 .apiInfo(apiInfo())
                 .select()
                 //加了ApiOperation注解的类，才生成接口文档

@@ -13,7 +13,7 @@ import java.io.Serializable;
  */
 @Data
 @ApiModel(value = "通用PI接口返回", description = "Common Api Response")
-public class ResponseBean implements Serializable {
+public class ResponseBean<T> implements Serializable {
 
     private String msg;
     private Object data;

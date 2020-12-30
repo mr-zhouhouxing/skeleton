@@ -64,4 +64,30 @@ public class Constant {
         // 邀请好友
         public static final int invite_user  = 2;
     }
+
+    public static class File {
+        // OSS 后缀
+        public static final String suffix = "?x-oss-process=image/resize,w_700/format,jpg/quality,q_90";
+
+        /** 用户头像图片 *//** 用户头像图片 */
+        public static final int USER_INFO_IMAGE = 1;
+        public static final String USER_INFO_VALUE = "user_info/";
+
+        /** 用户聊天图片 */
+        public static final int USER_CHAT_MESSAGE = 2;
+        public static final String USER_CHAT_MESSAGE_VALUE = "user_chat/";
+
+        /** 用户日志图片 */
+        public static final int USER_DYNAMIC = 3;
+        public static final String USER_DYNAMIC_VALUE = "user_dynamic/";
+
+        /** 酒吧 OR 公益图片 */
+        public static final int BAR_OR_BENEFIT = 4;
+        public static final String BAR_OR_BENEFIT_VALUE = "bar_benefit/";
+
+        /** APP 活动图片 */
+        public static final int APP_ACTIVE_IMAGE = 5;
+        public static final String APP_ACTIVE_IMAGE_VALUE = "app_image/";
+
+    }
 }

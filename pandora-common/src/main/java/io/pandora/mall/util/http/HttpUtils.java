@@ -1,4 +1,4 @@
-package io.pandora.mall.util;
+package io.pandora.mall.util.http;
 
 import okhttp3.MediaType;
 import okhttp3.OkHttpClient;

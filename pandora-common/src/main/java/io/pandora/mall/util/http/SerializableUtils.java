@@ -1,4 +1,4 @@
-package io.pandora.mall.util;
+package io.pandora.mall.util.http;
 
 import io.pandora.mall.exception.CustomException;
 import org.slf4j.Logger;
