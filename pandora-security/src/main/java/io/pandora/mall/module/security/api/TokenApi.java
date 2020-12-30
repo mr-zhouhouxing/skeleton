@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.*;
  */
 @RestController
 @RequestMapping("/token")
-@Api(tags = {"系统服务:Token服务"})
+@Api(tags = {"系统服务 - 【系统授权】"})
 public class TokenApi {
 
     private final ITokenService tokenService;

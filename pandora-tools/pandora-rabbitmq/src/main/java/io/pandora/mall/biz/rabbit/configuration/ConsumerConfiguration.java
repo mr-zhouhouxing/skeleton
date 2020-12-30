@@ -6,6 +6,9 @@ import io.pandora.mall.biz.rabbit.impl.DefaultRabbitMqRegister;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+/**
+ * 在此 注册所有 RabbitMQ 消费者
+ */
 @Configuration
 public class ConsumerConfiguration {
     /**
@@ -13,7 +16,7 @@ public class ConsumerConfiguration {
      */
     @Bean
     Object listenerRabbit(DefaultRabbitMqRegister rabbitMqRegister) {
-        // 注册订单消费者
+        // 监听订单消费者
         rabbitMqRegister.listenerQueue(orderCancelConsumer(), RabbitMqQueue.PANDORA_QUEUE_ORDER);
 
         return rabbitMqRegister;

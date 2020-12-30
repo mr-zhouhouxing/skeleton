@@ -12,6 +12,7 @@
         <module name="pandora-generate" />
         <module name="pandora-job" />
         <module name="pandora-logging" />
+        <module name="pandora-oss" />
         <module name="pandora-pay" />
         <module name="pandora-persistence" />
         <module name="pandora-push" />
@@ -33,6 +34,7 @@
       <module name="pandora-job" target="1.8" />
       <module name="pandora-logging" target="1.8" />
       <module name="pandora-mall" target="1.8" />
+      <module name="pandora-oss" target="1.8" />
       <module name="pandora-pay" target="1.8" />
       <module name="pandora-persistence" target="1.8" />
       <module name="pandora-push" target="1.8" />
@@ -57,6 +59,7 @@
       <module name="pandora-generate" options="-parameters" />
       <module name="pandora-job" options="-parameters" />
       <module name="pandora-logging" options="-parameters" />
+      <module name="pandora-oss" options="-parameters" />
       <module name="pandora-pay" options="-parameters" />
       <module name="pandora-persistence" options="-parameters" />
       <module name="pandora-push" options="-parameters" />

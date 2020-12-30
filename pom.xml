@@ -56,10 +56,12 @@
         <easyCaptcha.version>1.6.2</easyCaptcha.version>
         <aliyun.sms.version>3.7.1</aliyun.sms.version>
         <commons-lang3.version>3.4</commons-lang3.version>
+        <commonIO.version>2.4</commonIO.version>
         <aliyun.dysmsapi.version>1.1.0</aliyun.dysmsapi.version>
         <email.version>1.4</email.version>
         <aliyun.email.core>3.0.0</aliyun.email.core>
         <aliyun.email.version>3.1.0</aliyun.email.version>
+        <aliyun.oss.version>3.8.0</aliyun.oss.version>
     </properties>
 
     <dependencies>

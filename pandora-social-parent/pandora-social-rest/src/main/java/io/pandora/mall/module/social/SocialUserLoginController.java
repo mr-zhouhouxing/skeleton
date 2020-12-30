@@ -23,7 +23,7 @@ import java.util.Map;
  * @author Created by mr_zhou on 2020/12/24
  */
 @RestController
-@Api(tags = {"社交系统:登录注册"})
+@Api(tags = {"社交系统 - 【登录注册】"})
 @RequestMapping("/${social}/sso")
 public class SocialUserLoginController {
 
@@ -84,8 +84,8 @@ public class SocialUserLoginController {
 
     @SysLog("发送验证码")
     @GetMapping("/code/send")
-    @ApiOperation(value = "发送验证码[type:1.登录,2.注册,3.忘记密码]")
-    public ResponseBean sendVerifyCode(String account , int type){
+    @ApiOperation(value = "发送验证码[TYPE:1.登录,2.注册,3.忘记密码]")
+    public ResponseBean sendVerifyCode(String account , Integer type){
         Map<String, Object> map = socialUserService.sendVerifyCode(account, type);
         return ResponseBean.succeed(map);
     }

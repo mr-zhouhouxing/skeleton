@@ -19,6 +19,7 @@
         <module>pandora-search</module>
         <module>pandora-sms</module>
         <module>pandora-email</module>
+        <module>pandora-oss</module>
     </modules>
 
 </project>

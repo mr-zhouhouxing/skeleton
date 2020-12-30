@@ -10,6 +10,8 @@ import org.springframework.amqp.support.converter.Jackson2JsonMessageConverter;
 import org.springframework.amqp.support.converter.MessageConverter;
 
 /**
+ * 消息处理抽象类 所有消费者继承自该类 处理消息
+ *
  * @author Created by mr_zhou on 2020/11/26
  */
 public abstract class AbstractMessageListener implements ChannelAwareMessageListener , IRabbitMqListener {

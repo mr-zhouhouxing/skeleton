@@ -1,5 +1,8 @@
 package io.pandora.mall.biz.rabbit;
 
+/**
+ * RabbitMQ 对外服务
+ */
 public interface IRabbitMqService {
 
     /**

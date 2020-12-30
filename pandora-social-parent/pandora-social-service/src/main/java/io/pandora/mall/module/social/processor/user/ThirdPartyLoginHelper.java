@@ -5,7 +5,7 @@ import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import io.pandora.mall.config.ResourcesConfig;
 import io.pandora.mall.module.social.enume.SocialUserLoginType;
-import io.pandora.mall.util.HttpUtils;
+import io.pandora.mall.util.http.HttpUtils;
 import org.apache.commons.httpclient.NameValuePair;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;

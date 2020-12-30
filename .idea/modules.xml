@@ -9,6 +9,7 @@
       <module fileurl="file://$PROJECT_DIR$/pandora-job/pandora-job.iml" filepath="$PROJECT_DIR$/pandora-job/pandora-job.iml" />
       <module fileurl="file://$PROJECT_DIR$/pandora-logging/pandora-logging.iml" filepath="$PROJECT_DIR$/pandora-logging/pandora-logging.iml" />
       <module fileurl="file://$PROJECT_DIR$/pandora-mall.iml" filepath="$PROJECT_DIR$/pandora-mall.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pandora-tools/pandora-oss/pandora-oss.iml" filepath="$PROJECT_DIR$/pandora-tools/pandora-oss/pandora-oss.iml" />
       <module fileurl="file://$PROJECT_DIR$/pandora-tools/pandora-pay/pandora-pay.iml" filepath="$PROJECT_DIR$/pandora-tools/pandora-pay/pandora-pay.iml" />
       <module fileurl="file://$PROJECT_DIR$/pandora-persistence/pandora-persistence.iml" filepath="$PROJECT_DIR$/pandora-persistence/pandora-persistence.iml" />
       <module fileurl="file://$PROJECT_DIR$/pandora-push/pandora-push.iml" filepath="$PROJECT_DIR$/pandora-push/pandora-push.iml" />

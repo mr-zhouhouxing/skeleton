@@ -33,12 +33,12 @@
             <property name="nullCatalogMeansCurrent" value="true" />
         </jdbcConnection>
 
-        <javaModelGenerator targetPackage="io.pandora.mall.domian.social"
+        <javaModelGenerator targetPackage="io.pandora.mall.domian.system"
                             targetProject="pandora-persistence\src\main\java"/>
 
-        <sqlMapGenerator targetPackage="mapper/social" targetProject="pandora-persistence\src\main\resources"/>
+        <sqlMapGenerator targetPackage="mapper/system" targetProject="pandora-persistence\src\main\resources"/>
 
-        <javaClientGenerator type="XMLMAPPER" targetPackage="io.pandora.mall.mapper.social"
+        <javaClientGenerator type="XMLMAPPER" targetPackage="io.pandora.mall.mapper.system"
                              targetProject="pandora-persistence\src\main\java"/>
 
         <!--生成全部表tableName设为%-->
@@ -46,7 +46,7 @@
             <generatedKey column="id" sqlStatement="MySql" identity="true"/>
         </table>-->
 
-        <table tableName="social_user_invite">
+        <table tableName="sys_task">
             <generatedKey column="id" sqlStatement="MySql" identity="true"/>
         </table>
 
