@@ -13,4 +13,22 @@
     <artifactId>pandora-job</artifactId>
     <packaging>jar</packaging>
 
+    <dependencies>
+        <dependency>
+            <groupId>io.pandora.mall</groupId>
+            <artifactId>pandora-persistence</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>io.pandora.mall</groupId>
+            <artifactId>pandora-common</artifactId>
+            <version>1.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.quartz-scheduler</groupId>
+            <artifactId>quartz</artifactId>
+            <version>2.2.1</version>
+        </dependency>
+    </dependencies>
 </project>
