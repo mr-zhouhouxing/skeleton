@@ -45,11 +45,16 @@
             <artifactId>pandora-shop-rest</artifactId>
             <version>1.0</version>
         </dependency>
-      <!--  <dependency>
+        <dependency>
+            <groupId>io.pandora.mall</groupId>
+            <artifactId>pandora-job</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <dependency>
             <groupId>io.pandora.mall</groupId>
             <artifactId>pandora-rabbitmq</artifactId>
             <version>1.0</version>
-        </dependency>-->
+        </dependency>
 
         <!--图片验证-->
         <dependency>
