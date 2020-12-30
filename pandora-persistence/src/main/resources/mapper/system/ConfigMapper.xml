@@ -137,19 +137,6 @@
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-
-  <insert id="insert" parameterType="io.pandora.mall.domian.system.Config" >
-    <selectKey resultType="java.lang.Long" keyProperty="id" order="AFTER" >
-      SELECT LAST_INSERT_ID()
-    </selectKey>
-    insert into sys_config (name, key, seq, 
-      type, isRequ, defaultVal, 
-      value)
-    values (#{name,jdbcType=VARCHAR}, #{key,jdbcType=VARCHAR}, #{seq,jdbcType=INTEGER}, 
-      #{type,jdbcType=CHAR}, #{isrequ,jdbcType=CHAR}, #{defaultval,jdbcType=VARCHAR}, 
-      #{value,jdbcType=LONGVARCHAR})
-  </insert>
-
   <insert id="insertSelective" parameterType="io.pandora.mall.domian.system.Config" >
     <selectKey resultType="java.lang.Long" keyProperty="id" order="AFTER" >
       SELECT LAST_INSERT_ID()

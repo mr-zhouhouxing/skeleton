@@ -15,8 +15,6 @@ public interface ConfigMapper extends BaseDao<Config> {
 
     int deleteByPrimaryKey(Long id);
 
-    int insert(Config record);
-
     int insertSelective(Config record);
 
     List<Config> selectByExampleWithBLOBs(ConfigExample example);
