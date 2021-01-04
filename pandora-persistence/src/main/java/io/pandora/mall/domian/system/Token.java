@@ -3,6 +3,7 @@ package io.pandora.mall.domian.system;
 import com.baomidou.mybatisplus.annotation.TableName;
 import io.pandora.mall.base.BaseDo;
 import lombok.Data;
+
 import java.util.Date;
 
 /**
@@ -12,11 +13,18 @@ import java.util.Date;
 @Data
 @TableName("system_token")
 public class Token extends BaseDo {
+
     private Integer id;
+
     private Long userId;
+
     private Integer sessionId;
+
     private String token;
+
     private Date createTime;
+
     private Date expireTime;
+
     private Date updateTime;
 }

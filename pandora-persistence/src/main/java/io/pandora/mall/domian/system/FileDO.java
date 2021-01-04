@@ -13,6 +13,7 @@ import java.util.Date;
  */
 @TableName("sys_file")
 public class FileDO extends Model<FileDO> implements Serializable {
+
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;
 
