@@ -5,6 +5,7 @@ import io.pandora.mall.constant.Constant;
 import io.pandora.mall.domian.system.Token;
 import io.pandora.mall.exception.TokenException;
 import io.pandora.mall.module.security.service.ITokenService;
+import io.pandora.mall.redis.util.RedisUtils;
 import io.pandora.mall.util.DateUtils;
 import io.pandora.mall.util.StringUtils;
 import org.slf4j.Logger;
@@ -26,6 +27,8 @@ import java.util.Date;
  */
 public class AccessTokenInterceptor implements HandlerInterceptor {
 
+    @Autowired
+    private RedisUtils redisUtils;
     @Autowired
     private ITokenService tokenService;
 

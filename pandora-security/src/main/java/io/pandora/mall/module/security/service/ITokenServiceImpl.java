@@ -9,6 +9,7 @@ import io.pandora.mall.mapper.system.TokenMapper;
 import io.pandora.mall.pojo.vo.system.TokenVo;
 import io.pandora.mall.util.DateUtils;
 import io.pandora.mall.util.StringUtils;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
@@ -66,6 +67,7 @@ public class ITokenServiceImpl extends BaseServiceImpl<TokenMapper, Token> imple
     public void insert(Token token) throws TokenException {
         try {
             token.setCreateTime(new Date());
+
             tokenMapper.insert(token);
         }catch (Exception e){
             LOGGER.error("【Token】-> 保存Token异常:{}",e);
@@ -86,6 +88,7 @@ public class ITokenServiceImpl extends BaseServiceImpl<TokenMapper, Token> imple
         if (StringUtils.isEmpty(secret)) secret = secretStr;
         // 查询 appId 及 secret 是否正确
 
+
         // 生成token
         String token = newToken(id, secret);
         if (StringUtils.isEmpty(token)){
@@ -99,7 +102,15 @@ public class ITokenServiceImpl extends BaseServiceImpl<TokenMapper, Token> imple
         bean.setToken(token);
         bean.setCreateTime(now);
         bean.setExpireTime(expireTime);
-        this.insert(bean);
+
+        Token obj = findByToken(id);
+        if (StringUtils.isNull(obj)){
+            this.insert(bean);
+        }else {
+            BeanUtils.copyProperties(bean,obj);
+            this.update(obj);
+        }
+
         return token;
     }
 
@@ -119,6 +130,17 @@ public class ITokenServiceImpl extends BaseServiceImpl<TokenMapper, Token> imple
         }catch (Exception e){
             LOGGER.error("【Token】-> 更新Token异常:{}",e);
             throw new TokenException("更新Token异常");
+        }
+    }
+
+    @Override
+    public void deleteToken(Long userId) {
+        Token token = findByToken(userId);
+
+        if (!StringUtils.isNull(token)){
+            // 修改 Token 为退出登录状态
+            token.setToken(UUID.randomUUID().toString().replaceAll("-", " "));
+            update(token);
         }
     }
 

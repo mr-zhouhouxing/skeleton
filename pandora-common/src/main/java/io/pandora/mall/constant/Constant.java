@@ -42,7 +42,14 @@ public class Constant {
     public final static int EXPIRE_HOUR = 60 * 60;
     public final static int EXPIRE_THREE_HOUR = 60 * 60 * 3;
     public final static int EXPIRE_DAY = 60 * 60 * 24;
+    public final static int EXPIRE_MONTH = 60 * 60 * 24 * 30;
 
+    // 离线推送客户端ID
+    public final static String USER_PUSH_CLIENT = "user:users_push_client:user_";
+    // 用户在线列表
+    public final static String USER_ONLINE_LIST = "user:users_online:user_";
+    // 用户Token 列表
+    public final static String USER_TOKEN_LIST = "user:users_token:user_";
     // 用户资料缓存
     public final static String USER_INFO_PREFIX = "user_info_list:user_info_";
 

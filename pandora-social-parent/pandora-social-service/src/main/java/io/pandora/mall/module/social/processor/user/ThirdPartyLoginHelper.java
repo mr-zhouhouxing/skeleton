@@ -46,13 +46,11 @@ public final class ThirdPartyLoginHelper {
             }
             user.setToken(token);
             user.setAvatarUrl(img);
+
             String sex = json.getString("gender");
-            if ("女".equals(sex)) {
-                user.setGender("0");
-            } else {
-                user.setGender("1");
-            }
+            user.setGender("女".equals(sex) ? "0" : "1");
             user.setOpenid(openid);
+
         } else {
             throw new IllegalArgumentException(json.getString("msg"));
         }
@@ -73,11 +71,8 @@ public final class ThirdPartyLoginHelper {
                 user.setAvatarUrl(img);
             }
             String sex = json.getString("sex");
-            if ("0".equals(sex)) {
-                user.setGender("0");
-            } else {
-                user.setGender("1");
-            }
+            user.setGender("女".equals(sex) ? "0" : "1");
+
             user.setToken(token);
             user.setOpenid(openid);
         } else {

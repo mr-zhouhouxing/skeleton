@@ -1,10 +1,10 @@
 package io.pandora.mall.manage.log.controller;
 
-import io.pandora.mall.manage.log.service.dto.LogQueryCriteria;
 import io.pandora.mall.manage.log.service.LoggingService;
+import io.pandora.mall.manage.log.service.dto.LogQueryCriteria;
 import io.swagger.annotations.Api;
-import org.springframework.data.domain.Pageable;
 import io.swagger.annotations.ApiOperation;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping("/${webPath}/logging")
-@Api(tags = {"系统管理:日志管理"})
+@Api(tags = {"系统管理 - 【日志管理】"})
 public class LoggingController {
 
     private final LoggingService loggingService;

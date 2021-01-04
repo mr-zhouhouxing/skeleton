@@ -1,10 +1,11 @@
-<h1 style="text-align: center">Pandora-十卫十七</h1>
+<h1 style="text-align: center">Pandora-希神</h1>
 
-* 中文名称：土卫十七 
-* 英文名称：Pandora (英语发音"pan DOR uh")是 土星已知卫星中距其第四近的一颗
+* 中文名称：希神。
+* 英文名称：Pandora 译【潘多拉魔盒】。
 * 我们的太阳系有很大,到目前为止还有许许多多我们不知道的秘密，学习亦是如此，人生本是永无止境的探索。
-  此项目的初衷是想记录本人从无到有记录着从程序世界中探索到的点点滴滴，虽然不能给后代留下什么财富，但是可以留下一堆烂代码给后代优化。
-                                                                                                                足矣!
+* 此项目的初衷是想:真实还原企业级项目，日志收集、邮件/短信发送、图片存储、第三方支付、全文检索、动态任务、权限鉴别、消息推送等通用系列集成。
+* 方便后期适用于不同项目的基础建设，减少新项目开发的工作量，主要应对于不同的业务逻辑开发。
+
 
 ### 项目简介
    基于当前流行技术组合的前后端分离商城系统
@@ -24,7 +25,7 @@
     6、店铺入驻：店铺审核、开通店铺、店铺推荐；
     7、优惠卷中心、积分商城等功能；
 ### 项目源码
-|  |  GiTee | GitHub | 
+|  |  码云 | GitHub | 
 |---  |--- | --- | 
 | 后端源码 | https://gitee.com/zhouhouxing/pandora-mall| https://github.com/zhouhouxing/pandora-mall|
 | 前端源码 | https://gitee.com/zhouhouxing/pandora-web | https://github.com/zhouhouxing/pandora-web |

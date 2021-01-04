@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * 在此 注册所有 RabbitMQ 消费者
+ * RabbitMQ消费者注册中心
  */
 @Configuration
 public class ConsumerConfiguration {

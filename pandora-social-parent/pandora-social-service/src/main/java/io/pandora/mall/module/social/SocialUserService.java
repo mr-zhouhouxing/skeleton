@@ -28,4 +28,6 @@ public interface SocialUserService extends BaseService<SocialUser> {
     String updatePassword(PasswordDto source);
 
     void cleanCode(String account);
+
+    String logout(Long userId);
 }

@@ -10,11 +10,6 @@ import io.pandora.mall.email.model.EmailSendResponse;
  */
 public interface EmailSendService extends BaseService<SystemEmailConfig> {
 
-    /**
-     * 发送邮件
-     * @param request
-     * @return
-     */
     EmailSendResponse sendEmail(EmailSendRequest request);
 
     boolean verifyCodeEquals(String email , String code);

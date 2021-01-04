@@ -23,6 +23,7 @@ import io.pandora.mall.pojo.dto.social.PasswordDto;
 import io.pandora.mall.pojo.dto.social.RegisterDto;
 import io.pandora.mall.pojo.vo.social.SocialUserInfoVo;
 import io.pandora.mall.pojo.vo.system.TokenVo;
+import io.pandora.mall.push.offline.service.SystemPushService;
 import io.pandora.mall.sms.model.SMSType;
 import io.pandora.mall.sms.model.SmsSendRequest;
 import io.pandora.mall.sms.model.SmsSendResponse;
@@ -57,6 +58,7 @@ public class SocialUserServiceImpl extends AbstractUserService<SocialUserMapper,
     private final ITokenService tokenService;
     private final ConfigService configService;
     private final SmsSendService smsSendService;
+    private final SystemPushService pushService;
     private final EmailSendService emailSendService;
     private final SocialUserMapper socialUserMapper;
     private final SocialUserInfoService userInfoService;
@@ -64,13 +66,16 @@ public class SocialUserServiceImpl extends AbstractUserService<SocialUserMapper,
     private final SocialUserIntegralService userIntegralService;
 
     @Autowired
-    public SocialUserServiceImpl(ITokenService tokenService, ConfigService configService, SmsSendService smsSendService,
-                                 EmailSendService emailSendService, SocialUserMapper socialUserMapper,
-                                 SocialUserInfoService userInfoService, SocialUserInviteMapper userInviteMapper,
-                                 SocialUserIntegralService userIntegralService) {
+    public SocialUserServiceImpl(
+            ITokenService tokenService, ConfigService configService, SmsSendService smsSendService,
+            SystemPushService pushService, EmailSendService emailSendService, SocialUserMapper socialUserMapper,
+            SocialUserInfoService userInfoService, SocialUserInviteMapper userInviteMapper,
+            SocialUserIntegralService userIntegralService
+    ) {
         this.tokenService = tokenService;
         this.configService = configService;
         this.smsSendService = smsSendService;
+        this.pushService = pushService;
         this.emailSendService = emailSendService;
         this.socialUserMapper = socialUserMapper;
         this.userInfoService = userInfoService;
@@ -154,13 +159,13 @@ public class SocialUserServiceImpl extends AbstractUserService<SocialUserMapper,
     public SocialUserInfoVo toLogin(SocialUserLoginProcessor processor, HttpServletRequest request) {
         SocialUser socialUser = this.login(processor, request);
 
+        Long userId = socialUser.getId();
         TokenVo token = tokenService.createToken(socialUser.getId());
-        SocialUserInfo userInfo = userInfoService.selectUserInfoByUserId(socialUser.getId());
+        SocialUserInfo userInfo = userInfoService.selectUserInfoByUserId(userId);
 
         return SocialUserInfoVo.builder()
                 .userId(socialUser.getId()).userInfo(userInfo).level(socialUser.getLevel())
-                .role(socialUser.getRole()).token(token)
-                .build();
+                .role(socialUser.getRole()).token(token).build();
     }
 
     @Override
@@ -220,29 +225,24 @@ public class SocialUserServiceImpl extends AbstractUserService<SocialUserMapper,
 
     @Override
     public void cleanCode(String account) {
-        if (account.contains("@")){
-            emailSendService.cleanVerifyCode(account);
-        }else {
-            smsSendService.cleanVerifyCode(account);
-        }
+        if (account.contains("@")) emailSendService.cleanVerifyCode(account);
+
+        else if (account.length() == 11) smsSendService.cleanVerifyCode(account);
     }
 
-    /**
-     * 校验账号是否存在
-     *
-     * @param account
-     * @return
-     */
+    @Override
+    public String logout(Long userId) {
+        if (StringUtils.isNull(userId)) throw new BadRequestException("用户ID不能为空");
+
+        tokenService.deleteToken(userId);
+        pushService.cleanClientId(userId);
+        return "退出登录成功";
+    }
+
     private boolean verifyAccountExit(String account){
-        return socialUserMapper.selectOneByAccount(account) == null ? false : true;
+        return !StringUtils.isNull(socialUserMapper.selectOneByAccount(account));
     }
 
-    /**
-     * 生成唯一邀请码
-     *
-     * @param phone
-     * @return
-     */
     private String genInviteCode(String phone){
         String code = CodeUtils.toSerialCode(Long.valueOf(phone));
 
@@ -260,12 +260,6 @@ public class SocialUserServiceImpl extends AbstractUserService<SocialUserMapper,
         return code;
     }
 
-    /**
-     * 校验手机号码
-     *
-     * @param phone 176-0000-0000
-     * @return
-     */
     private static boolean verifyPhone(String phone){
         String regex = "^((13[0-9])|(14[5|7])|(15([0-3]|[5-9]))|(17[013678])|(18[0,5-9]))\\d{8}$";
         if (phone.length() != 11) {

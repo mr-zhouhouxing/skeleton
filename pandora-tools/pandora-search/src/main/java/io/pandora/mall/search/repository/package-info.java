@@ -1,0 +1,1 @@
+package io.pandora.mall.search.repository;

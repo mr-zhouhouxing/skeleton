@@ -14,13 +14,10 @@ import java.math.BigDecimal;
 public class UserIntegralProcessor {
     @ApiModelProperty(value = "用户ID")
     private Long userId;
-
     @ApiModelProperty(value = "积分数量")
     private BigDecimal number;
-
     @ApiModelProperty(value = "积分来源:1.邀请")
     private Integer source;
-
     @ApiModelProperty(value = "来源详情")
     private String sourceMemo;
 }

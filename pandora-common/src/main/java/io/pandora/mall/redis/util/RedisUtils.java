@@ -1,5 +1,8 @@
 package io.pandora.mall.redis.util;
 
+import io.pandora.mall.util.StringUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.redis.connection.RedisConnection;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
@@ -19,6 +22,8 @@ import java.util.concurrent.TimeUnit;
 @Component
 @SuppressWarnings({"unchecked","all"})
 public class RedisUtils {
+
+    private Logger logger = LoggerFactory.getLogger(RedisUtils.class);
 
     private RedisTemplate<Object, Object> redisTemplate;
 
@@ -136,10 +141,14 @@ public class RedisUtils {
      */
     public void del(String... key) {
         if (key != null && key.length > 0) {
-            if (key.length == 1) {
-                redisTemplate.delete(key[0]);
-            } else {
-                redisTemplate.delete(CollectionUtils.arrayToList(key));
+            try {
+                if (key.length == 1) {
+                    redisTemplate.delete(key[0]);
+                } else {
+                    redisTemplate.delete(CollectionUtils.arrayToList(key));
+                }
+            }catch ( Exception e){
+                logger.error("[Redis del] 删除Key:{} 异常:{}", key , e.getMessage());
             }
         }
     }
@@ -152,7 +161,8 @@ public class RedisUtils {
      * @return 值
      */
     public Object get(String key) {
-        return key == null ? null : redisTemplate.opsForValue().get(key);
+        Object obj = key == null ? null : redisTemplate.opsForValue().get(key);
+        return StringUtils.isNull(obj) ? "" : obj;
     }
 
     /**

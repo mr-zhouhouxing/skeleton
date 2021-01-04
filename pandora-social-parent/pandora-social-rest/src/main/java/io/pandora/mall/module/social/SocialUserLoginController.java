@@ -107,4 +107,14 @@ public class SocialUserLoginController {
         return ResponseBean.succeed(message);
     }
 
+    @SysLog("退出登录")
+    @GetMapping("/logout/{userId}")
+    @ApiOperation(value = "退出登录")
+    public ResponseBean logout(@PathVariable("id") Long userId){
+
+        String message = socialUserService.logout(userId);
+
+        return ResponseBean.succeed(message);
+    }
+
 }

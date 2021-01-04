@@ -50,10 +50,15 @@ public class SystemTaskServiceImpl extends BaseServiceImpl<SysTaskMapper, SysTas
 
     @Override
     public int insertTask(SysTask task) {
+        try {
+            task.setCreateUser(SecurityUtils.getUsername());
+            task.setUpdateUser(SecurityUtils.getUsername());
+        }catch (Exception e){
+            task.setCreateUser("未知用户");
+            task.setUpdateUser("未知用户");
+        }
         task.setJobStatus(JobStatusEnum.STOP.getCode());
-        task.setCreateUser(SecurityUtils.getUsername());
         task.setCreateTime(new Date());
-        task.setUpdateUser(SecurityUtils.getUsername());
         task.setUpdateTime(new Date());
         return taskMapper.insert(task);
     }
@@ -104,8 +109,8 @@ public class SystemTaskServiceImpl extends BaseServiceImpl<SysTaskMapper, SysTas
     @Override
     public void initSchedule() throws SchedulerException {
         List<SysTask> taskList = taskMapper.selectList(null);
-        if (taskList == null){
-            log.info("[定时任务] 初始化定时任务条数为空...return");
+        if (taskList.isEmpty()){
+            log.info("[定时任务] 初始化定时任务条数为 0 ...return");
             return;
         }
         log.info("[定时任务] 初始化定时任务条数:{}",taskList.size());
@@ -135,9 +140,8 @@ public class SystemTaskServiceImpl extends BaseServiceImpl<SysTaskMapper, SysTas
     @Override
     public void updateCron(Long jobId) throws SchedulerException {
         SysTask task = get(jobId);
-        if (task == null) {
-            return;
-        }
+        if (task == null) return;
+
         if (JobStatusEnum.RUNNING.getCode().equals(task.getJobStatus())) {
             quartzManager.updateJobCron(task);
         }

@@ -23,4 +23,6 @@ public interface ITokenService extends BaseService<Token> {
     TokenVo createToken(Long id);
 
     void update(Token token) throws TokenException;
+
+    void deleteToken(Long userId);
 }
