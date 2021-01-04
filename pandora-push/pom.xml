@@ -13,4 +13,48 @@
     <artifactId>pandora-push</artifactId>
     <packaging>jar</packaging>
 
+    <properties>
+        <push.version>4.1.1.3</push.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>io.pandora.mall</groupId>
+            <artifactId>pandora-common</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>io.pandora.mall</groupId>
+            <artifactId>pandora-persistence</artifactId>
+            <version>1.0</version>
+        </dependency>
+
+        <!-- 个推 sdk - start -->
+        <!-- https://mvnrepository.com/artifact/com.gexin.platform/gexin-rp-sdk-http -->
+        <dependency>
+            <groupId>com.gexin.platform</groupId>
+            <artifactId>gexin-rp-sdk-http</artifactId>
+            <version>${push.version}</version>
+        </dependency>
+        <!-- 个推 sdk - end -->
+    </dependencies>
+
+    <repositories>
+        <repository>
+            <id>sonatype-nexus-staging</id>
+            <name>Sonatype Nexus Staging</name>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>getui-nexus</id>
+            <url>http://mvn.gt.igexin.com/nexus/content/repositories/releases/</url>
+        </repository>
+    </repositories>
+
 </project>
