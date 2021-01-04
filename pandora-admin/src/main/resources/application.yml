@@ -1,9 +1,12 @@
 server:
   port: 9009
-  tomcat:
-    max-threads: 2000
-    min-spare-threads: 30
-    uri-encoding: UTF-8
+#  tomcat:
+#    max-threads: 2000
+#    min-spare-threads: 30
+#    uri-encoding: UTF-8
+  jetty:
+    acceptors: 2
+    selectors: 4
 
 spring:
   profiles:
@@ -53,6 +56,8 @@ ignore:
   - /robots.txt
   - /druid/**
   - /v1/user/login
-  authenticates:
+  # 测试阶段放行
   - /manage/**
+#  authenticates:
+#  - /manage/**
 

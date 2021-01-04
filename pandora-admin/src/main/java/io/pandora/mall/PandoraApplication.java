@@ -17,11 +17,18 @@ public class PandoraApplication {
 
     private static Logger LOGGER = LoggerFactory.getLogger(PandoraApplication.class);
 
+    /**
+     * 程序入口
+     * @param args
+     */
     public static void main(String[] args) {
         SpringApplication.run(PandoraApplication.class,args);
         printProjectConfigs();
     }
 
+    /**
+     * 输出项目配置信息
+     */
     private static void printProjectConfigs() {
         ServerProperties serverProperties = SpringContextHolder
                 .getApplicationContext()

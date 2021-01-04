@@ -14,6 +14,23 @@
     <packaging>jar</packaging>
 
     <dependencies>
+        <!-- Jetty适合长连接应用，就是聊天类的长连接-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <!-- 使用Jetty，需要排除Tomcat，因为SpringBoot默认使用Tomcat -->
+            <exclusions>
+                <exclusion>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-tomcat</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-jetty</artifactId>
+        </dependency>
+
         <!-- 系统模块 -->
         <dependency>
             <groupId>io.pandora.mall</groupId>
@@ -53,6 +70,11 @@
         <dependency>
             <groupId>io.pandora.mall</groupId>
             <artifactId>pandora-rabbitmq</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>io.pandora.mall</groupId>
+            <artifactId>pandora-search</artifactId>
             <version>1.0</version>
         </dependency>
 

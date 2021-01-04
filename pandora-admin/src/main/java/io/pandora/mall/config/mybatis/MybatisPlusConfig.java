@@ -12,7 +12,10 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
  */
 @Configuration
 @EnableTransactionManagement
-@MapperScan(basePackages = {"io.pandora.mall.mapper.**"})
+@MapperScan(basePackages = {
+        "io.pandora.mall.mapper.social", "io.pandora.mall.mapper.mall",
+        "io.pandora.mall.mapper.system"
+        })
 public class MybatisPlusConfig {
 
     /**

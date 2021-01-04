@@ -6,6 +6,12 @@ spring:
     username: guest
     password: guest
     virtual-host: /
+  # ElasticSearch
+  data:
+    elasticsearch:
+      cluster-nodes: localhost:9300
+      repositories:
+        enabled: true
   # 数据源
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
