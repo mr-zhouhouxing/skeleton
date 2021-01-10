@@ -34,6 +34,8 @@ public class Constant {
     public static final String ACCESS_TOKEN = "accessToken";
     public static final long ACCESS_TOKEN_EXPIRE_TIME = 7200000;
 
+    /** ws 对象前缀 */
+    public static final String WS_CLIENT_ = "ws_";
 
     // Redis
     public final static String LOCK = "common_lock:lock_";

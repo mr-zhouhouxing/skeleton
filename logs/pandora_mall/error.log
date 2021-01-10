@@ -26,3 +26,189 @@ Caused by: java.lang.IllegalStateException: javax.websocket.server.ServerContain
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1774)
 	... 16 common frames omitted
 2021-01-04 16:07:46,939 [main] ERROR [o.s.d.e.r.support.AbstractElasticsearchRepository] AbstractElasticsearchRepository.java:91 - failed to load elasticsearch nodes : org.elasticsearch.client.transport.NoNodeAvailableException: None of the configured nodes are available: [{#transport#-1}{YwKAwhPjSvy0GDyICQA6hA}{localhost}{127.0.0.1:9300}]
+2021-01-07 10:58:17,199 [main] ERROR [o.s.b.diagnostics.LoggingFailureAnalysisReporter] LoggingFailureAnalysisReporter.java:42 - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field redisUtils in io.pandora.mall.chat.service.ChatAccessTokenService required a bean of type 'io.pandora.mall.redis.util.RedisUtils' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'io.pandora.mall.redis.util.RedisUtils' in your configuration.
+
+2021-01-07 11:00:42,273 [main] ERROR [o.s.b.diagnostics.LoggingFailureAnalysisReporter] LoggingFailureAnalysisReporter.java:42 - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field redisUtils in io.pandora.mall.chat.service.ChatAccessTokenService required a bean of type 'io.pandora.mall.redis.util.RedisUtils' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'io.pandora.mall.redis.util.RedisUtils' in your configuration.
+
+2021-01-07 11:26:51,994 [main] ERROR [o.s.b.diagnostics.LoggingFailureAnalysisReporter] LoggingFailureAnalysisReporter.java:42 - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field redisUtils in io.pandora.mall.chat.service.ChatAccessTokenService required a bean of type 'io.pandora.mall.redis.util.RedisUtils' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'io.pandora.mall.redis.util.RedisUtils' in your configuration.
+
+2021-01-07 11:29:37,903 [main] ERROR [o.s.b.diagnostics.LoggingFailureAnalysisReporter] LoggingFailureAnalysisReporter.java:42 - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field redisUtils in io.pandora.mall.chat.service.ChatAccessTokenService required a bean of type 'io.pandora.mall.redis.util.RedisUtils' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'io.pandora.mall.redis.util.RedisUtils' in your configuration.
+
+2021-01-07 11:31:21,107 [main] ERROR [o.s.b.diagnostics.LoggingFailureAnalysisReporter] LoggingFailureAnalysisReporter.java:42 - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field redisUtils in io.pandora.mall.chat.service.ChatAccessTokenService required a bean of type 'io.pandora.mall.redis.util.RedisUtils' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'io.pandora.mall.redis.util.RedisUtils' in your configuration.
+
+2021-01-07 11:41:06,615 [main] ERROR [io.pandora.mall.chat.ChatNettyBoote] ChatNettyBoote.java:30 - [Netty] 初始化启动失败,异常信息:null,异常栈信息:{}
+java.lang.NullPointerException: null
+	at io.pandora.mall.chat.ChatNettyBoote.onApplicationEvent(ChatNettyBoote.java:28)
+	at io.pandora.mall.chat.ChatNettyBoote.onApplicationEvent(ChatNettyBoote.java:16)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:402)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:359)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:896)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:163)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:552)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at io.pandora.mall.chat.ChatApplication.main(ChatApplication.java:37)
+2021-01-07 11:43:25,082 [main] ERROR [io.pandora.mall.chat.ChatNettyBoote] ChatNettyBoote.java:30 - [Netty] 初始化启动失败,异常信息:null,异常栈信息:{}
+java.lang.NullPointerException: null
+	at io.pandora.mall.chat.ChatNettyBoote.onApplicationEvent(ChatNettyBoote.java:28)
+	at io.pandora.mall.chat.ChatNettyBoote.onApplicationEvent(ChatNettyBoote.java:16)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:402)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:359)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:896)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:163)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:552)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at io.pandora.mall.chat.ChatApplication.main(ChatApplication.java:37)
+2021-01-07 11:44:04,336 [main] ERROR [io.pandora.mall.chat.ChatNettyBoote] ChatNettyBoote.java:30 - [Netty] 初始化启动失败,异常信息:null,异常栈信息:{}
+java.lang.NullPointerException: null
+	at io.pandora.mall.chat.ChatNettyBoote.onApplicationEvent(ChatNettyBoote.java:28)
+	at io.pandora.mall.chat.ChatNettyBoote.onApplicationEvent(ChatNettyBoote.java:16)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:402)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:359)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:896)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:163)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:552)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at io.pandora.mall.chat.ChatApplication.main(ChatApplication.java:37)
+2021-01-07 14:55:06,828 [main] ERROR [io.pandora.mall.chat.ChatNettyBoote] ChatNettyBoote.java:30 - [Netty] 初始化启动失败,异常信息:null,异常栈信息:{}
+java.lang.NullPointerException: null
+	at io.pandora.mall.chat.ChatNettyBoote.onApplicationEvent(ChatNettyBoote.java:28)
+	at io.pandora.mall.chat.ChatNettyBoote.onApplicationEvent(ChatNettyBoote.java:16)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:402)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:359)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:896)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:163)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:552)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at io.pandora.mall.chat.ChatApplication.main(ChatApplication.java:37)
+2021-01-07 14:56:08,614 [main] ERROR [io.pandora.mall.chat.ChatNettyBoote] ChatNettyBoote.java:30 - [Netty] 初始化启动失败,异常信息:null,异常栈信息:{}
+java.lang.NullPointerException: null
+	at io.pandora.mall.chat.ChatNettyBoote.onApplicationEvent(ChatNettyBoote.java:28)
+	at io.pandora.mall.chat.ChatNettyBoote.onApplicationEvent(ChatNettyBoote.java:16)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:402)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:359)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:896)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:163)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:552)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at io.pandora.mall.chat.ChatApplication.main(ChatApplication.java:37)
+2021-01-08 10:55:55,593 [main] ERROR [o.s.d.e.r.support.AbstractElasticsearchRepository] AbstractElasticsearchRepository.java:91 - failed to load elasticsearch nodes : org.elasticsearch.client.transport.NoNodeAvailableException: None of the configured nodes are available: [{#transport#-1}{rTczrSCAQm-pF7Hj-UJJVA}{localhost}{127.0.0.1:9300}]

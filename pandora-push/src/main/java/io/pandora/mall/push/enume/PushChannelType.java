@@ -9,8 +9,6 @@ public enum PushChannelType {
     private Integer channel;
     private String name;
 
-    PushChannelType() {}
-
     PushChannelType(Integer channel, String name) {
         this.channel = channel;
         this.name = name;

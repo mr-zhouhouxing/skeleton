@@ -58,5 +58,4 @@ public class MessageVo extends BaseDto {
 
     @ApiModelProperty("是否已读")
     private int isRed;
-
 }

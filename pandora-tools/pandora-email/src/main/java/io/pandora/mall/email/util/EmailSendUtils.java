@@ -59,14 +59,12 @@ public class EmailSendUtils {
                 Transport.send(message);
             }
 
-            return EmailSendResponse
-                    .builder().responseCode(Constant.OK).responseCode("邮件发送成功").build();
+            return EmailSendResponse.builder().responseCode(Constant.OK).responseCode("邮件发送成功").build();
 
         } catch (Exception e) {
             e.printStackTrace();
             // 发送失败
-            return EmailSendResponse
-                    .builder().responseCode("ERROR").responseCode(e.getMessage()).build();
+            return EmailSendResponse.builder().responseCode("ERROR").responseCode(e.getMessage()).build();
         }
     }
 }

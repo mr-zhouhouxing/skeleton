@@ -4,7 +4,6 @@ import io.pandora.mall.domian.system.Log;
 import io.pandora.mall.manage.log.service.LoggingService;
 import io.pandora.mall.util.StringUtils;
 import io.pandora.mall.util.ThrowableUtils;
-import io.pandora.mall.util.spring.SecurityUtils;
 import io.pandora.mall.util.spring.SpringContextHolder;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
@@ -104,13 +103,15 @@ public class LoggingAspect {
     }
 
     private String getUsername() {
-        try { return SecurityUtils.getUsername();
-        }catch (Exception e){ return ""; }
+        return "测试用户";
+//        try { return SecurityUtils.getUsername();
+//        }catch (Exception e){ return ""; }
     }
 
     private Long getUid(){
-        try { return SecurityUtils.getUserId();
-        }catch (Exception e){ return 0L; }
+        return 10000L;
+//        try { return SecurityUtils.getUserId();
+//        }catch (Exception e){ return 0L; }
     }
 
 }

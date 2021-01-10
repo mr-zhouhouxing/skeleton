@@ -321,3 +321,582 @@ Caused by: java.lang.IllegalStateException: javax.websocket.server.ServerContain
 2021-01-04 16:07:52,058 [main] INFO  [io.pandora.mall.PandoraApplication] StartupInfoLogger.java:59 - Started PandoraApplication in 23.954 seconds (JVM running for 26.334)
 2021-01-04 16:07:52,210 [main] INFO  [io.pandora.mall.job.service.SystemTaskServiceImpl] SystemTaskServiceImpl.java:116 - [定时任务] 初始化定时任务条数:1
 2021-01-04 16:07:52,215 [main] INFO  [io.pandora.mall.PandoraApplication] PandoraApplication.java:36 - run at http://127.0.0.1:9009/doc.html
+2021-01-07 10:58:12,059 [main] INFO  [io.pandora.mall.chat.ChatApplication] StartupInfoLogger.java:50 - Starting ChatApplication on DESKTOP-PSDTEL6 with PID 9204 (D:\pandora-mall\pandora-chat\target\classes started by WIN10 in D:\pandora-mall)
+2021-01-07 10:58:12,066 [main] INFO  [io.pandora.mall.chat.ChatApplication] SpringApplication.java:679 - The following profiles are active: DEV
+2021-01-07 10:58:13,189 [main] WARN  [org.mybatis.spring.mapper.ClassPathMapperScanner] Logger.java:44 - No MyBatis mapper was found in '[io.pandora.mall.chat]' package. Please check your configuration.
+2021-01-07 10:58:13,255 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] RepositoryConfigurationDelegate.java:244 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-01-07 10:58:13,259 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] RepositoryConfigurationDelegate.java:126 - Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-01-07 10:58:13,304 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] RepositoryConfigurationDelegate.java:182 - Finished Spring Data repository scanning in 21ms. Found 0 repository interfaces.
+2021-01-07 10:58:13,890 [main] INFO  [o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] PostProcessorRegistrationDelegate.java:330 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$4f4e7b74] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-01-07 10:58:14,398 [main] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] TomcatWebServer.java:90 - Tomcat initialized with port(s): 10001 (http)
+2021-01-07 10:58:14,420 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] DirectJDKLog.java:173 - Initializing ProtocolHandler ["http-nio-10001"]
+2021-01-07 10:58:14,436 [main] INFO  [org.apache.catalina.core.StandardService] DirectJDKLog.java:173 - Starting service [Tomcat]
+2021-01-07 10:58:14,437 [main] INFO  [org.apache.catalina.core.StandardEngine] DirectJDKLog.java:173 - Starting Servlet engine: [Apache Tomcat/9.0.17]
+2021-01-07 10:58:14,861 [main] INFO  [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] DirectJDKLog.java:173 - Initializing Spring embedded WebApplicationContext
+2021-01-07 10:58:14,863 [main] INFO  [org.springframework.web.context.ContextLoader] ServletWebServerApplicationContext.java:296 - Root WebApplicationContext: initialization completed in 2681 ms
+2021-01-07 10:58:15,325 [main] INFO  [c.a.d.s.b.a.DruidDataSourceAutoConfigure] DruidDataSourceAutoConfigure.java:56 - Init DruidDataSource
+2021-01-07 10:58:15,598 [main] INFO  [com.alibaba.druid.pool.DruidDataSource] DruidDataSource.java:928 - {dataSource-1} inited
+2021-01-07 10:58:16,699 [main] WARN  [c.b.mybatisplus.core.metadata.TableInfoHelper] TableInfoHelper.java:282 - Warn: Could not find @TableId in Class: java.security.Permission.
+2021-01-07 10:58:16,953 [main] WARN  [o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext] AbstractApplicationContext.java:557 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'chatAccessTokenService': Unsatisfied dependency expressed through field 'redisUtils'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'io.pandora.mall.redis.util.RedisUtils' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2021-01-07 10:58:16,955 [main] INFO  [com.alibaba.druid.pool.DruidDataSource] DruidDataSource.java:1823 - {dataSource-1} closed
+2021-01-07 10:58:16,959 [main] INFO  [org.apache.catalina.core.StandardService] DirectJDKLog.java:173 - Stopping service [Tomcat]
+2021-01-07 10:58:16,976 [main] INFO  [o.s.b.a.l.ConditionEvaluationReportLoggingListener] ConditionEvaluationReportLoggingListener.java:142 - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-01-07 10:58:17,199 [main] ERROR [o.s.b.diagnostics.LoggingFailureAnalysisReporter] LoggingFailureAnalysisReporter.java:42 - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field redisUtils in io.pandora.mall.chat.service.ChatAccessTokenService required a bean of type 'io.pandora.mall.redis.util.RedisUtils' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'io.pandora.mall.redis.util.RedisUtils' in your configuration.
+
+2021-01-07 11:00:37,406 [main] INFO  [io.pandora.mall.chat.ChatApplication] StartupInfoLogger.java:50 - Starting ChatApplication on DESKTOP-PSDTEL6 with PID 16768 (D:\pandora-mall\pandora-chat\target\classes started by WIN10 in D:\pandora-mall)
+2021-01-07 11:00:37,411 [main] INFO  [io.pandora.mall.chat.ChatApplication] SpringApplication.java:679 - The following profiles are active: DEV
+2021-01-07 11:00:38,523 [main] WARN  [org.mybatis.spring.mapper.ClassPathMapperScanner] Logger.java:44 - No MyBatis mapper was found in '[io.pandora.mall.chat]' package. Please check your configuration.
+2021-01-07 11:00:38,585 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] RepositoryConfigurationDelegate.java:244 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-01-07 11:00:38,589 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] RepositoryConfigurationDelegate.java:126 - Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-01-07 11:00:38,631 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] RepositoryConfigurationDelegate.java:182 - Finished Spring Data repository scanning in 20ms. Found 0 repository interfaces.
+2021-01-07 11:00:39,205 [main] INFO  [o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] PostProcessorRegistrationDelegate.java:330 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$f6c65176] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-01-07 11:00:39,705 [main] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] TomcatWebServer.java:90 - Tomcat initialized with port(s): 10001 (http)
+2021-01-07 11:00:39,727 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] DirectJDKLog.java:173 - Initializing ProtocolHandler ["http-nio-10001"]
+2021-01-07 11:00:39,743 [main] INFO  [org.apache.catalina.core.StandardService] DirectJDKLog.java:173 - Starting service [Tomcat]
+2021-01-07 11:00:39,743 [main] INFO  [org.apache.catalina.core.StandardEngine] DirectJDKLog.java:173 - Starting Servlet engine: [Apache Tomcat/9.0.17]
+2021-01-07 11:00:40,185 [main] INFO  [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] DirectJDKLog.java:173 - Initializing Spring embedded WebApplicationContext
+2021-01-07 11:00:40,185 [main] INFO  [org.springframework.web.context.ContextLoader] ServletWebServerApplicationContext.java:296 - Root WebApplicationContext: initialization completed in 2667 ms
+2021-01-07 11:00:40,578 [main] INFO  [c.a.d.s.b.a.DruidDataSourceAutoConfigure] DruidDataSourceAutoConfigure.java:56 - Init DruidDataSource
+2021-01-07 11:00:40,776 [main] INFO  [com.alibaba.druid.pool.DruidDataSource] DruidDataSource.java:928 - {dataSource-1} inited
+2021-01-07 11:00:41,760 [main] WARN  [c.b.mybatisplus.core.metadata.TableInfoHelper] TableInfoHelper.java:282 - Warn: Could not find @TableId in Class: java.security.Permission.
+2021-01-07 11:00:42,014 [main] WARN  [o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext] AbstractApplicationContext.java:557 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'chatAccessTokenService': Unsatisfied dependency expressed through field 'redisUtils'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'io.pandora.mall.redis.util.RedisUtils' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2021-01-07 11:00:42,016 [main] INFO  [com.alibaba.druid.pool.DruidDataSource] DruidDataSource.java:1823 - {dataSource-1} closed
+2021-01-07 11:00:42,020 [main] INFO  [org.apache.catalina.core.StandardService] DirectJDKLog.java:173 - Stopping service [Tomcat]
+2021-01-07 11:00:42,039 [main] INFO  [o.s.b.a.l.ConditionEvaluationReportLoggingListener] ConditionEvaluationReportLoggingListener.java:142 - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-01-07 11:00:42,273 [main] ERROR [o.s.b.diagnostics.LoggingFailureAnalysisReporter] LoggingFailureAnalysisReporter.java:42 - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field redisUtils in io.pandora.mall.chat.service.ChatAccessTokenService required a bean of type 'io.pandora.mall.redis.util.RedisUtils' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'io.pandora.mall.redis.util.RedisUtils' in your configuration.
+
+2021-01-07 11:26:47,173 [main] INFO  [io.pandora.mall.chat.ChatApplication] StartupInfoLogger.java:50 - Starting ChatApplication on DESKTOP-PSDTEL6 with PID 12020 (D:\pandora-mall\pandora-chat\target\classes started by WIN10 in D:\pandora-mall)
+2021-01-07 11:26:47,178 [main] INFO  [io.pandora.mall.chat.ChatApplication] SpringApplication.java:679 - The following profiles are active: DEV
+2021-01-07 11:26:48,317 [main] WARN  [org.mybatis.spring.mapper.ClassPathMapperScanner] Logger.java:44 - No MyBatis mapper was found in '[io.pandora.mall.chat]' package. Please check your configuration.
+2021-01-07 11:26:48,378 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] RepositoryConfigurationDelegate.java:244 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-01-07 11:26:48,382 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] RepositoryConfigurationDelegate.java:126 - Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-01-07 11:26:48,424 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] RepositoryConfigurationDelegate.java:182 - Finished Spring Data repository scanning in 20ms. Found 0 repository interfaces.
+2021-01-07 11:26:49,001 [main] INFO  [o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] PostProcessorRegistrationDelegate.java:330 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$f9180180] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-01-07 11:26:49,498 [main] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] TomcatWebServer.java:90 - Tomcat initialized with port(s): 10001 (http)
+2021-01-07 11:26:49,521 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] DirectJDKLog.java:173 - Initializing ProtocolHandler ["http-nio-10001"]
+2021-01-07 11:26:49,536 [main] INFO  [org.apache.catalina.core.StandardService] DirectJDKLog.java:173 - Starting service [Tomcat]
+2021-01-07 11:26:49,536 [main] INFO  [org.apache.catalina.core.StandardEngine] DirectJDKLog.java:173 - Starting Servlet engine: [Apache Tomcat/9.0.17]
+2021-01-07 11:26:49,898 [main] INFO  [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] DirectJDKLog.java:173 - Initializing Spring embedded WebApplicationContext
+2021-01-07 11:26:49,898 [main] INFO  [org.springframework.web.context.ContextLoader] ServletWebServerApplicationContext.java:296 - Root WebApplicationContext: initialization completed in 2597 ms
+2021-01-07 11:26:50,287 [main] INFO  [c.a.d.s.b.a.DruidDataSourceAutoConfigure] DruidDataSourceAutoConfigure.java:56 - Init DruidDataSource
+2021-01-07 11:26:50,482 [main] INFO  [com.alibaba.druid.pool.DruidDataSource] DruidDataSource.java:928 - {dataSource-1} inited
+2021-01-07 11:26:51,480 [main] WARN  [c.b.mybatisplus.core.metadata.TableInfoHelper] TableInfoHelper.java:282 - Warn: Could not find @TableId in Class: java.security.Permission.
+2021-01-07 11:26:51,738 [main] WARN  [o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext] AbstractApplicationContext.java:557 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'chatAccessTokenService': Unsatisfied dependency expressed through field 'redisUtils'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'io.pandora.mall.redis.util.RedisUtils' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2021-01-07 11:26:51,740 [main] INFO  [com.alibaba.druid.pool.DruidDataSource] DruidDataSource.java:1823 - {dataSource-1} closed
+2021-01-07 11:26:51,744 [main] INFO  [org.apache.catalina.core.StandardService] DirectJDKLog.java:173 - Stopping service [Tomcat]
+2021-01-07 11:26:51,760 [main] INFO  [o.s.b.a.l.ConditionEvaluationReportLoggingListener] ConditionEvaluationReportLoggingListener.java:142 - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-01-07 11:26:51,994 [main] ERROR [o.s.b.diagnostics.LoggingFailureAnalysisReporter] LoggingFailureAnalysisReporter.java:42 - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field redisUtils in io.pandora.mall.chat.service.ChatAccessTokenService required a bean of type 'io.pandora.mall.redis.util.RedisUtils' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'io.pandora.mall.redis.util.RedisUtils' in your configuration.
+
+2021-01-07 11:29:33,144 [main] INFO  [io.pandora.mall.chat.ChatApplication] StartupInfoLogger.java:50 - Starting ChatApplication on DESKTOP-PSDTEL6 with PID 14036 (D:\pandora-mall\pandora-chat\target\classes started by WIN10 in D:\pandora-mall)
+2021-01-07 11:29:33,150 [main] INFO  [io.pandora.mall.chat.ChatApplication] SpringApplication.java:679 - The following profiles are active: DEV
+2021-01-07 11:29:34,263 [main] WARN  [org.mybatis.spring.mapper.ClassPathMapperScanner] Logger.java:44 - No MyBatis mapper was found in '[io.pandora.mall.chat]' package. Please check your configuration.
+2021-01-07 11:29:34,325 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] RepositoryConfigurationDelegate.java:244 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-01-07 11:29:34,329 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] RepositoryConfigurationDelegate.java:126 - Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-01-07 11:29:34,373 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] RepositoryConfigurationDelegate.java:182 - Finished Spring Data repository scanning in 21ms. Found 0 repository interfaces.
+2021-01-07 11:29:34,962 [main] INFO  [o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] PostProcessorRegistrationDelegate.java:330 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$cd377d7e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-01-07 11:29:35,451 [main] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] TomcatWebServer.java:90 - Tomcat initialized with port(s): 10001 (http)
+2021-01-07 11:29:35,473 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] DirectJDKLog.java:173 - Initializing ProtocolHandler ["http-nio-10001"]
+2021-01-07 11:29:35,488 [main] INFO  [org.apache.catalina.core.StandardService] DirectJDKLog.java:173 - Starting service [Tomcat]
+2021-01-07 11:29:35,489 [main] INFO  [org.apache.catalina.core.StandardEngine] DirectJDKLog.java:173 - Starting Servlet engine: [Apache Tomcat/9.0.17]
+2021-01-07 11:29:35,842 [main] INFO  [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] DirectJDKLog.java:173 - Initializing Spring embedded WebApplicationContext
+2021-01-07 11:29:35,842 [main] INFO  [org.springframework.web.context.ContextLoader] ServletWebServerApplicationContext.java:296 - Root WebApplicationContext: initialization completed in 2584 ms
+2021-01-07 11:29:36,241 [main] INFO  [c.a.d.s.b.a.DruidDataSourceAutoConfigure] DruidDataSourceAutoConfigure.java:56 - Init DruidDataSource
+2021-01-07 11:29:36,439 [main] INFO  [com.alibaba.druid.pool.DruidDataSource] DruidDataSource.java:928 - {dataSource-1} inited
+2021-01-07 11:29:37,415 [main] WARN  [c.b.mybatisplus.core.metadata.TableInfoHelper] TableInfoHelper.java:282 - Warn: Could not find @TableId in Class: java.security.Permission.
+2021-01-07 11:29:37,676 [main] WARN  [o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext] AbstractApplicationContext.java:557 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'chatAccessTokenService': Unsatisfied dependency expressed through field 'redisUtils'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'io.pandora.mall.redis.util.RedisUtils' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2021-01-07 11:29:37,678 [main] INFO  [com.alibaba.druid.pool.DruidDataSource] DruidDataSource.java:1823 - {dataSource-1} closed
+2021-01-07 11:29:37,682 [main] INFO  [org.apache.catalina.core.StandardService] DirectJDKLog.java:173 - Stopping service [Tomcat]
+2021-01-07 11:29:37,698 [main] INFO  [o.s.b.a.l.ConditionEvaluationReportLoggingListener] ConditionEvaluationReportLoggingListener.java:142 - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-01-07 11:29:37,903 [main] ERROR [o.s.b.diagnostics.LoggingFailureAnalysisReporter] LoggingFailureAnalysisReporter.java:42 - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field redisUtils in io.pandora.mall.chat.service.ChatAccessTokenService required a bean of type 'io.pandora.mall.redis.util.RedisUtils' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'io.pandora.mall.redis.util.RedisUtils' in your configuration.
+
+2021-01-07 11:31:15,656 [main] INFO  [io.pandora.mall.chat.ChatApplication] StartupInfoLogger.java:50 - Starting ChatApplication on DESKTOP-PSDTEL6 with PID 4368 (D:\pandora-mall\pandora-chat\target\classes started by WIN10 in D:\pandora-mall)
+2021-01-07 11:31:15,664 [main] INFO  [io.pandora.mall.chat.ChatApplication] SpringApplication.java:679 - The following profiles are active: DEV
+2021-01-07 11:31:17,219 [main] WARN  [org.mybatis.spring.mapper.ClassPathMapperScanner] Logger.java:44 - No MyBatis mapper was found in '[io.pandora.mall.chat]' package. Please check your configuration.
+2021-01-07 11:31:17,289 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] RepositoryConfigurationDelegate.java:244 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-01-07 11:31:17,293 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] RepositoryConfigurationDelegate.java:126 - Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-01-07 11:31:17,339 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] RepositoryConfigurationDelegate.java:182 - Finished Spring Data repository scanning in 22ms. Found 0 repository interfaces.
+2021-01-07 11:31:17,970 [main] INFO  [o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] PostProcessorRegistrationDelegate.java:330 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$3cfbc758] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-01-07 11:31:18,543 [main] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] TomcatWebServer.java:90 - Tomcat initialized with port(s): 10001 (http)
+2021-01-07 11:31:18,567 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] DirectJDKLog.java:173 - Initializing ProtocolHandler ["http-nio-10001"]
+2021-01-07 11:31:18,583 [main] INFO  [org.apache.catalina.core.StandardService] DirectJDKLog.java:173 - Starting service [Tomcat]
+2021-01-07 11:31:18,584 [main] INFO  [org.apache.catalina.core.StandardEngine] DirectJDKLog.java:173 - Starting Servlet engine: [Apache Tomcat/9.0.17]
+2021-01-07 11:31:18,956 [main] INFO  [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] DirectJDKLog.java:173 - Initializing Spring embedded WebApplicationContext
+2021-01-07 11:31:18,957 [main] INFO  [org.springframework.web.context.ContextLoader] ServletWebServerApplicationContext.java:296 - Root WebApplicationContext: initialization completed in 3167 ms
+2021-01-07 11:31:19,385 [main] INFO  [c.a.d.s.b.a.DruidDataSourceAutoConfigure] DruidDataSourceAutoConfigure.java:56 - Init DruidDataSource
+2021-01-07 11:31:19,589 [main] INFO  [com.alibaba.druid.pool.DruidDataSource] DruidDataSource.java:928 - {dataSource-1} inited
+2021-01-07 11:31:20,594 [main] WARN  [c.b.mybatisplus.core.metadata.TableInfoHelper] TableInfoHelper.java:282 - Warn: Could not find @TableId in Class: java.security.Permission.
+2021-01-07 11:31:20,851 [main] WARN  [o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext] AbstractApplicationContext.java:557 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'chatAccessTokenService': Unsatisfied dependency expressed through field 'redisUtils'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'io.pandora.mall.redis.util.RedisUtils' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2021-01-07 11:31:20,853 [main] INFO  [com.alibaba.druid.pool.DruidDataSource] DruidDataSource.java:1823 - {dataSource-1} closed
+2021-01-07 11:31:20,857 [main] INFO  [org.apache.catalina.core.StandardService] DirectJDKLog.java:173 - Stopping service [Tomcat]
+2021-01-07 11:31:20,876 [main] INFO  [o.s.b.a.l.ConditionEvaluationReportLoggingListener] ConditionEvaluationReportLoggingListener.java:142 - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-01-07 11:31:21,107 [main] ERROR [o.s.b.diagnostics.LoggingFailureAnalysisReporter] LoggingFailureAnalysisReporter.java:42 - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field redisUtils in io.pandora.mall.chat.service.ChatAccessTokenService required a bean of type 'io.pandora.mall.redis.util.RedisUtils' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'io.pandora.mall.redis.util.RedisUtils' in your configuration.
+
+2021-01-07 11:41:00,627 [main] INFO  [io.pandora.mall.chat.ChatApplication] StartupInfoLogger.java:50 - Starting ChatApplication on DESKTOP-PSDTEL6 with PID 21264 (D:\pandora-mall\pandora-chat\target\classes started by WIN10 in D:\pandora-mall)
+2021-01-07 11:41:00,677 [main] INFO  [io.pandora.mall.chat.ChatApplication] SpringApplication.java:679 - The following profiles are active: DEV
+2021-01-07 11:41:01,756 [main] WARN  [org.mybatis.spring.mapper.ClassPathMapperScanner] Logger.java:44 - No MyBatis mapper was found in '[io.pandora.mall.chat]' package. Please check your configuration.
+2021-01-07 11:41:01,816 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] RepositoryConfigurationDelegate.java:244 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-01-07 11:41:01,820 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] RepositoryConfigurationDelegate.java:126 - Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-01-07 11:41:01,862 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] RepositoryConfigurationDelegate.java:182 - Finished Spring Data repository scanning in 20ms. Found 0 repository interfaces.
+2021-01-07 11:41:02,425 [main] INFO  [o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] PostProcessorRegistrationDelegate.java:330 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$416ed714] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-01-07 11:41:02,913 [main] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] TomcatWebServer.java:90 - Tomcat initialized with port(s): 10001 (http)
+2021-01-07 11:41:02,935 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] DirectJDKLog.java:173 - Initializing ProtocolHandler ["http-nio-10001"]
+2021-01-07 11:41:02,950 [main] INFO  [org.apache.catalina.core.StandardService] DirectJDKLog.java:173 - Starting service [Tomcat]
+2021-01-07 11:41:02,950 [main] INFO  [org.apache.catalina.core.StandardEngine] DirectJDKLog.java:173 - Starting Servlet engine: [Apache Tomcat/9.0.17]
+2021-01-07 11:41:03,310 [main] INFO  [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] DirectJDKLog.java:173 - Initializing Spring embedded WebApplicationContext
+2021-01-07 11:41:03,311 [main] INFO  [org.springframework.web.context.ContextLoader] ServletWebServerApplicationContext.java:296 - Root WebApplicationContext: initialization completed in 2567 ms
+2021-01-07 11:41:03,703 [main] INFO  [c.a.d.s.b.a.DruidDataSourceAutoConfigure] DruidDataSourceAutoConfigure.java:56 - Init DruidDataSource
+2021-01-07 11:41:03,898 [main] INFO  [com.alibaba.druid.pool.DruidDataSource] DruidDataSource.java:928 - {dataSource-1} inited
+2021-01-07 11:41:04,885 [main] WARN  [c.b.mybatisplus.core.metadata.TableInfoHelper] TableInfoHelper.java:282 - Warn: Could not find @TableId in Class: java.security.Permission.
+2021-01-07 11:41:05,593 [main] INFO  [o.s.scheduling.concurrent.ThreadPoolTaskExecutor] ExecutorConfigurationSupport.java:171 - Initializing ExecutorService 'applicationTaskExecutor'
+2021-01-07 11:41:06,264 [main] INFO  [o.s.b.a.s.s.UserDetailsServiceAutoConfiguration] UserDetailsServiceAutoConfiguration.java:87 - 
+
+Using generated security password: 4027d23e-b6cf-45b7-b7f5-9cfb2d5243aa
+
+2021-01-07 11:41:06,450 [main] INFO  [o.s.security.web.DefaultSecurityFilterChain] DefaultSecurityFilterChain.java:43 - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@383c3eb3, org.springframework.security.web.context.SecurityContextPersistenceFilter@3b4825f0, org.springframework.security.web.header.HeaderWriterFilter@3408f695, org.springframework.security.web.csrf.CsrfFilter@40c2ce52, org.springframework.security.web.authentication.logout.LogoutFilter@610d28b8, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@23da79eb, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@682abca7, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@20ab76ee, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@9f674ac, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7980cf2c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@20a967fe, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@485caa8f, org.springframework.security.web.session.SessionManagementFilter@4dde8976, org.springframework.security.web.access.ExceptionTranslationFilter@6cd15072, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7c281eb8]
+2021-01-07 11:41:06,615 [main] ERROR [io.pandora.mall.chat.ChatNettyBoote] ChatNettyBoote.java:30 - [Netty] 初始化启动失败,异常信息:null,异常栈信息:{}
+java.lang.NullPointerException: null
+	at io.pandora.mall.chat.ChatNettyBoote.onApplicationEvent(ChatNettyBoote.java:28)
+	at io.pandora.mall.chat.ChatNettyBoote.onApplicationEvent(ChatNettyBoote.java:16)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:402)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:359)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:896)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:163)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:552)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at io.pandora.mall.chat.ChatApplication.main(ChatApplication.java:37)
+2021-01-07 11:41:06,619 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] DirectJDKLog.java:173 - Starting ProtocolHandler ["http-nio-10001"]
+2021-01-07 11:41:06,644 [main] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] TomcatWebServer.java:204 - Tomcat started on port(s): 10001 (http) with context path ''
+2021-01-07 11:41:06,648 [main] INFO  [io.pandora.mall.chat.ChatApplication] StartupInfoLogger.java:59 - Started ChatApplication in 7.013 seconds (JVM running for 8.792)
+2021-01-07 11:41:06,651 [main] INFO  [io.pandora.mall.chat.ChatApplication] ChatApplication.java:53 - [CHAT] Service startup removes all users...
+2021-01-07 11:43:18,379 [main] INFO  [io.pandora.mall.chat.ChatApplication] StartupInfoLogger.java:50 - Starting ChatApplication on DESKTOP-PSDTEL6 with PID 20380 (D:\pandora-mall\pandora-chat\target\classes started by WIN10 in D:\pandora-mall)
+2021-01-07 11:43:18,433 [main] INFO  [io.pandora.mall.chat.ChatApplication] SpringApplication.java:679 - The following profiles are active: DEV
+2021-01-07 11:43:19,690 [main] WARN  [org.mybatis.spring.mapper.ClassPathMapperScanner] Logger.java:44 - No MyBatis mapper was found in '[io.pandora.mall.chat]' package. Please check your configuration.
+2021-01-07 11:43:19,765 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] RepositoryConfigurationDelegate.java:244 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-01-07 11:43:19,770 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] RepositoryConfigurationDelegate.java:126 - Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-01-07 11:43:19,827 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] RepositoryConfigurationDelegate.java:182 - Finished Spring Data repository scanning in 27ms. Found 0 repository interfaces.
+2021-01-07 11:43:20,475 [main] INFO  [o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] PostProcessorRegistrationDelegate.java:330 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$348ed68a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-01-07 11:43:21,061 [main] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] TomcatWebServer.java:90 - Tomcat initialized with port(s): 10001 (http)
+2021-01-07 11:43:21,087 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] DirectJDKLog.java:173 - Initializing ProtocolHandler ["http-nio-10001"]
+2021-01-07 11:43:21,103 [main] INFO  [org.apache.catalina.core.StandardService] DirectJDKLog.java:173 - Starting service [Tomcat]
+2021-01-07 11:43:21,104 [main] INFO  [org.apache.catalina.core.StandardEngine] DirectJDKLog.java:173 - Starting Servlet engine: [Apache Tomcat/9.0.17]
+2021-01-07 11:43:21,495 [main] INFO  [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] DirectJDKLog.java:173 - Initializing Spring embedded WebApplicationContext
+2021-01-07 11:43:21,496 [main] INFO  [org.springframework.web.context.ContextLoader] ServletWebServerApplicationContext.java:296 - Root WebApplicationContext: initialization completed in 2984 ms
+2021-01-07 11:43:21,926 [main] INFO  [c.a.d.s.b.a.DruidDataSourceAutoConfigure] DruidDataSourceAutoConfigure.java:56 - Init DruidDataSource
+2021-01-07 11:43:22,144 [main] INFO  [com.alibaba.druid.pool.DruidDataSource] DruidDataSource.java:928 - {dataSource-1} inited
+2021-01-07 11:43:23,208 [main] WARN  [c.b.mybatisplus.core.metadata.TableInfoHelper] TableInfoHelper.java:282 - Warn: Could not find @TableId in Class: java.security.Permission.
+2021-01-07 11:43:23,999 [main] INFO  [o.s.scheduling.concurrent.ThreadPoolTaskExecutor] ExecutorConfigurationSupport.java:171 - Initializing ExecutorService 'applicationTaskExecutor'
+2021-01-07 11:43:24,717 [main] INFO  [o.s.b.a.s.s.UserDetailsServiceAutoConfiguration] UserDetailsServiceAutoConfiguration.java:87 - 
+
+Using generated security password: 041a1e4c-1a72-4491-b301-f578070bbca8
+
+2021-01-07 11:43:24,899 [main] INFO  [o.s.security.web.DefaultSecurityFilterChain] DefaultSecurityFilterChain.java:43 - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@23f5008a, org.springframework.security.web.context.SecurityContextPersistenceFilter@320ff86f, org.springframework.security.web.header.HeaderWriterFilter@2e29f28e, org.springframework.security.web.csrf.CsrfFilter@406ad6d5, org.springframework.security.web.authentication.logout.LogoutFilter@6ba060af, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@241fc278, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@7ed7ae, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@44abdb1f, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@eded048, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@84f51d9, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@374b6e33, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@62108cd3, org.springframework.security.web.session.SessionManagementFilter@32b46831, org.springframework.security.web.access.ExceptionTranslationFilter@73b74615, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4b98225c]
+2021-01-07 11:43:25,082 [main] ERROR [io.pandora.mall.chat.ChatNettyBoote] ChatNettyBoote.java:30 - [Netty] 初始化启动失败,异常信息:null,异常栈信息:{}
+java.lang.NullPointerException: null
+	at io.pandora.mall.chat.ChatNettyBoote.onApplicationEvent(ChatNettyBoote.java:28)
+	at io.pandora.mall.chat.ChatNettyBoote.onApplicationEvent(ChatNettyBoote.java:16)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:402)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:359)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:896)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:163)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:552)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at io.pandora.mall.chat.ChatApplication.main(ChatApplication.java:37)
+2021-01-07 11:43:25,086 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] DirectJDKLog.java:173 - Starting ProtocolHandler ["http-nio-10001"]
+2021-01-07 11:43:25,114 [main] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] TomcatWebServer.java:204 - Tomcat started on port(s): 10001 (http) with context path ''
+2021-01-07 11:43:25,119 [main] INFO  [io.pandora.mall.chat.ChatApplication] StartupInfoLogger.java:59 - Started ChatApplication in 7.707 seconds (JVM running for 10.274)
+2021-01-07 11:43:25,123 [main] INFO  [io.pandora.mall.chat.ChatApplication] ChatApplication.java:53 - [CHAT] Service startup removes all users...
+2021-01-07 11:43:58,150 [main] INFO  [io.pandora.mall.chat.ChatApplication] StartupInfoLogger.java:50 - Starting ChatApplication on DESKTOP-PSDTEL6 with PID 13984 (D:\pandora-mall\pandora-chat\target\classes started by WIN10 in D:\pandora-mall)
+2021-01-07 11:43:58,201 [main] INFO  [io.pandora.mall.chat.ChatApplication] SpringApplication.java:679 - The following profiles are active: DEV
+2021-01-07 11:43:59,468 [main] WARN  [org.mybatis.spring.mapper.ClassPathMapperScanner] Logger.java:44 - No MyBatis mapper was found in '[io.pandora.mall.chat]' package. Please check your configuration.
+2021-01-07 11:43:59,541 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] RepositoryConfigurationDelegate.java:244 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-01-07 11:43:59,545 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] RepositoryConfigurationDelegate.java:126 - Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-01-07 11:43:59,595 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] RepositoryConfigurationDelegate.java:182 - Finished Spring Data repository scanning in 26ms. Found 0 repository interfaces.
+2021-01-07 11:44:00,189 [main] INFO  [o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] PostProcessorRegistrationDelegate.java:330 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$619e3ebb] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-01-07 11:44:00,674 [main] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] TomcatWebServer.java:90 - Tomcat initialized with port(s): 10001 (http)
+2021-01-07 11:44:00,697 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] DirectJDKLog.java:173 - Initializing ProtocolHandler ["http-nio-10001"]
+2021-01-07 11:44:00,711 [main] INFO  [org.apache.catalina.core.StandardService] DirectJDKLog.java:173 - Starting service [Tomcat]
+2021-01-07 11:44:00,712 [main] INFO  [org.apache.catalina.core.StandardEngine] DirectJDKLog.java:173 - Starting Servlet engine: [Apache Tomcat/9.0.17]
+2021-01-07 11:44:01,075 [main] INFO  [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] DirectJDKLog.java:173 - Initializing Spring embedded WebApplicationContext
+2021-01-07 11:44:01,075 [main] INFO  [org.springframework.web.context.ContextLoader] ServletWebServerApplicationContext.java:296 - Root WebApplicationContext: initialization completed in 2810 ms
+2021-01-07 11:44:01,471 [main] INFO  [c.a.d.s.b.a.DruidDataSourceAutoConfigure] DruidDataSourceAutoConfigure.java:56 - Init DruidDataSource
+2021-01-07 11:44:01,663 [main] INFO  [com.alibaba.druid.pool.DruidDataSource] DruidDataSource.java:928 - {dataSource-1} inited
+2021-01-07 11:44:02,646 [main] WARN  [c.b.mybatisplus.core.metadata.TableInfoHelper] TableInfoHelper.java:282 - Warn: Could not find @TableId in Class: java.security.Permission.
+2021-01-07 11:44:03,331 [main] INFO  [o.s.scheduling.concurrent.ThreadPoolTaskExecutor] ExecutorConfigurationSupport.java:171 - Initializing ExecutorService 'applicationTaskExecutor'
+2021-01-07 11:44:03,990 [main] INFO  [o.s.b.a.s.s.UserDetailsServiceAutoConfiguration] UserDetailsServiceAutoConfiguration.java:87 - 
+
+Using generated security password: 2b0fb29b-3502-4862-ab3d-8b55e67184e4
+
+2021-01-07 11:44:04,173 [main] INFO  [o.s.security.web.DefaultSecurityFilterChain] DefaultSecurityFilterChain.java:43 - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2dbc408c, org.springframework.security.web.context.SecurityContextPersistenceFilter@71cea1b8, org.springframework.security.web.header.HeaderWriterFilter@77c1e611, org.springframework.security.web.csrf.CsrfFilter@6dd36ab6, org.springframework.security.web.authentication.logout.LogoutFilter@34d713a2, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@5cf8676a, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@1e79d43, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@991cbde, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@59939293, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2e463f4, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5dcd0cdf, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@78d71df1, org.springframework.security.web.session.SessionManagementFilter@5a97b17c, org.springframework.security.web.access.ExceptionTranslationFilter@93824eb, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@630bf683]
+2021-01-07 11:44:04,336 [main] ERROR [io.pandora.mall.chat.ChatNettyBoote] ChatNettyBoote.java:30 - [Netty] 初始化启动失败,异常信息:null,异常栈信息:{}
+java.lang.NullPointerException: null
+	at io.pandora.mall.chat.ChatNettyBoote.onApplicationEvent(ChatNettyBoote.java:28)
+	at io.pandora.mall.chat.ChatNettyBoote.onApplicationEvent(ChatNettyBoote.java:16)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:402)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:359)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:896)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:163)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:552)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at io.pandora.mall.chat.ChatApplication.main(ChatApplication.java:37)
+2021-01-07 11:44:04,340 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] DirectJDKLog.java:173 - Starting ProtocolHandler ["http-nio-10001"]
+2021-01-07 11:44:04,364 [main] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] TomcatWebServer.java:204 - Tomcat started on port(s): 10001 (http) with context path ''
+2021-01-07 11:44:04,369 [main] INFO  [io.pandora.mall.chat.ChatApplication] StartupInfoLogger.java:59 - Started ChatApplication in 7.171 seconds (JVM running for 8.964)
+2021-01-07 11:44:04,372 [main] INFO  [io.pandora.mall.chat.ChatApplication] ChatApplication.java:53 - [CHAT] Service startup removes all users...
+2021-01-07 14:54:58,891 [main] INFO  [io.pandora.mall.chat.ChatApplication] StartupInfoLogger.java:50 - Starting ChatApplication on DESKTOP-PSDTEL6 with PID 15464 (D:\pandora-mall\pandora-chat\target\classes started by WIN10 in D:\pandora-mall)
+2021-01-07 14:54:58,897 [main] INFO  [io.pandora.mall.chat.ChatApplication] SpringApplication.java:679 - The following profiles are active: DEV
+2021-01-07 14:55:00,216 [main] WARN  [org.mybatis.spring.mapper.ClassPathMapperScanner] Logger.java:44 - No MyBatis mapper was found in '[io.pandora.mall.chat]' package. Please check your configuration.
+2021-01-07 14:55:00,286 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] RepositoryConfigurationDelegate.java:244 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-01-07 14:55:00,291 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] RepositoryConfigurationDelegate.java:126 - Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-01-07 14:55:00,341 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] RepositoryConfigurationDelegate.java:182 - Finished Spring Data repository scanning in 25ms. Found 0 repository interfaces.
+2021-01-07 14:55:01,069 [main] INFO  [o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] PostProcessorRegistrationDelegate.java:330 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$7d80915f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-01-07 14:55:01,402 [main] INFO  [org.eclipse.jetty.util.log] Log.java:193 - Logging initialized @4949ms to org.eclipse.jetty.util.log.Slf4jLog
+2021-01-07 14:55:02,080 [main] INFO  [o.s.b.w.e.jetty.JettyServletWebServerFactory] JettyServletWebServerFactory.java:143 - Server initialized with port: 10001
+2021-01-07 14:55:02,085 [main] INFO  [org.eclipse.jetty.server.Server] Server.java:370 - jetty-9.4.15.v20190215; built: 2019-02-15T16:53:49.381Z; git: eb70b240169fcf1abbd86af36482d1c49826fa0b; jvm 1.8.0_121-b13
+2021-01-07 14:55:02,139 [main] INFO  [o.e.j.server.handler.ContextHandler.application] ContextHandler.java:2345 - Initializing Spring embedded WebApplicationContext
+2021-01-07 14:55:02,139 [main] INFO  [org.springframework.web.context.ContextLoader] ServletWebServerApplicationContext.java:296 - Root WebApplicationContext: initialization completed in 3123 ms
+2021-01-07 14:55:02,454 [main] INFO  [org.eclipse.jetty.server.session] DefaultSessionIdManager.java:365 - DefaultSessionIdManager workerName=node0
+2021-01-07 14:55:02,455 [main] INFO  [org.eclipse.jetty.server.session] DefaultSessionIdManager.java:370 - No SessionScavenger set, using defaults
+2021-01-07 14:55:02,457 [main] INFO  [org.eclipse.jetty.server.session] HouseKeeper.java:149 - node0 Scavenging every 660000ms
+2021-01-07 14:55:02,470 [main] INFO  [org.eclipse.jetty.server.handler.ContextHandler] ContextHandler.java:855 - Started o.s.b.w.e.j.JettyEmbeddedWebAppContext@2c58dcb1{application,/,[file:///C:/Users/WIN10/AppData/Local/Temp/jetty-docbase.7398786385685623900.10001/, jar:file:/C:/Users/WIN10/.m2/repository/io/springfox/springfox-swagger-ui/2.6.1/springfox-swagger-ui-2.6.1.jar!/META-INF/resources, jar:file:/C:/Users/WIN10/.m2/repository/com/github/xiaoymin/swagger-bootstrap-ui/1.9.6/swagger-bootstrap-ui-1.9.6.jar!/META-INF/resources],AVAILABLE}
+2021-01-07 14:55:02,471 [main] INFO  [org.eclipse.jetty.server.Server] Server.java:407 - Started @6019ms
+2021-01-07 14:55:02,698 [main] INFO  [c.a.d.s.b.a.DruidDataSourceAutoConfigure] DruidDataSourceAutoConfigure.java:56 - Init DruidDataSource
+2021-01-07 14:55:03,093 [main] INFO  [com.alibaba.druid.pool.DruidDataSource] DruidDataSource.java:928 - {dataSource-1} inited
+2021-01-07 14:55:04,438 [main] WARN  [c.b.mybatisplus.core.metadata.TableInfoHelper] TableInfoHelper.java:282 - Warn: Could not find @TableId in Class: java.security.Permission.
+2021-01-07 14:55:05,419 [main] INFO  [o.s.scheduling.concurrent.ThreadPoolTaskExecutor] ExecutorConfigurationSupport.java:171 - Initializing ExecutorService 'applicationTaskExecutor'
+2021-01-07 14:55:06,409 [main] INFO  [o.s.b.a.s.s.UserDetailsServiceAutoConfiguration] UserDetailsServiceAutoConfiguration.java:87 - 
+
+Using generated security password: 96fbd7f9-5df0-4a77-9029-a3a198ab1545
+
+2021-01-07 14:55:06,619 [main] INFO  [o.s.security.web.DefaultSecurityFilterChain] DefaultSecurityFilterChain.java:43 - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@67fb5025, org.springframework.security.web.context.SecurityContextPersistenceFilter@7d0100ea, org.springframework.security.web.header.HeaderWriterFilter@59498d94, org.springframework.security.web.csrf.CsrfFilter@7069f076, org.springframework.security.web.authentication.logout.LogoutFilter@2282400e, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@733fb462, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@ee21292, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@787e4357, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@245253d8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4ea17147, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@35d26ad2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@392781e, org.springframework.security.web.session.SessionManagementFilter@6b321262, org.springframework.security.web.access.ExceptionTranslationFilter@6367a688, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@27dc627a]
+2021-01-07 14:55:06,828 [main] ERROR [io.pandora.mall.chat.ChatNettyBoote] ChatNettyBoote.java:30 - [Netty] 初始化启动失败,异常信息:null,异常栈信息:{}
+java.lang.NullPointerException: null
+	at io.pandora.mall.chat.ChatNettyBoote.onApplicationEvent(ChatNettyBoote.java:28)
+	at io.pandora.mall.chat.ChatNettyBoote.onApplicationEvent(ChatNettyBoote.java:16)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:402)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:359)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:896)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:163)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:552)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at io.pandora.mall.chat.ChatApplication.main(ChatApplication.java:37)
+2021-01-07 14:55:06,886 [main] INFO  [o.e.j.server.handler.ContextHandler.application] ContextHandler.java:2345 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-01-07 14:55:06,886 [main] INFO  [org.springframework.web.servlet.DispatcherServlet] FrameworkServlet.java:524 - Initializing Servlet 'dispatcherServlet'
+2021-01-07 14:55:06,900 [main] INFO  [org.springframework.web.servlet.DispatcherServlet] FrameworkServlet.java:546 - Completed initialization in 13 ms
+2021-01-07 14:55:06,930 [main] INFO  [org.eclipse.jetty.server.AbstractConnector] AbstractConnector.java:292 - Started ServerConnector@1a483d57{HTTP/1.1,[http/1.1]}{0.0.0.0:10001}
+2021-01-07 14:55:06,932 [main] INFO  [o.s.boot.web.embedded.jetty.JettyWebServer] JettyWebServer.java:159 - Jetty started on port(s) 10001 (http/1.1) with context path '/'
+2021-01-07 14:55:06,937 [main] INFO  [io.pandora.mall.chat.ChatApplication] StartupInfoLogger.java:59 - Started ChatApplication in 9.022 seconds (JVM running for 10.485)
+2021-01-07 14:55:06,939 [main] INFO  [io.pandora.mall.chat.ChatApplication] ChatApplication.java:53 - [CHAT] Service startup removes all users...
+2021-01-07 14:56:00,401 [main] INFO  [io.pandora.mall.chat.ChatApplication] StartupInfoLogger.java:50 - Starting ChatApplication on DESKTOP-PSDTEL6 with PID 10496 (D:\pandora-mall\pandora-chat\target\classes started by WIN10 in D:\pandora-mall)
+2021-01-07 14:56:00,407 [main] INFO  [io.pandora.mall.chat.ChatApplication] SpringApplication.java:679 - The following profiles are active: DEV
+2021-01-07 14:56:01,830 [main] WARN  [org.mybatis.spring.mapper.ClassPathMapperScanner] Logger.java:44 - No MyBatis mapper was found in '[io.pandora.mall.chat]' package. Please check your configuration.
+2021-01-07 14:56:01,898 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] RepositoryConfigurationDelegate.java:244 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-01-07 14:56:01,904 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] RepositoryConfigurationDelegate.java:126 - Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-01-07 14:56:01,953 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] RepositoryConfigurationDelegate.java:182 - Finished Spring Data repository scanning in 25ms. Found 0 repository interfaces.
+2021-01-07 14:56:02,696 [main] INFO  [o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] PostProcessorRegistrationDelegate.java:330 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$2091a0a5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-01-07 14:56:03,028 [main] INFO  [org.eclipse.jetty.util.log] Log.java:193 - Logging initialized @4997ms to org.eclipse.jetty.util.log.Slf4jLog
+2021-01-07 14:56:03,698 [main] INFO  [o.s.b.w.e.jetty.JettyServletWebServerFactory] JettyServletWebServerFactory.java:143 - Server initialized with port: 10001
+2021-01-07 14:56:03,703 [main] INFO  [org.eclipse.jetty.server.Server] Server.java:370 - jetty-9.4.15.v20190215; built: 2019-02-15T16:53:49.381Z; git: eb70b240169fcf1abbd86af36482d1c49826fa0b; jvm 1.8.0_121-b13
+2021-01-07 14:56:03,755 [main] INFO  [o.e.j.server.handler.ContextHandler.application] ContextHandler.java:2345 - Initializing Spring embedded WebApplicationContext
+2021-01-07 14:56:03,755 [main] INFO  [org.springframework.web.context.ContextLoader] ServletWebServerApplicationContext.java:296 - Root WebApplicationContext: initialization completed in 3214 ms
+2021-01-07 14:56:04,079 [main] INFO  [org.eclipse.jetty.server.session] DefaultSessionIdManager.java:365 - DefaultSessionIdManager workerName=node0
+2021-01-07 14:56:04,080 [main] INFO  [org.eclipse.jetty.server.session] DefaultSessionIdManager.java:370 - No SessionScavenger set, using defaults
+2021-01-07 14:56:04,082 [main] INFO  [org.eclipse.jetty.server.session] HouseKeeper.java:149 - node0 Scavenging every 600000ms
+2021-01-07 14:56:04,095 [main] INFO  [org.eclipse.jetty.server.handler.ContextHandler] ContextHandler.java:855 - Started o.s.b.w.e.j.JettyEmbeddedWebAppContext@1abfe081{application,/,[file:///C:/Users/WIN10/AppData/Local/Temp/jetty-docbase.993405886949297724.10001/, jar:file:/C:/Users/WIN10/.m2/repository/io/springfox/springfox-swagger-ui/2.6.1/springfox-swagger-ui-2.6.1.jar!/META-INF/resources, jar:file:/C:/Users/WIN10/.m2/repository/com/github/xiaoymin/swagger-bootstrap-ui/1.9.6/swagger-bootstrap-ui-1.9.6.jar!/META-INF/resources],AVAILABLE}
+2021-01-07 14:56:04,096 [main] INFO  [org.eclipse.jetty.server.Server] Server.java:407 - Started @6066ms
+2021-01-07 14:56:04,316 [main] INFO  [c.a.d.s.b.a.DruidDataSourceAutoConfigure] DruidDataSourceAutoConfigure.java:56 - Init DruidDataSource
+2021-01-07 14:56:04,722 [main] INFO  [com.alibaba.druid.pool.DruidDataSource] DruidDataSource.java:928 - {dataSource-1} inited
+2021-01-07 14:56:06,096 [main] WARN  [c.b.mybatisplus.core.metadata.TableInfoHelper] TableInfoHelper.java:282 - Warn: Could not find @TableId in Class: java.security.Permission.
+2021-01-07 14:56:07,047 [main] INFO  [o.s.scheduling.concurrent.ThreadPoolTaskExecutor] ExecutorConfigurationSupport.java:171 - Initializing ExecutorService 'applicationTaskExecutor'
+2021-01-07 14:56:08,055 [main] INFO  [o.s.b.a.s.s.UserDetailsServiceAutoConfiguration] UserDetailsServiceAutoConfiguration.java:87 - 
+
+Using generated security password: ce346c0d-1130-4b28-a7e2-2c65395f8d6f
+
+2021-01-07 14:56:08,363 [main] INFO  [o.s.security.web.DefaultSecurityFilterChain] DefaultSecurityFilterChain.java:43 - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@61191222, org.springframework.security.web.context.SecurityContextPersistenceFilter@1f66d8e1, org.springframework.security.web.header.HeaderWriterFilter@7a2fce12, org.springframework.security.web.csrf.CsrfFilter@7e7743ec, org.springframework.security.web.authentication.logout.LogoutFilter@713a35c5, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@45292ec1, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@519c6fcc, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@58833798, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@4f93bf0a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3421debd, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@432af457, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7f3ca64a, org.springframework.security.web.session.SessionManagementFilter@4bb1b96b, org.springframework.security.web.access.ExceptionTranslationFilter@5bcec67e, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3292d91a]
+2021-01-07 14:56:08,614 [main] ERROR [io.pandora.mall.chat.ChatNettyBoote] ChatNettyBoote.java:30 - [Netty] 初始化启动失败,异常信息:null,异常栈信息:{}
+java.lang.NullPointerException: null
+	at io.pandora.mall.chat.ChatNettyBoote.onApplicationEvent(ChatNettyBoote.java:28)
+	at io.pandora.mall.chat.ChatNettyBoote.onApplicationEvent(ChatNettyBoote.java:16)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:402)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:359)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:896)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:163)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:552)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at io.pandora.mall.chat.ChatApplication.main(ChatApplication.java:37)
+2021-01-07 14:56:08,641 [main] INFO  [o.e.j.server.handler.ContextHandler.application] ContextHandler.java:2345 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-01-07 14:56:08,642 [main] INFO  [org.springframework.web.servlet.DispatcherServlet] FrameworkServlet.java:524 - Initializing Servlet 'dispatcherServlet'
+2021-01-07 14:56:08,658 [main] INFO  [org.springframework.web.servlet.DispatcherServlet] FrameworkServlet.java:546 - Completed initialization in 15 ms
+2021-01-07 14:56:08,687 [main] INFO  [org.eclipse.jetty.server.AbstractConnector] AbstractConnector.java:292 - Started ServerConnector@6961b8f2{HTTP/1.1,[http/1.1]}{0.0.0.0:10001}
+2021-01-07 14:56:08,690 [main] INFO  [o.s.boot.web.embedded.jetty.JettyWebServer] JettyWebServer.java:159 - Jetty started on port(s) 10001 (http/1.1) with context path '/'
+2021-01-07 14:56:08,694 [main] INFO  [io.pandora.mall.chat.ChatApplication] StartupInfoLogger.java:59 - Started ChatApplication in 9.401 seconds (JVM running for 10.664)
+2021-01-07 14:56:08,696 [main] INFO  [io.pandora.mall.chat.ChatApplication] ChatApplication.java:53 - [CHAT] Service startup removes all users...
+2021-01-07 15:05:33,536 [main] INFO  [io.pandora.mall.chat.ChatApplication] StartupInfoLogger.java:50 - Starting ChatApplication on DESKTOP-PSDTEL6 with PID 492 (D:\pandora-mall\pandora-chat\target\classes started by WIN10 in D:\pandora-mall)
+2021-01-07 15:05:33,542 [main] INFO  [io.pandora.mall.chat.ChatApplication] SpringApplication.java:679 - The following profiles are active: DEV
+2021-01-07 15:05:34,957 [main] WARN  [org.mybatis.spring.mapper.ClassPathMapperScanner] Logger.java:44 - No MyBatis mapper was found in '[io.pandora.mall.chat]' package. Please check your configuration.
+2021-01-07 15:05:35,024 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] RepositoryConfigurationDelegate.java:244 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-01-07 15:05:35,029 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] RepositoryConfigurationDelegate.java:126 - Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-01-07 15:05:35,078 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] RepositoryConfigurationDelegate.java:182 - Finished Spring Data repository scanning in 24ms. Found 0 repository interfaces.
+2021-01-07 15:05:35,743 [main] INFO  [o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] PostProcessorRegistrationDelegate.java:330 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$619e3ebb] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-01-07 15:05:36,084 [main] INFO  [org.eclipse.jetty.util.log] Log.java:193 - Logging initialized @4916ms to org.eclipse.jetty.util.log.Slf4jLog
+2021-01-07 15:05:36,747 [main] INFO  [o.s.b.w.e.jetty.JettyServletWebServerFactory] JettyServletWebServerFactory.java:143 - Server initialized with port: 10001
+2021-01-07 15:05:36,751 [main] INFO  [org.eclipse.jetty.server.Server] Server.java:370 - jetty-9.4.15.v20190215; built: 2019-02-15T16:53:49.381Z; git: eb70b240169fcf1abbd86af36482d1c49826fa0b; jvm 1.8.0_121-b13
+2021-01-07 15:05:36,803 [main] INFO  [o.e.j.server.handler.ContextHandler.application] ContextHandler.java:2345 - Initializing Spring embedded WebApplicationContext
+2021-01-07 15:05:36,804 [main] INFO  [org.springframework.web.context.ContextLoader] ServletWebServerApplicationContext.java:296 - Root WebApplicationContext: initialization completed in 3099 ms
+2021-01-07 15:05:37,114 [main] INFO  [org.eclipse.jetty.server.session] DefaultSessionIdManager.java:365 - DefaultSessionIdManager workerName=node0
+2021-01-07 15:05:37,115 [main] INFO  [org.eclipse.jetty.server.session] DefaultSessionIdManager.java:370 - No SessionScavenger set, using defaults
+2021-01-07 15:05:37,117 [main] INFO  [org.eclipse.jetty.server.session] HouseKeeper.java:149 - node0 Scavenging every 600000ms
+2021-01-07 15:05:37,130 [main] INFO  [org.eclipse.jetty.server.handler.ContextHandler] ContextHandler.java:855 - Started o.s.b.w.e.j.JettyEmbeddedWebAppContext@5a00eb1e{application,/,[file:///C:/Users/WIN10/AppData/Local/Temp/jetty-docbase.6757987016762662880.10001/, jar:file:/C:/Users/WIN10/.m2/repository/io/springfox/springfox-swagger-ui/2.6.1/springfox-swagger-ui-2.6.1.jar!/META-INF/resources, jar:file:/C:/Users/WIN10/.m2/repository/com/github/xiaoymin/swagger-bootstrap-ui/1.9.6/swagger-bootstrap-ui-1.9.6.jar!/META-INF/resources],AVAILABLE}
+2021-01-07 15:05:37,131 [main] INFO  [org.eclipse.jetty.server.Server] Server.java:407 - Started @5964ms
+2021-01-07 15:05:37,346 [main] INFO  [c.a.d.s.b.a.DruidDataSourceAutoConfigure] DruidDataSourceAutoConfigure.java:56 - Init DruidDataSource
+2021-01-07 15:05:37,760 [main] INFO  [com.alibaba.druid.pool.DruidDataSource] DruidDataSource.java:928 - {dataSource-1} inited
+2021-01-07 15:05:39,217 [main] WARN  [c.b.mybatisplus.core.metadata.TableInfoHelper] TableInfoHelper.java:282 - Warn: Could not find @TableId in Class: java.security.Permission.
+2021-01-07 15:05:40,153 [main] INFO  [o.s.scheduling.concurrent.ThreadPoolTaskExecutor] ExecutorConfigurationSupport.java:171 - Initializing ExecutorService 'applicationTaskExecutor'
+2021-01-07 15:05:41,100 [main] INFO  [o.e.j.server.handler.ContextHandler.application] ContextHandler.java:2345 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-01-07 15:05:41,101 [main] INFO  [org.springframework.web.servlet.DispatcherServlet] FrameworkServlet.java:524 - Initializing Servlet 'dispatcherServlet'
+2021-01-07 15:05:41,114 [main] INFO  [org.springframework.web.servlet.DispatcherServlet] FrameworkServlet.java:546 - Completed initialization in 13 ms
+2021-01-07 15:05:41,147 [main] INFO  [org.eclipse.jetty.server.AbstractConnector] AbstractConnector.java:292 - Started ServerConnector@343fddd9{HTTP/1.1,[http/1.1]}{0.0.0.0:10001}
+2021-01-07 15:05:41,151 [main] INFO  [o.s.boot.web.embedded.jetty.JettyWebServer] JettyWebServer.java:159 - Jetty started on port(s) 10001 (http/1.1) with context path '/'
+2021-01-07 15:05:41,155 [main] INFO  [io.pandora.mall.chat.ChatApplication] StartupInfoLogger.java:59 - Started ChatApplication in 8.721 seconds (JVM running for 9.989)
+2021-01-07 15:05:41,158 [main] INFO  [io.pandora.mall.chat.ChatApplication] ChatApplication.java:53 - [CHAT] Service startup removes all users...
+2021-01-07 15:07:32,675 [main] INFO  [io.pandora.mall.chat.ChatApplication] StartupInfoLogger.java:50 - Starting ChatApplication on DESKTOP-PSDTEL6 with PID 8424 (D:\pandora-mall\pandora-chat\target\classes started by WIN10 in D:\pandora-mall)
+2021-01-07 15:07:32,681 [main] INFO  [io.pandora.mall.chat.ChatApplication] SpringApplication.java:679 - The following profiles are active: DEV
+2021-01-07 15:07:34,115 [main] WARN  [org.mybatis.spring.mapper.ClassPathMapperScanner] Logger.java:44 - No MyBatis mapper was found in '[io.pandora.mall.chat]' package. Please check your configuration.
+2021-01-07 15:07:34,182 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] RepositoryConfigurationDelegate.java:244 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-01-07 15:07:34,188 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] RepositoryConfigurationDelegate.java:126 - Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-01-07 15:07:34,237 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] RepositoryConfigurationDelegate.java:182 - Finished Spring Data repository scanning in 24ms. Found 0 repository interfaces.
+2021-01-07 15:07:34,906 [main] INFO  [o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] PostProcessorRegistrationDelegate.java:330 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$de9250e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-01-07 15:07:35,239 [main] INFO  [org.eclipse.jetty.util.log] Log.java:193 - Logging initialized @5019ms to org.eclipse.jetty.util.log.Slf4jLog
+2021-01-07 15:07:35,905 [main] INFO  [o.s.b.w.e.jetty.JettyServletWebServerFactory] JettyServletWebServerFactory.java:143 - Server initialized with port: 10001
+2021-01-07 15:07:35,910 [main] INFO  [org.eclipse.jetty.server.Server] Server.java:370 - jetty-9.4.15.v20190215; built: 2019-02-15T16:53:49.381Z; git: eb70b240169fcf1abbd86af36482d1c49826fa0b; jvm 1.8.0_121-b13
+2021-01-07 15:07:35,964 [main] INFO  [o.e.j.server.handler.ContextHandler.application] ContextHandler.java:2345 - Initializing Spring embedded WebApplicationContext
+2021-01-07 15:07:35,964 [main] INFO  [org.springframework.web.context.ContextLoader] ServletWebServerApplicationContext.java:296 - Root WebApplicationContext: initialization completed in 3139 ms
+2021-01-07 15:07:36,281 [main] INFO  [org.eclipse.jetty.server.session] DefaultSessionIdManager.java:365 - DefaultSessionIdManager workerName=node0
+2021-01-07 15:07:36,282 [main] INFO  [org.eclipse.jetty.server.session] DefaultSessionIdManager.java:370 - No SessionScavenger set, using defaults
+2021-01-07 15:07:36,284 [main] INFO  [org.eclipse.jetty.server.session] HouseKeeper.java:149 - node0 Scavenging every 600000ms
+2021-01-07 15:07:36,296 [main] INFO  [org.eclipse.jetty.server.handler.ContextHandler] ContextHandler.java:855 - Started o.s.b.w.e.j.JettyEmbeddedWebAppContext@6f4ade6e{application,/,[file:///C:/Users/WIN10/AppData/Local/Temp/jetty-docbase.7629701055081050734.10001/, jar:file:/C:/Users/WIN10/.m2/repository/io/springfox/springfox-swagger-ui/2.6.1/springfox-swagger-ui-2.6.1.jar!/META-INF/resources, jar:file:/C:/Users/WIN10/.m2/repository/com/github/xiaoymin/swagger-bootstrap-ui/1.9.6/swagger-bootstrap-ui-1.9.6.jar!/META-INF/resources],AVAILABLE}
+2021-01-07 15:07:36,298 [main] INFO  [org.eclipse.jetty.server.Server] Server.java:407 - Started @6077ms
+2021-01-07 15:07:36,516 [main] INFO  [c.a.d.s.b.a.DruidDataSourceAutoConfigure] DruidDataSourceAutoConfigure.java:56 - Init DruidDataSource
+2021-01-07 15:07:36,931 [main] INFO  [com.alibaba.druid.pool.DruidDataSource] DruidDataSource.java:928 - {dataSource-1} inited
+2021-01-07 15:07:38,335 [main] WARN  [c.b.mybatisplus.core.metadata.TableInfoHelper] TableInfoHelper.java:282 - Warn: Could not find @TableId in Class: java.security.Permission.
+2021-01-07 15:07:39,271 [main] INFO  [o.s.scheduling.concurrent.ThreadPoolTaskExecutor] ExecutorConfigurationSupport.java:171 - Initializing ExecutorService 'applicationTaskExecutor'
+2021-01-07 15:07:41,246 [main] INFO  [i.p.mall.chat.websocket.server.ChatWebSocketServer] ChatWebSocketServer.java:57 - [Netty] WebSocket Server Starting on port:10002......
+2021-01-07 15:07:41,281 [main] INFO  [o.e.j.server.handler.ContextHandler.application] ContextHandler.java:2345 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-01-07 15:07:41,282 [main] INFO  [org.springframework.web.servlet.DispatcherServlet] FrameworkServlet.java:524 - Initializing Servlet 'dispatcherServlet'
+2021-01-07 15:07:41,294 [main] INFO  [org.springframework.web.servlet.DispatcherServlet] FrameworkServlet.java:546 - Completed initialization in 11 ms
+2021-01-07 15:07:41,324 [main] INFO  [org.eclipse.jetty.server.AbstractConnector] AbstractConnector.java:292 - Started ServerConnector@3281dfc2{HTTP/1.1,[http/1.1]}{0.0.0.0:10001}
+2021-01-07 15:07:41,326 [main] INFO  [o.s.boot.web.embedded.jetty.JettyWebServer] JettyWebServer.java:159 - Jetty started on port(s) 10001 (http/1.1) with context path '/'
+2021-01-07 15:07:41,331 [main] INFO  [io.pandora.mall.chat.ChatApplication] StartupInfoLogger.java:59 - Started ChatApplication in 9.806 seconds (JVM running for 11.11)
+2021-01-07 15:07:41,334 [main] INFO  [io.pandora.mall.chat.ChatApplication] ChatApplication.java:53 - [CHAT] Service startup removes all users...
+2021-01-08 10:55:35,734 [main] INFO  [io.pandora.mall.PandoraApplication] StartupInfoLogger.java:50 - Starting PandoraApplication on DESKTOP-PSDTEL6 with PID 24000 (D:\pandora-mall\pandora-admin\target\classes started by WIN10 in D:\pandora-mall)
+2021-01-08 10:55:35,743 [main] INFO  [io.pandora.mall.PandoraApplication] SpringApplication.java:679 - The following profiles are active: dev
+2021-01-08 10:55:39,069 [main] WARN  [org.mybatis.spring.mapper.ClassPathMapperScanner] Logger.java:44 - No MyBatis mapper was found in '[io.pandora.mall.redis, io.pandora.mall]' package. Please check your configuration.
+2021-01-08 10:55:39,203 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] RepositoryConfigurationDelegate.java:244 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-01-08 10:55:39,208 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] RepositoryConfigurationDelegate.java:126 - Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-01-08 10:55:39,525 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] RepositoryConfigurationDelegate.java:182 - Finished Spring Data repository scanning in 306ms. Found 1 repository interfaces.
+2021-01-08 10:55:39,548 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] RepositoryConfigurationDelegate.java:244 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-01-08 10:55:39,551 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] RepositoryConfigurationDelegate.java:126 - Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-01-08 10:55:39,653 [main] INFO  [o.s.d.r.c.RepositoryConfigurationExtensionSupport] RepositoryConfigurationExtensionSupport.java:363 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface io.pandora.mall.search.dao.TestDao.
+2021-01-08 10:55:39,653 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] RepositoryConfigurationDelegate.java:182 - Finished Spring Data repository scanning in 78ms. Found 0 repository interfaces.
+2021-01-08 10:55:40,486 [main] INFO  [o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] PostProcessorRegistrationDelegate.java:330 - Bean 'asyncTaskProperties' of type [io.pandora.mall.config.thread.AsyncTaskProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-01-08 10:55:40,489 [main] INFO  [o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] PostProcessorRegistrationDelegate.java:330 - Bean 'asyncTaskExecutePool' of type [io.pandora.mall.config.thread.AsyncTaskExecutePool$$EnhancerBySpringCGLIB$$8283649b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-01-08 10:55:41,167 [main] INFO  [o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] PostProcessorRegistrationDelegate.java:330 - Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$9281ae6d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-01-08 10:55:41,178 [main] INFO  [o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] PostProcessorRegistrationDelegate.java:330 - Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-01-08 10:55:41,185 [main] INFO  [o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] PostProcessorRegistrationDelegate.java:330 - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@33379242' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-01-08 10:55:41,188 [main] INFO  [o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] PostProcessorRegistrationDelegate.java:330 - Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$b756511f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-01-08 10:55:41,203 [main] INFO  [o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] PostProcessorRegistrationDelegate.java:330 - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-01-08 10:55:41,239 [main] INFO  [o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] PostProcessorRegistrationDelegate.java:330 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$f9d3e633] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-01-08 10:55:42,097 [main] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] TomcatWebServer.java:90 - Tomcat initialized with port(s): 9009 (http)
+2021-01-08 10:55:42,132 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] DirectJDKLog.java:173 - Initializing ProtocolHandler ["http-nio-9009"]
+2021-01-08 10:55:42,152 [main] INFO  [org.apache.catalina.core.StandardService] DirectJDKLog.java:173 - Starting service [Tomcat]
+2021-01-08 10:55:42,153 [main] INFO  [org.apache.catalina.core.StandardEngine] DirectJDKLog.java:173 - Starting Servlet engine: [Apache Tomcat/9.0.17]
+2021-01-08 10:55:42,639 [main] INFO  [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] DirectJDKLog.java:173 - Initializing Spring embedded WebApplicationContext
+2021-01-08 10:55:42,640 [main] INFO  [org.springframework.web.context.ContextLoader] ServletWebServerApplicationContext.java:296 - Root WebApplicationContext: initialization completed in 6794 ms
+2021-01-08 10:55:43,212 [main] INFO  [c.a.d.s.b.a.DruidDataSourceAutoConfigure] DruidDataSourceAutoConfigure.java:56 - Init DruidDataSource
+2021-01-08 10:55:43,761 [main] INFO  [com.alibaba.druid.pool.DruidDataSource] DruidDataSource.java:928 - {dataSource-1} inited
+2021-01-08 10:55:45,104 [main] WARN  [c.b.mybatisplus.core.metadata.TableInfoHelper] TableInfoHelper.java:282 - Warn: Could not find @TableId in Class: java.security.Permission.
+2021-01-08 10:55:46,185 [main] INFO  [o.s.boot.web.servlet.RegistrationBean] RegistrationBean.java:50 - Filter myAuthenticationFilter was not registered (disabled)
+2021-01-08 10:55:46,185 [main] INFO  [o.s.boot.web.servlet.RegistrationBean] RegistrationBean.java:50 - Filter myLoginFiler was not registered (disabled)
+2021-01-08 10:55:46,731 [main] INFO  [org.quartz.impl.StdSchedulerFactory] StdSchedulerFactory.java:1208 - Using default implementation for ThreadExecutor
+2021-01-08 10:55:46,759 [main] INFO  [org.quartz.core.SchedulerSignalerImpl] SchedulerSignalerImpl.java:61 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2021-01-08 10:55:46,759 [main] INFO  [org.quartz.core.QuartzScheduler] QuartzScheduler.java:229 - Quartz Scheduler v.2.3.1 created.
+2021-01-08 10:55:46,761 [main] INFO  [org.quartz.simpl.RAMJobStore] RAMJobStore.java:155 - RAMJobStore initialized.
+2021-01-08 10:55:46,763 [main] INFO  [org.quartz.core.QuartzScheduler] QuartzScheduler.java:294 - Scheduler meta-data: Quartz Scheduler (v2.3.1) 'schedulerFactoryBean' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2021-01-08 10:55:46,764 [main] INFO  [org.quartz.impl.StdSchedulerFactory] StdSchedulerFactory.java:1362 - Quartz scheduler 'schedulerFactoryBean' initialized from an externally provided properties instance.
+2021-01-08 10:55:46,764 [main] INFO  [org.quartz.impl.StdSchedulerFactory] StdSchedulerFactory.java:1366 - Quartz scheduler version: 2.3.1
+2021-01-08 10:55:46,766 [main] INFO  [org.quartz.core.QuartzScheduler] QuartzScheduler.java:2293 - JobFactory set to: io.pandora.mall.job.factory.JobFactory@54326e9
+2021-01-08 10:55:46,924 [main] INFO  [io.pandora.mall.redis.RedisConfig] RedisConfig.java:60 - ===> init Redis JedisPool succeed:[127.0.0.1:6379]
+2021-01-08 10:55:49,166 [main] INFO  [org.elasticsearch.plugins.PluginsService] PluginsService.java:190 - no modules loaded
+2021-01-08 10:55:49,168 [main] INFO  [org.elasticsearch.plugins.PluginsService] PluginsService.java:193 - loaded plugin [org.elasticsearch.index.reindex.ReindexPlugin]
+2021-01-08 10:55:49,169 [main] INFO  [org.elasticsearch.plugins.PluginsService] PluginsService.java:193 - loaded plugin [org.elasticsearch.join.ParentJoinPlugin]
+2021-01-08 10:55:49,169 [main] INFO  [org.elasticsearch.plugins.PluginsService] PluginsService.java:193 - loaded plugin [org.elasticsearch.percolator.PercolatorPlugin]
+2021-01-08 10:55:49,170 [main] INFO  [org.elasticsearch.plugins.PluginsService] PluginsService.java:193 - loaded plugin [org.elasticsearch.script.mustache.MustachePlugin]
+2021-01-08 10:55:49,170 [main] INFO  [org.elasticsearch.plugins.PluginsService] PluginsService.java:193 - loaded plugin [org.elasticsearch.transport.Netty4Plugin]
+2021-01-08 10:55:52,075 [main] INFO  [o.s.d.e.client.TransportClientFactoryBean] TransportClientFactoryBean.java:88 - Adding transport node : 127.0.0.1:9300
+2021-01-08 10:55:55,593 [main] ERROR [o.s.d.e.r.support.AbstractElasticsearchRepository] AbstractElasticsearchRepository.java:91 - failed to load elasticsearch nodes : org.elasticsearch.client.transport.NoNodeAvailableException: None of the configured nodes are available: [{#transport#-1}{rTczrSCAQm-pF7Hj-UJJVA}{localhost}{127.0.0.1:9300}]
+2021-01-08 10:55:56,550 [main] INFO  [s.d.s.w.PropertySourcedRequestMappingHandlerMapping] PropertySourcedRequestMappingHandlerMapping.java:69 - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2021-01-08 10:55:56,818 [main] INFO  [o.s.security.web.DefaultSecurityFilterChain] DefaultSecurityFilterChain.java:43 - Creating filter chain: Ant [pattern='/**/*.html', GET], []
+2021-01-08 10:55:56,818 [main] INFO  [o.s.security.web.DefaultSecurityFilterChain] DefaultSecurityFilterChain.java:43 - Creating filter chain: Ant [pattern='/**/*.css', GET], []
+2021-01-08 10:55:56,819 [main] INFO  [o.s.security.web.DefaultSecurityFilterChain] DefaultSecurityFilterChain.java:43 - Creating filter chain: Ant [pattern='/**/*.js', GET], []
+2021-01-08 10:55:56,819 [main] INFO  [o.s.security.web.DefaultSecurityFilterChain] DefaultSecurityFilterChain.java:43 - Creating filter chain: Ant [pattern='/favicon.ico', GET], []
+2021-01-08 10:55:56,899 [main] INFO  [o.s.security.web.DefaultSecurityFilterChain] DefaultSecurityFilterChain.java:43 - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@144dc2f7, org.springframework.security.web.context.SecurityContextPersistenceFilter@23ea3853, org.springframework.security.web.header.HeaderWriterFilter@3f71ae7f, org.springframework.web.filter.CorsFilter@79ca7bea, org.springframework.security.web.authentication.logout.LogoutFilter@4deca78, io.pandora.mall.module.security.filter.MyAuthenticationFilter@20256a0b, io.pandora.mall.module.security.filter.MyLoginFiler@624b3544, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7857cb1d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3f5ac587, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@403cff1c, org.springframework.security.web.session.SessionManagementFilter@d1d85d0, org.springframework.security.web.access.ExceptionTranslationFilter@31c56721, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@690677de]
+2021-01-08 10:55:57,058 [main] INFO  [o.s.a.rabbit.connection.CachingConnectionFactory] AbstractConnectionFactory.java:460 - Attempting to connect to: [localhost:5672]
+2021-01-08 10:55:57,155 [main] INFO  [o.s.a.rabbit.connection.CachingConnectionFactory] AbstractConnectionFactory.java:496 - Created new connection: rabbitConnectionFactory#74787609:0/SimpleConnection@5764d421 [delegate=amqp://guest@127.0.0.1:5672/, localPort= 58315]
+2021-01-08 10:55:57,756 [main] INFO  [o.s.scheduling.concurrent.ThreadPoolTaskExecutor] ExecutorConfigurationSupport.java:171 - Initializing ExecutorService 'applicationTaskExecutor'
+2021-01-08 10:55:58,102 [main] INFO  [org.dozer.config.GlobalSettings] GlobalSettings.java:113 - Trying to find Dozer configuration file: dozer.properties
+2021-01-08 10:55:58,107 [main] WARN  [org.dozer.config.GlobalSettings] GlobalSettings.java:118 - Dozer configuration file not found: dozer.properties.  Using defaults for all Dozer global properties.
+2021-01-08 10:55:58,109 [main] INFO  [org.dozer.DozerInitializer] DozerInitializer.java:75 - Initializing Dozer. Version: 5.5.0, Thread Name: main
+2021-01-08 10:55:58,113 [main] INFO  [org.dozer.jmx.JMXPlatformImpl] JMXPlatformImpl.java:66 - Dozer JMX MBean [org.dozer.jmx:type=DozerStatisticsController] auto registered with the Platform MBean Server
+2021-01-08 10:55:58,114 [main] INFO  [org.dozer.jmx.JMXPlatformImpl] JMXPlatformImpl.java:66 - Dozer JMX MBean [org.dozer.jmx:type=DozerAdminController] auto registered with the Platform MBean Server
+2021-01-08 10:55:58,115 [main] INFO  [org.dozer.DozerBeanMapper] DozerBeanMapper.java:175 - Initializing a new instance of dozer bean mapper.
+2021-01-08 10:56:00,232 [main] INFO  [s.d.s.web.plugins.DocumentationPluginsBootstrapper] DocumentationPluginsBootstrapper.java:147 - Context refreshed
+2021-01-08 10:56:00,278 [main] INFO  [s.d.s.web.plugins.DocumentationPluginsBootstrapper] DocumentationPluginsBootstrapper.java:150 - Found 2 custom documentation plugin(s)
+2021-01-08 10:56:00,358 [main] INFO  [s.d.spring.web.scanners.ApiListingReferenceScanner] ApiListingReferenceScanner.java:41 - Scanning for api listing references
+2021-01-08 10:56:00,772 [main] INFO  [s.d.spring.web.scanners.ApiListingReferenceScanner] ApiListingReferenceScanner.java:41 - Scanning for api listing references
+2021-01-08 10:56:00,783 [main] INFO  [s.d.s.w.r.operation.CachingOperationNameGenerator] CachingOperationNameGenerator.java:40 - Generating unique operation named: loginUsingPOST_1
+2021-01-08 10:56:00,789 [main] INFO  [s.d.s.w.r.operation.CachingOperationNameGenerator] CachingOperationNameGenerator.java:40 - Generating unique operation named: verifyCodeUsingGET_1
+2021-01-08 10:56:00,868 [main] INFO  [s.d.s.w.r.operation.CachingOperationNameGenerator] CachingOperationNameGenerator.java:40 - Generating unique operation named: updateUsingPOST_1
+2021-01-08 10:56:00,873 [main] INFO  [s.d.s.w.r.operation.CachingOperationNameGenerator] CachingOperationNameGenerator.java:40 - Generating unique operation named: updateUsingPOST_2
+2021-01-08 10:56:00,875 [main] INFO  [o.s.scheduling.quartz.SchedulerFactoryBean] SchedulerFactoryBean.java:726 - Starting Quartz Scheduler now
+2021-01-08 10:56:00,875 [main] INFO  [org.quartz.core.QuartzScheduler] QuartzScheduler.java:547 - Scheduler schedulerFactoryBean_$_NON_CLUSTERED started.
+2021-01-08 10:56:00,889 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] DirectJDKLog.java:173 - Starting ProtocolHandler ["http-nio-9009"]
+2021-01-08 10:56:00,927 [main] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] TomcatWebServer.java:204 - Tomcat started on port(s): 9009 (http) with context path ''
+2021-01-08 10:56:00,931 [main] INFO  [io.pandora.mall.PandoraApplication] StartupInfoLogger.java:59 - Started PandoraApplication in 26.59 seconds (JVM running for 28.867)
+2021-01-08 10:56:01,126 [main] INFO  [io.pandora.mall.job.service.SystemTaskServiceImpl] SystemTaskServiceImpl.java:116 - [定时任务] 初始化定时任务条数:1
+2021-01-08 10:56:01,131 [main] INFO  [io.pandora.mall.PandoraApplication] PandoraApplication.java:53 - run at http://127.0.0.1:9009/doc.html

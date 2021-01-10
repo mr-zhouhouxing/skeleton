@@ -7,7 +7,6 @@ import io.swagger.annotations.ApiOperation;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -28,7 +27,7 @@ public class LoggingController {
 
     @GetMapping
     @ApiOperation("日志查询")
-    @PreAuthorize("@el.check('admin','modelue:list')")
+//    @PreAuthorize("@el.check('admin','modelue:list')")
     public ResponseEntity<Object> getLogs(LogQueryCriteria criteria, Pageable pageable){
         criteria.setLogType("INFO");
         criteria.setType(0);

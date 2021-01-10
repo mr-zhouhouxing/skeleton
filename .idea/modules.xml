@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/pandora-admin/pandora-admin.iml" filepath="$PROJECT_DIR$/pandora-admin/pandora-admin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pandora-chat/pandora-chat.iml" filepath="$PROJECT_DIR$/pandora-chat/pandora-chat.iml" />
       <module fileurl="file://$PROJECT_DIR$/pandora-common/pandora-common.iml" filepath="$PROJECT_DIR$/pandora-common/pandora-common.iml" />
       <module fileurl="file://$PROJECT_DIR$/pandora-tools/pandora-email/pandora-email.iml" filepath="$PROJECT_DIR$/pandora-tools/pandora-email/pandora-email.iml" />
       <module fileurl="file://$PROJECT_DIR$/pandora-generate/pandora-generate.iml" filepath="$PROJECT_DIR$/pandora-generate/pandora-generate.iml" />

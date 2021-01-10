@@ -17,8 +17,6 @@ public class PushRequest extends BaseDto {
     @ApiModelProperty("消息推送实体")
     private MessageRequest request;
 
-    public PushRequest() {}
-
     public PushRequest(Integer channel, MessageRequest request) {
         this.channel = channel;
         this.request = request;
@@ -26,6 +24,6 @@ public class PushRequest extends BaseDto {
 
     @Override
     public String toString() {
-        return "PushRequest{ channel = " + channel + ", request = " + request + '}';
+        return "PushRequest{ channel = " + channel + ", request = " + request + "}";
     }
 }

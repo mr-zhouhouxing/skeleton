@@ -81,7 +81,7 @@ public class SystemPushServiceImpl extends BaseServiceImpl<SystemPushRecordMappe
             return new PushResponse(result.getResponse());
 
         }else if (channel == PushChannelType.JiGuang.getChannel()){
-            // 极光通道 下发
+            // 极光通道下发
         }
         return new PushResponse(null);
     }

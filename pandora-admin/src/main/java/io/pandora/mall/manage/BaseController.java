@@ -1,6 +1,6 @@
 package io.pandora.mall.manage;
 
-import io.pandora.mall.util.spring.SecurityUtils;
+import io.pandora.mall.module.security.utils.SecurityUtils;
 import org.springframework.security.core.userdetails.UserDetails;
 
 public abstract class BaseController {

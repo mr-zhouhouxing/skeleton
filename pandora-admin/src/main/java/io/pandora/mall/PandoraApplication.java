@@ -9,7 +9,24 @@ import org.springframework.boot.autoconfigure.web.ServerProperties;
 import org.springframework.context.annotation.PropertySource;
 
 /**
- * @author Created by mr_zhou on 2020/5/26
+ *                      .-"``"-.
+ *                     /______; \
+ *                    {_______}\|
+ *                    (/ a a \)(_)
+ *                    (.-.).-.)
+ *       _______ooo__(    ^    )____________
+ *      /             '-.___.-'             \
+ *     |            Pandora stark            |
+ *     |                                     |
+ *     |         Copyright 2019-2020         |
+ *     |      Created by zhou on 2019/6/29   |
+ *      \___________________________________/
+ *                    |_  |  _|  jgs
+ *                    \___|___/
+ *                    {___|___}
+ *                     |_ | _|
+ *                     /-'Y'-\
+ *                    (__/ \__)
  */
 @SpringBootApplication
 @PropertySource(value = "config/config.properties",encoding = "UTF-8")

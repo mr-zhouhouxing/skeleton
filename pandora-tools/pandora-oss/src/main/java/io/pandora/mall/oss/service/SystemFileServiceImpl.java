@@ -43,7 +43,7 @@ public class SystemFileServiceImpl extends BaseServiceImpl<FileMapper, FileDO> i
      * @param fileName  图片名
      * @return
      */
-    private String buildFileName(int source,String fileName){
+    private String buildFileName(int source , String fileName){
         String name = FileNameUtils.getFileName(fileName, properties);
         if (source == Constant.ZERO)  return name;
 

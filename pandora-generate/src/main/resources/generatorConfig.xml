@@ -33,12 +33,13 @@
             <property name="nullCatalogMeansCurrent" value="true" />
         </jdbcConnection>
 
-        <javaModelGenerator targetPackage="io.pandora.mall.domian.system"
+        <javaModelGenerator targetPackage="io.pandora.mall.domian.chat"
                             targetProject="pandora-persistence\src\main\java"/>
 
-        <sqlMapGenerator targetPackage="mapper/system" targetProject="pandora-persistence\src\main\resources"/>
+        <sqlMapGenerator targetPackage="mapper/chat"
+                         targetProject="pandora-persistence\src\main\resources"/>
 
-        <javaClientGenerator type="XMLMAPPER" targetPackage="io.pandora.mall.mapper.system"
+        <javaClientGenerator type="XMLMAPPER" targetPackage="io.pandora.mall.mapper.chat"
                              targetProject="pandora-persistence\src\main\java"/>
 
         <!--生成全部表tableName设为%-->
@@ -46,7 +47,7 @@
             <generatedKey column="id" sqlStatement="MySql" identity="true"/>
         </table>-->
 
-        <table tableName="system_push_record">
+        <table tableName="chat_connect_log">
             <generatedKey column="id" sqlStatement="MySql" identity="true"/>
         </table>
 
