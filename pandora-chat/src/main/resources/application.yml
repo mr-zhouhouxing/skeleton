@@ -1,0 +1,88 @@
+server:
+  port: 10001
+  jetty:
+    acceptors: 2
+    selectors: 4
+spring:
+  profiles:
+    active: DEV
+
+# 开发环境
+---
+spring:
+  profiles: DEV
+  banner:
+    location: config/banner.txt
+  rabbitmq:
+    username: guest
+    password: guest
+    host: localhost
+    port: 5672
+    virtual-host: /
+  #    # 开启发送失败退回
+  #    publisher-returns: true
+  #    #    设置消息确认类型
+  #    publisher-confirm-type: correlated
+  #    listener:
+  #      direct:
+  #        # 开启ACK
+  #        acknowledge-mode: manual
+  #        prefetch: 1
+  #      simple:
+  #        # 开启ACK
+  #        acknowledge-mode: manual
+  datasource:
+    username: root
+    password: 123456
+    url: jdbc:mysql://localhost:3306/pandora_mall?characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false&serverTimezone=Asia/Shanghai
+    driver-class-name: com.mysql.jdbc.Driver
+    hikari:
+      # 是否允许暂停连接池，暂停后getConnection方法都会被阻塞，用于模拟连接故障，生产环境使用默认配置false
+      allow-pool-suspension: false
+      # 空闲连接数
+      minimum-idle: 5
+      # 最大连接数
+      maximum-pool-size: 50
+      connection-test-query: select 1
+      # 一个连接idle状态的最大时长(毫秒)，超时则被释放(retired)，缺省:10分钟
+      idle-timeout: 100000
+      # 一个连接的生命时长(毫秒),超时而且没被使用则被释放(retired)，缺省:30分钟，建议设置比数据库超时时长少30秒
+      max-lifetime: 120000
+      connection-timeout: 30000
+      connection-init-sql: set names utf8mb4
+      pool-name: DatebookHikariCP
+
+mybatis-plus:
+  mapper-locations: classpath:/mapper/chat/*Mapper.xml
+  typeAliasesPackage: io.pandora.mall.domian.chat
+  global-config:
+    banner: false
+    db-config:
+      id-type: auto
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+  configuration:
+    map-underscore-to-camel-case: true
+
+logging:
+  path: logs/
+  file: pandora_chat
+  config: classpath:config/logback-spring.xml
+
+# Redis
+redis:
+  host: 127.0.0.1
+  port: 6379
+  password:
+  timeout: 30000
+  database: 0
+  maxActive: 200
+  maxWait: 10000
+  maxIdle: 50
+  minIdle: 10
+
+user:
+  active: ${spring.profiles.active}
+  port: 10002
+  ignoreUrl:
+  - /access/token
