@@ -50,6 +50,7 @@
 ## 项目结构
 项目采用分模块开发方式
 - **后台服务模块**    - pandora-admin         
+- **通讯服务模块**    - pandora-chat 
 - **公共组件模块**    - pandora-tools          
 - **公共代码模块**    - pandora-common        
 - **代码生成模块**    - pandora-generate    
