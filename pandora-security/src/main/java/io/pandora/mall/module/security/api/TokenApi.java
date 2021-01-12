@@ -29,7 +29,7 @@ public class TokenApi {
     @SysLog("获取Token")
     @PostMapping("/getToken")
     @ApiOperation(value = "获取Token",notes = "根据用户ID/APP_ID + 密钥获取Token")
-    public ResponseBean getToken(@RequestBody TokenDto dto) throws TokenException {
+    public ResponseBean<TokenVo> getToken(@RequestBody TokenDto dto) throws TokenException {
         String token = tokenService.createToken(dto.getId(),dto.getSecret());
         TokenVo vo = new TokenVo();
         vo.setAccessToken(token);

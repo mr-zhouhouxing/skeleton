@@ -11,8 +11,10 @@ import lombok.Data;
 @Data
 @ApiModel("Token入参")
 public class TokenDto extends BaseDto {
+    
     @ApiModelProperty("用户ID/APPID")
     private long id;
+
     @ApiModelProperty("密钥[空则走默认密钥]")
     private String secret;
 

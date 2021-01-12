@@ -10,7 +10,7 @@ import springfox.documentation.annotations.ApiIgnore;
 @Controller
 @ApiIgnore
 @RequestMapping("/thirdPartyLogin")
-public class SocialUserThirdpartyController {
+public class SocialUserThirdPartyController {
 
 
 

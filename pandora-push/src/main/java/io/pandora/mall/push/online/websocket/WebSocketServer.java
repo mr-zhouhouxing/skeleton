@@ -170,31 +170,4 @@ public class WebSocketServer {
         }
     }
 
-//    private static class SingletonWSSever{
-//        static final WebSocketServer instance = new WebSocketServer();
-//    }
-//
-//    public static WebSocketServer getInstance() {
-//        return SingletonWSSever.instance;
-//    }
-//
-//    private NioEventLoopGroup boss;
-//    private NioEventLoopGroup worker;
-//    private ServerBootstrap bootstrap;
-//    private ChannelFuture future;
-//
-//    /**
-//     * 构造器私有
-//     */
-//    private WebSocketServer() {
-//        //1. 两个线程组
-//        boss = new NioEventLoopGroup();
-//        worker = new NioEventLoopGroup();
-//        //2. 启动类
-//        bootstrap = new ServerBootstrap();
-//
-//        //3. 定义启动的线程组,channel和初始化器
-//        //bootstrap.group(boss, worker).channel(NioServerSocketChannel.class).childHandler(new WebSocketSeverInitializer());
-//    }
-
 }

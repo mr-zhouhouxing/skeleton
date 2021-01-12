@@ -1,4 +1,4 @@
-<h1 style="text-align: center">Pandora-希神</h1>
+<h1 style="text-align: center">Pandora</h1>
 
 * 中文名称：希神。
 * 英文名称：Pandora 译【潘多拉魔盒】。
@@ -56,10 +56,11 @@
 - **定时任务模块**    - pandora-job        
 - **系统安全模块**    - pandora-security   
 - **日志收集模块**    - pandora-logging       
+- **消息服务API**    - pandora-shop-parent
 - **数据访问模块**    - pandora-persistence   
 - **通用推送模块**    - pandora-push          
-- **商城服务模块**    - pandora-shop-parent          
-- **社交服务模块**    - pandora-social-parent          
+- **商城服务API**    - pandora-shop-parent          
+- **社交服务API**    - pandora-social-parent          
 
 ## 技术选型
 #### 后端使用技术

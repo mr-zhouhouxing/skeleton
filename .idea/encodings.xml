@@ -8,6 +8,9 @@
     <file url="file://$PROJECT_DIR$/pandora-generate" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/pandora-job" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/pandora-logging" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pandora-message-parent" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pandora-message-parent/pandora-message-rest" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pandora-message-parent/pandora-message-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/pandora-persistence" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/pandora-push" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/pandora-security" charset="UTF-8" />

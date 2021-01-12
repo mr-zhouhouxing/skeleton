@@ -2347,3 +2347,37 @@ io.pandora.mall.exception.TokenException: Netty Token authentication failed
 2021-01-09 17:02:24,905 [nioEventLoopGroup-5-1] INFO  [io.pandora.mall.chat.websocket.ChatHandler] ChatHandler.java:142 - [Netty] 用户【10020】,channelId=1d05d8b0,注册成功...
 2021-01-09 17:03:04,920 [nioEventLoopGroup-5-1] INFO  [io.pandora.mall.chat.websocket.HeartBeatHandler] HeartBeatHandler.java:36 - [Netty] ChannelId=1d05d8b0 进入读空闲,本实例当前连接数:1
 2021-01-09 17:03:14,774 [nioEventLoopGroup-5-1] INFO  [io.pandora.mall.chat.websocket.HeartBeatHandler] HeartBeatHandler.java:39 - [Netty] ChannelId=1d05d8b0 进入写空闲,本实例当前连接数:1
+2021-01-12 14:24:27,228 [main] INFO  [io.pandora.mall.chat.ChatApplication] StartupInfoLogger.java:50 - Starting ChatApplication on DESKTOP-PSDTEL6 with PID 24568 (D:\2021-mall-template\pandora-mall\pandora-chat\target\classes started by WIN10 in D:\2021-mall-template\pandora-mall)
+2021-01-12 14:24:27,273 [main] INFO  [io.pandora.mall.chat.ChatApplication] SpringApplication.java:679 - The following profiles are active: DEV
+2021-01-12 14:24:28,811 [main] WARN  [org.mybatis.spring.mapper.ClassPathMapperScanner] Logger.java:44 - No MyBatis mapper was found in '[io.pandora.mall.chat]' package. Please check your configuration.
+2021-01-12 14:24:28,874 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] RepositoryConfigurationDelegate.java:244 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-01-12 14:24:28,879 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] RepositoryConfigurationDelegate.java:126 - Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-01-12 14:24:28,925 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] RepositoryConfigurationDelegate.java:182 - Finished Spring Data repository scanning in 24ms. Found 0 repository interfaces.
+2021-01-12 14:24:29,501 [main] INFO  [o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] PostProcessorRegistrationDelegate.java:330 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$78413038] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-01-12 14:24:29,755 [main] INFO  [org.eclipse.jetty.util.log] Log.java:193 - Logging initialized @5364ms to org.eclipse.jetty.util.log.Slf4jLog
+2021-01-12 14:24:29,949 [main] INFO  [o.s.b.w.e.jetty.JettyServletWebServerFactory] JettyServletWebServerFactory.java:143 - Server initialized with port: 10001
+2021-01-12 14:24:29,952 [main] INFO  [org.eclipse.jetty.server.Server] Server.java:370 - jetty-9.4.15.v20190215; built: 2019-02-15T16:53:49.381Z; git: eb70b240169fcf1abbd86af36482d1c49826fa0b; jvm 1.8.0_121-b13
+2021-01-12 14:24:30,000 [main] INFO  [o.e.j.server.handler.ContextHandler.application] ContextHandler.java:2345 - Initializing Spring embedded WebApplicationContext
+2021-01-12 14:24:30,001 [main] INFO  [org.springframework.web.context.ContextLoader] ServletWebServerApplicationContext.java:296 - Root WebApplicationContext: initialization completed in 2661 ms
+2021-01-12 14:24:30,212 [main] INFO  [org.eclipse.jetty.server.session] DefaultSessionIdManager.java:365 - DefaultSessionIdManager workerName=node0
+2021-01-12 14:24:30,212 [main] INFO  [org.eclipse.jetty.server.session] DefaultSessionIdManager.java:370 - No SessionScavenger set, using defaults
+2021-01-12 14:24:30,214 [main] INFO  [org.eclipse.jetty.server.session] HouseKeeper.java:149 - node0 Scavenging every 600000ms
+2021-01-12 14:24:30,227 [main] INFO  [org.eclipse.jetty.server.handler.ContextHandler] ContextHandler.java:855 - Started o.s.b.w.e.j.JettyEmbeddedWebAppContext@25aeb5ac{application,/,[file:///C:/Users/WIN10/AppData/Local/Temp/jetty-docbase.1858721724455950202.10001/, jar:file:/C:/Users/WIN10/.m2/repository/io/springfox/springfox-swagger-ui/2.6.1/springfox-swagger-ui-2.6.1.jar!/META-INF/resources, jar:file:/C:/Users/WIN10/.m2/repository/com/github/xiaoymin/swagger-bootstrap-ui/1.9.6/swagger-bootstrap-ui-1.9.6.jar!/META-INF/resources],AVAILABLE}
+2021-01-12 14:24:30,228 [main] INFO  [org.eclipse.jetty.server.Server] Server.java:407 - Started @5837ms
+2021-01-12 14:24:30,414 [main] INFO  [c.a.d.s.b.a.DruidDataSourceAutoConfigure] DruidDataSourceAutoConfigure.java:56 - Init DruidDataSource
+2021-01-12 14:24:30,679 [main] INFO  [com.alibaba.druid.pool.DruidDataSource] DruidDataSource.java:928 - {dataSource-1} inited
+2021-01-12 14:24:31,804 [main] INFO  [s.d.s.w.PropertySourcedRequestMappingHandlerMapping] PropertySourcedRequestMappingHandlerMapping.java:69 - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2021-01-12 14:24:32,037 [main] INFO  [o.s.scheduling.concurrent.ThreadPoolTaskExecutor] ExecutorConfigurationSupport.java:171 - Initializing ExecutorService 'applicationTaskExecutor'
+2021-01-12 14:24:32,937 [main] WARN  [c.b.mybatisplus.core.metadata.TableInfoHelper] TableInfoHelper.java:282 - Warn: Could not find @TableId in Class: java.security.Permission.
+2021-01-12 14:24:33,374 [main] INFO  [s.d.s.web.plugins.DocumentationPluginsBootstrapper] DocumentationPluginsBootstrapper.java:147 - Context refreshed
+2021-01-12 14:24:33,400 [main] INFO  [s.d.s.web.plugins.DocumentationPluginsBootstrapper] DocumentationPluginsBootstrapper.java:150 - Found 1 custom documentation plugin(s)
+2021-01-12 14:24:33,455 [main] INFO  [s.d.spring.web.scanners.ApiListingReferenceScanner] ApiListingReferenceScanner.java:41 - Scanning for api listing references
+2021-01-12 14:24:34,383 [main] INFO  [i.p.mall.chat.websocket.server.ChatWebSocketServer] ChatWebSocketServer.java:57 - [Netty] WebSocket Server Starting on port:10002......
+2021-01-12 14:24:34,401 [main] INFO  [o.e.j.server.handler.ContextHandler.application] ContextHandler.java:2345 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-01-12 14:24:34,401 [main] INFO  [org.springframework.web.servlet.DispatcherServlet] FrameworkServlet.java:524 - Initializing Servlet 'dispatcherServlet'
+2021-01-12 14:24:34,412 [main] INFO  [org.springframework.web.servlet.DispatcherServlet] FrameworkServlet.java:546 - Completed initialization in 10 ms
+2021-01-12 14:24:34,431 [main] INFO  [org.eclipse.jetty.server.AbstractConnector] AbstractConnector.java:292 - Started ServerConnector@6af65f29{HTTP/1.1,[http/1.1]}{0.0.0.0:10001}
+2021-01-12 14:24:34,436 [main] INFO  [o.s.boot.web.embedded.jetty.JettyWebServer] JettyWebServer.java:159 - Jetty started on port(s) 10001 (http/1.1) with context path '/'
+2021-01-12 14:24:34,440 [main] INFO  [io.pandora.mall.chat.ChatApplication] StartupInfoLogger.java:59 - Started ChatApplication in 8.123 seconds (JVM running for 10.05)
+2021-01-12 14:24:34,444 [main] INFO  [io.pandora.mall.chat.ChatApplication] ChatApplication.java:43 - [CHAT] Service startup removes all users...
+2021-01-12 14:24:34,763 [main] INFO  [io.pandora.mall.chat.ChatApplication] ChatApplication.java:50 - =============> run at http://localhost:10001/doc.html

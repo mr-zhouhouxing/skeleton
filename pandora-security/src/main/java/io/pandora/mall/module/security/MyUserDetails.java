@@ -45,7 +45,7 @@ public class MyUserDetails implements UserDetails,Serializable {
             sortedAuthorities.add(grantedAuthority);
         }
 
-        log.info("===> init authorities :{}",sortedAuthorities);
+        log.info("===> [Security] init authorities :{}",sortedAuthorities);
         return sortedAuthorities;
     }
 
@@ -75,6 +75,10 @@ public class MyUserDetails implements UserDetails,Serializable {
     @Override
     public String getUsername() {return account;  }
 
+    /**
+     * 一定要 true
+     * @return
+     */
     @Override
     public boolean isAccountNonExpired() {
         return true;

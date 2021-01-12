@@ -8,7 +8,7 @@ import io.pandora.mall.module.social.processor.user.ThirdPartyUser;
 /**
  * @author Created by mr_zhou on 2020/12/24
  */
-public interface SocialUserThirdpartyService extends BaseService<SocialUserThirdparty> {
+public interface SocialUserThirdPartyService extends BaseService<SocialUserThirdparty> {
 
     SocialUser insertThirdPartyUser(ThirdPartyUser param, String password) throws Exception;
 

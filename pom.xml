@@ -28,6 +28,7 @@
         <module>pandora-generate</module>
         <module>pandora-social-parent</module>
         <module>pandora-chat</module>
+        <module>pandora-message-parent</module>
     </modules>
 
     <name>pandora-mall</name>

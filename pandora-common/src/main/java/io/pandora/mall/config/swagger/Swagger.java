@@ -41,15 +41,60 @@ public class Swagger {
     }
 
     @Bean
-    public Docket createRestApi() {
+    public Docket createTokenApi() {
         return new Docket(DocumentationType.SWAGGER_2)
-                .groupName("REST服务 - API")
+                .groupName("接口授权 - API")
                 .apiInfo(apiInfo())
                 .select()
                 //加了ApiOperation注解的类，才生成接口文档
                 .apis(RequestHandlerSelectors.withMethodAnnotation(ApiOperation.class))
                 //包下的类，才生成接口文档
-                .apis(RequestHandlerSelectors.basePackage(swaggerProperties.getBasePackage()))
+                .apis(RequestHandlerSelectors.basePackage("io.pandora.mall.module.security"))
+                .paths(PathSelectors.any())
+                .build()
+                .securitySchemes(manage_security());
+    }
+
+    @Bean
+    public Docket createSocialApi() {
+        return new Docket(DocumentationType.SWAGGER_2)
+                .groupName("社交服务 - API")
+                .apiInfo(apiInfo())
+                .select()
+                //加了ApiOperation注解的类，才生成接口文档
+                .apis(RequestHandlerSelectors.withMethodAnnotation(ApiOperation.class))
+                //包下的类，才生成接口文档
+                .apis(RequestHandlerSelectors.basePackage("io.pandora.mall.module.social"))
+                .paths(PathSelectors.any())
+                .build()
+                .securitySchemes(security());
+    }
+
+    @Bean
+    public Docket createMallApi() {
+        return new Docket(DocumentationType.SWAGGER_2)
+                .groupName("商城服务 - API")
+                .apiInfo(apiInfo())
+                .select()
+                //加了ApiOperation注解的类，才生成接口文档
+                .apis(RequestHandlerSelectors.withMethodAnnotation(ApiOperation.class))
+                //包下的类，才生成接口文档
+                .apis(RequestHandlerSelectors.basePackage("io.pandora.mall.module.shop"))
+                .paths(PathSelectors.any())
+                .build()
+                .securitySchemes(security());
+    }
+
+    @Bean
+    public Docket createMessageApi() {
+        return new Docket(DocumentationType.SWAGGER_2)
+                .groupName("聊天服务 - API")
+                .apiInfo(apiInfo())
+                .select()
+                //加了ApiOperation注解的类，才生成接口文档
+                .apis(RequestHandlerSelectors.withMethodAnnotation(ApiOperation.class))
+                //包下的类，才生成接口文档
+                .apis(RequestHandlerSelectors.basePackage("io.pandora.mall.module.message"))
                 .paths(PathSelectors.any())
                 .build()
                 .securitySchemes(security());

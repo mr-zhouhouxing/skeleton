@@ -1,6 +1,7 @@
 package io.pandora.mall.chat;
 
 import io.pandora.mall.chat.service.ChatConnectLogService;
+import io.pandora.mall.chat.util.SpringUtils;
 import io.pandora.mall.chat.websocket.service.ChatWebSocketService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -8,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.web.ServerProperties;
 import org.springframework.boot.web.servlet.ServletComponentScan;
 import org.springframework.context.annotation.Bean;
 import org.springframework.util.AntPathMatcher;
@@ -33,6 +35,7 @@ public class ChatApplication implements CommandLineRunner {
 
     public static void main(String[] args) {
         SpringApplication.run(ChatApplication.class,args);
+        printProjectConfigs();
     }
 
     @Override
@@ -40,5 +43,10 @@ public class ChatApplication implements CommandLineRunner {
         logger.info("[CHAT] Service startup removes all users...");
         // 全部下线
         chatConnectLogService.removeAll(chatWebSocketService.getInstanceFlag());
+    }
+
+    private static void printProjectConfigs() {
+        ServerProperties serverProperties = SpringUtils.getApplicationContext().getBean(ServerProperties.class);
+        logger.info("=============> run at http://localhost:{}/doc.html", serverProperties.getPort());
     }
 }
