@@ -69,11 +69,9 @@
       <module name="pandora-rabbitmq" options="-parameters" />
       <module name="pandora-search" options="-parameters" />
       <module name="pandora-security" options="-parameters" />
-      <module name="pandora-shop-parent" options="-parameters" />
       <module name="pandora-shop-rest" options="-parameters" />
       <module name="pandora-shop-service" options="-parameters" />
       <module name="pandora-sms" options="-parameters" />
-      <module name="pandora-social-parent" options="-parameters" />
       <module name="pandora-social-rest" options="-parameters" />
       <module name="pandora-social-service" options="-parameters" />
     </option>
